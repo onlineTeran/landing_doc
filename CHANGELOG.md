@@ -3,6 +3,16 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.3.1] — 2026-07-16
+
+### Added
+- **`assets/IFRAME-BRIDGE-README.md`** — дослівний оригінал контракту фронтенд-команди (байт-в-байт,
+  sha256 106e8b37…): канонічне джерело; анотована версія при розбіжностях поступається оригіналу.
+- `IFRAME-BRIDGE-INTEGRATION.md`: **правило строгої відповідності** — лендінг шле лише типи з
+  `T_IframeMessage`; нові типи (analytics_event) — тільки після підтвердження продуктом, до того канал
+  вимкнено прапорцем; `hasAuth/locale/theme` в embedded — строго з `IframeBridge.config` (контрактні
+  дефолти en/light), власні дефолти — лише standalone. Спостережено на лендінгу bezdep-month.
+
 ## [1.3.0] — 2026-07-16
 
 ### Added
