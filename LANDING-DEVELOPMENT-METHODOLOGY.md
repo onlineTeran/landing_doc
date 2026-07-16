@@ -497,6 +497,8 @@ export function useReveal(scopeEl: Ref<HTMLElement | null>) {
 
 Hero та декоративні візуали (стіли + зациклене відео) можна виробляти через image/video generation MCP, потім хостити на CDN і посилатися за URL. **Спостережено** в референсній збірці. Трактуй пайплайн як повторюваний виробничий конвеєр із QA-гейтом.
 
+> Для **наборів іконок** є окрема, глибша методологія: `ICON-GENERATION-METHODOLOGY.md` (style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA). Цей розділ покриває hero/декор/відео; іконки роби за нею.
+
 ### 9.1 Пайплайн
 ```
 idea ─▶ storyboard frame ─▶ keyframes ─▶ video generation

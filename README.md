@@ -36,10 +36,67 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 | [LANDING-PROMPT-TEMPLATE.md](LANDING-PROMPT-TEMPLATE.md) | Master-prompt зі змінними для старту нового лендінгу |
 | [CHECKLISTS.md](CHECKLISTS.md) | Компактні чеклісти (старт / код / hero / секція / адаптив / motion / асети / iframe / деплой) |
 | [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) | Що виносити в reusable starter, чого НЕ абстрагувати, API компонентів, ризики над-абстракції |
+| [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) | Генерація AI-іконок: style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA — доповнює §9 головного документа |
 | [DECISION-LOG-TEMPLATE.md](DECISION-LOG-TEMPLATE.md) | Шаблон журналу рішень |
 | [RETROSPECTIVE-TEMPLATE.md](RETROSPECTIVE-TEMPLATE.md) | Шаблон ретроспективи після лендінгу |
 | [EVOLVING-THE-METHODOLOGY.md](EVOLVING-THE-METHODOLOGY.md) | Як розвивати цю методологію під час наступних лендінгів (PR-процес, версіонування, submodule) |
 | [CHANGELOG.md](CHANGELOG.md) | Історія змін методології |
+
+## Як підключити до нового лендінгу
+
+Рекомендований спосіб — **git submodule**, запінений на тег версії: лендінг залежить від конкретної,
+відтворюваної версії методології, а доопрацювання повертаються назад одним push-ем (див. нижче).
+
+```bash
+# 1. У корені репозиторію нового лендінгу:
+git submodule add https://github.com/onlineTeran/landing_doc.git methodology
+
+# 2. Запінити на потрібну версію (список: git -C methodology tag -l):
+git -C methodology checkout v1.1.0
+git add .gitmodules methodology
+git commit -m "chore: pin methodology v1.1.0"
+
+# 3. Дати AI-агенту стартовий бриф:
+#    відкрий methodology/LANDING-PROMPT-TEMPLATE.md, заповни змінні, встав агенту.
+#    Далі — фазами за methodology/LANDING-WORKFLOW.md + methodology/PHASE-PROMPTS.md.
+```
+
+Клонування лендінгу з уже підключеною методологією:
+
+```bash
+git clone --recurse-submodules <url-лендінгу>
+# або в уже склонованому: git submodule update --init
+```
+
+Оновити методологію в лендінгу до нової версії (свідомо, коли готовий):
+
+```bash
+git -C methodology fetch --tags
+git -C methodology checkout v1.2.0
+git commit -am "chore: bump methodology to v1.2.0"
+```
+
+Альтернатива без submodule — разова копія в `docs/methodology/` лендінгу (`npx degit onlineTeran/landing_doc docs/methodology`);
+тоді покращення повертаєш вручну через PR.
+
+## Як доопрацьовувати методологію прямо з лендінгу
+
+Submodule — це повноцінний git-репозиторій усередині лендінгу, тому правки робляться **на місці** й
+push-аться прямо сюди, у GitHub:
+
+```bash
+# всередині лендінгу, під час роботи помітив, що методологію треба уточнити:
+cd methodology
+git switch main && git pull                  # стати на актуальний main
+# ... редагуєш потрібний .md ...
+git commit -am "docs: <що уточнено і чому>"
+git push origin main                          # ← методологія оновлена на GitHub
+cd ..
+git add methodology && git commit -m "chore: bump methodology"   # запінити новий коміт у лендінгу
+```
+
+Повний процес (мітки Спостережено/Виведено/Рекомендовано, версіонування, чеклист якості PR,
+цикл «лендінг → ретроспектива → оновлення методології») — в [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md).
 
 ## Як читати
 

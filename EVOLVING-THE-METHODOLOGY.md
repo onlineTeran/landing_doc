@@ -71,20 +71,60 @@ git push origin v1.1.0
 
 ```
 # у репозиторії нового лендінгу:
-git submodule add <git-url-методології> methodology
-cd methodology && git checkout v1.0.0 && cd ..
-git add . && git commit -m "chore: pin methodology v1.0.0"
+git submodule add https://github.com/onlineTeran/landing_doc.git methodology
+git -C methodology checkout v1.1.0
+git add .gitmodules methodology && git commit -m "chore: pin methodology v1.1.0"
 ```
 
 Оновити методологію в лендінгу (свідомо, коли готовий):
 
 ```
-cd methodology && git fetch --tags && git checkout v1.1.0 && cd ..
-git commit -am "chore: bump methodology to v1.1.0"
+git -C methodology fetch --tags && git -C methodology checkout v1.2.0
+git commit -am "chore: bump methodology to v1.2.0"
 ```
 
 Альтернатива без submodule — разова копія (`degit`/завантаження) у `docs/methodology/` лендінгу; тоді
 покращення повертаєш вручну через PR у цей репозиторій.
+
+## 5.1. Доопрацювання прямо з лендінгу (submodule-flow)
+
+Submodule — це повноцінний клон цього репозиторію всередині лендінгу. Тож коли під час збірки ти
+уточнюєш методологію, правки робляться на місці і push-аться напряму — без копіювання файлів між
+проєктами.
+
+**Швидкий режим (соло-робота, дрібні уточнення — прямо в `main`):**
+
+```
+cd methodology
+git switch main && git pull            # submodule за замовчуванням у detached HEAD — стань на main
+# ... редагуєш .md ...
+git commit -am "docs: <що і чому>"     # + запис у CHANGELOG.md, якщо зміна суттєва
+git push origin main
+cd ..
+git add methodology
+git commit -m "chore: bump methodology to latest main"
+```
+
+**Безпечний режим (більші зміни — через гілку + PR):**
+
+```
+cd methodology
+git switch -c update/<опис> && git push -u origin update/<опис>
+# PR на GitHub → merge → потім у лендінгу: git -C methodology checkout main && git -C methodology pull
+```
+
+**Правила, щоб цикл не розсипався:**
+
+1. **Не редагуй методологію в detached HEAD.** Після `git submodule update` submodule стоїть на
+   запіненому коміті без гілки — перед правками завжди `git switch main && git pull`.
+2. **Кожна суттєва зміна = запис у `CHANGELOG.md`**; на віхах — тег версії (semver, §4) і оновлення
+   `VERSION`.
+3. **Після push із submodule закріпи новий коміт у лендінгу** (`git add methodology && git commit`),
+   інакше інші клони лендінгу лишаться на старій версії.
+4. **Один лендінг — одна порція правок за раз.** Не накопичуй тижні правок незапушеними в submodule:
+   вони живуть лише в цій робочій копії, доки не зробиш `git push`.
+5. Наприкінці лендінгу — ретроспектива (§2): її секція «що оновити в методології» перетворюється на
+   фінальний коміт/PR + tag, і наступний лендінг стартує вже з новішої версії.
 
 ## 6. Цикл замкнено
 

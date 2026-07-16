@@ -3,6 +3,19 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.1.0] — 2026-07-16
+
+### Added
+- **`ICON-GENERATION-METHODOLOGY.md`** — методологія генерації AI-іконок (style lock, reference icon,
+  optical sizes, true alpha, safe area, export matrix, повний QA). Дистильована з практичного досвіду
+  генерації в ChatGPT; мітки гармонізовано під конвенцію пакета (Спостережено/Виведено/Рекомендовано).
+  Крос-реф додано в §9 головного документа та в README.
+- README: розділ **«Як підключити до нового лендінгу»** (submodule, запінений на тег; клонування з
+  `--recurse-submodules`; оновлення версії; degit-альтернатива) і розділ **«Як доопрацьовувати
+  методологію прямо з лендінгу»**.
+- `EVOLVING-THE-METHODOLOGY.md` §5.1 — повний **submodule-flow доопрацювання з лендінгу**: швидкий
+  режим (push у main) і безпечний (гілка + PR), правила проти detached HEAD і незакріплених комітів.
+
 ## [1.0.0] — 2026-07-16
 
 ### Added
