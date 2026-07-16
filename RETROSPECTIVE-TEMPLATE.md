@@ -102,7 +102,7 @@
 |---|---|---|---|
 | `useMotionPrefs` | reactive-хелпер reduced-motion | as-is | повністю generic. |
 | `useMagnetic` | хелпер magnetic-hover курсора | as-is | обмеж до `(hover:hover) and (pointer:fine)`. |
-| `<Decor>Galaxy` | декоративний inline-SVG primitive | needs-params | вже namespace-ний через `uid`; виведи color/scale через токени. |
+| `<Decor>Background` | декоративний inline-SVG primitive | needs-params | вже namespace-ний через `uid`; виведи color/scale через токени. |
 | 690-рядкова секція «visual storytelling» | одна важка секція | one-off | переросла один файл; розбий на суб-компоненти перед переви­користанням. |
 
 </details>

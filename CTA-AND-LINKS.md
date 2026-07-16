@@ -145,7 +145,7 @@ function onClick(e: MouseEvent) {
 Використання в секції — жодних URL:
 
 ```vue
-<CtaButton action-id="hero_primary" variant="primary" size="lg">Відкрити мапу</CtaButton>
+<CtaButton action-id="hero_primary" variant="primary" size="lg">Головна дія</CtaButton>
 <CtaButton action-id="promo_all" variant="gray">Всі акції</CtaButton>
 ```
 

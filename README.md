@@ -1,6 +1,6 @@
 # Методологія розробки промо-лендінгів
 
-**Версія:** 1.0.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
+**Версія:** 1.7.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
 
 Брендонезалежна, багаторазова методологія створення сучасних інтерактивних промо-лендінгів
 Awwwards-рівня, які інтегруються у продукт (full-page embed або iframe). Дистильована з реальних
@@ -18,6 +18,9 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 
 ## Швидкий старт (новий лендінг)
 
+0. Порожня папка → Claude Code з методологією і скілами: виконай
+   [`CLAUDE-BOOTSTRAP.md`](CLAUDE-BOOTSTRAP.md) (submodule, CLAUDE.md-шаблон, встановлення
+   й аудит скілів, Definition of Ready).
 1. Відкрий [`LANDING-PROMPT-TEMPLATE.md`](LANDING-PROMPT-TEMPLATE.md), заповни змінні (`[LANDING_NAME]`,
    `[BUSINESS_GOAL]`, …) і віддай агенту як стартовий бриф.
 2. Іди фазами за [`LANDING-WORKFLOW.md`](LANDING-WORKFLOW.md); на кожну фазу бери готовий prompt із
@@ -35,6 +38,7 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 | [LANDING-WORKFLOW.md](LANDING-WORKFLOW.md) | Покроковий runbook від ідеї до production: input / дії / скіли / артефакти / критерії готовності / типові помилки |
 | [PHASE-PROMPTS.md](PHASE-PROMPTS.md) | Самодостатні prompt-и на кожну фазу з критеріями завершення |
 | [CLAUDE-CODE-SKILLS.md](CLAUDE-CODE-SKILLS.md) | Аналіз скілів/агентів/інструментів + мінімальний і розширений стеки |
+| [CLAUDE-BOOTSTRAP.md](CLAUDE-BOOTSTRAP.md) | **Старт з нуля**: порожня папка → Claude Code з методологією — submodule, шаблон CLAUDE.md лендінгу, встановлення/аудит скілів, стартовий бриф, Definition of Ready |
 | [LANDING-PROMPT-TEMPLATE.md](LANDING-PROMPT-TEMPLATE.md) | Master-prompt зі змінними для старту нового лендінгу |
 | [CHECKLISTS.md](CHECKLISTS.md) | Компактні чеклісти (старт / код / hero / секція / адаптив / motion / асети / iframe / деплой) |
 | [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) | Що виносити в reusable starter, чого НЕ абстрагувати, API компонентів, ризики над-абстракції |

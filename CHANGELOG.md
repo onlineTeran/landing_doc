@@ -3,6 +3,21 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.7.0] — 2026-07-16
+
+### Added
+- **`CLAUDE-BOOTSTRAP.md`** — сценарій «порожня папка → Claude Code з методологією»: submodule
+  на тег версії, шаблон CLAUDE.md нового лендінгу, встановлення й аудит скілів (INSTALLED_SKILLS.md,
+  застереження версій фреймворку), стартовий бриф через LANDING-PROMPT-TEMPLATE, Definition of Ready.
+
+### Changed
+- **Повне знеособлення**: прибрано всі прив'язки до першого (референсного) лендінгу — назви
+  кампанії/бренду, тематичні приклади (декор, назви CTA) замінено на generic-плейсхолдери
+  (`<landing-name>`, `<brand>`, `<promo-term>`). Методологія тепер придатна для будь-якого
+  наступного лендінгу без контексту попереднього.
+- README: версія в шапці синхронізована з VERSION; «Швидкий старт» починається з кроку 0
+  (CLAUDE-BOOTSTRAP).
+
 ## [1.6.0] — 2026-07-16
 
 ### Milestone: iframe-інтеграція → Спостережено
@@ -21,15 +36,15 @@
 ## [1.5.0] — 2026-07-16
 
 ### Added
-- **`CONTENT-CONFIG.md`** — контент-система (Спостережено на bezdep-month): тексти в
+- **`CONTENT-CONFIG.md`** — контент-система (Спостережено на референсному лендінгу): тексти в
   `content/copy.json` (блок → ключ → {ua, ru}, редагує копірайтер), кнопки в `content/actions.json`
   (label{ua,ru} + `ga`-мітка для аналітиків + action), `useCopy()` з locale продукту за контрактом,
   hydration-правило (локаль/auth/канал — ПІСЛЯ mount через app:mounted hook), процес хендофу
   копірайтеру, чекліст. CTA-AND-LINKS: лейбли кнопок переїхали в content-шар.
 
-### Спостережено (лендінг bezdep-month)
-- Секції з власним opaque-фоном ховають глобальний starfield/засвіти — фон секцій має бути
-  transparent (локальні дубль-зорі прибрано разом із фоном мапи).
+### Спостережено (референсний лендінг)
+- Секції з власним opaque-фоном ховають глобальний декоративний фон (fixed-канвас/засвіти) — фон секцій має бути
+  transparent (локальні дублі декору прибрано разом із opaque-фоном секції).
 - Спред computed без `.value` (`[...items]`) — краш SSR «items is not iterable».
 - Після `nuxi generate` в каталозі запущеного dev-сервера ламається `.nuxt`/Vite dep-кеш
   (`#app-manifest`) — лікується `rm -rf .nuxt node_modules/.vite` + рестарт.
@@ -44,7 +59,7 @@
   event_action-id» — тепер id беруться звідси, лише кастомні `promotions/:term` підтверджуються
   контентом. Лінки з IFRAME-BRIDGE-INTEGRATION §C та README.
 
-### Спостережено (лендінг bezdep-month)
+### Спостережено (референсний лендінг)
 - `scroll-behavior: smooth` у CSS несумісний з Lenis (вимога доки Lenis): браузер анімує кожен крок
   Lenis → лаг/дрейф позиції. Правило: з Lenis — тільки нативний scroll-behavior.
 - Hosted test-parent (`/test-parent.html` на домені лендінгів, origin у whitelist) — обовʼязковий
@@ -58,7 +73,7 @@
 - `IFRAME-BRIDGE-INTEGRATION.md`: **правило строгої відповідності** — лендінг шле лише типи з
   `T_IframeMessage`; нові типи (analytics_event) — тільки після підтвердження продуктом, до того канал
   вимкнено прапорцем; `hasAuth/locale/theme` в embedded — строго з `IframeBridge.config` (контрактні
-  дефолти en/light), власні дефолти — лише standalone. Спостережено на лендінгу bezdep-month.
+  дефолти en/light), власні дефолти — лише standalone. Спостережено на референсному лендінгу.
 
 ## [1.3.0] — 2026-07-16
 

@@ -2,7 +2,7 @@
 
 > Призначення: система керування всім копірайтом лендінгу — тексти живуть у JSON-файлах, які можна
 > віддати копірайтеру без доступу до коду; мова перемикається `locale` продукту (контракт IframeBridge).
-> **Спостережено** на лендінгу bezdep-month (перша повна реалізація).
+> **Спостережено** на референсному лендінгу (перша повна реалізація).
 
 Мітки: **Спостережено** / **Виведено** / **Рекомендовано**.
 
@@ -48,13 +48,13 @@
 
 ```json
 {
-  "map_open": {
-    "label": { "ua": "Відкрити мапу", "ru": "Открыть карту" },
-    "ga": "map_open",
+  "promo_open": {
+    "label": { "ua": "Взяти бонус", "ru": "Забрать бонус" },
+    "ga": "promo_open",
     "action": {
       "kind": "event_action",
-      "actionId": "event_action/promotions/bezdep-month",
-      "fallbackHref": "https://product.example/promo/bezdep-month"
+      "actionId": "event_action/promotions/<promo-term>",
+      "fallbackHref": "https://product.example/promo/<landing-name>"
     }
   }
 }
