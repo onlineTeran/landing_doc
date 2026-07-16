@@ -40,6 +40,8 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 | [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) | Що виносити в reusable starter, чого НЕ абстрагувати, API компонентів, ризики над-абстракції |
 | [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) | Генерація AI-іконок: style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA — доповнює §9 головного документа |
 | [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) | **Офіційний контракт продукту** для iframe-інтеграції (IframeBridge: loaded/height/event_action/token) + адаптація до Nuxt 3 і наслідки для motion; готове ядро — [`assets/iframe-bridge.js`](assets/iframe-bridge.js) |
+| [CTA-AND-LINKS.md](CTA-AND-LINKS.md) | Кнопки й лінки через конфіг: `config/actions.ts` (усі URL/`event_action`-id в одному файлі), `useCtaAction()` + єдиний `<CtaButton>`, який сам обирає канал (`<a>` / `target="_top"` / `event_action`) |
+| [GA-ANALYTICS-SPEC.md](GA-ANALYTICS-SPEC.md) | GA4-специфікація подій для продуктових аналітиків: словник подій із власниками, спільні параметри, канали за режимом вбудовування, `useAnalytics()`-адаптер, хендоф-чекліст |
 | [DECISION-LOG-TEMPLATE.md](DECISION-LOG-TEMPLATE.md) | Шаблон журналу рішень |
 | [RETROSPECTIVE-TEMPLATE.md](RETROSPECTIVE-TEMPLATE.md) | Шаблон ретроспективи після лендінгу |
 | [EVOLVING-THE-METHODOLOGY.md](EVOLVING-THE-METHODOLOGY.md) | Як розвивати цю методологію під час наступних лендінгів (PR-процес, версіонування, submodule) |

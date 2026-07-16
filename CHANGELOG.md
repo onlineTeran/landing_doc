@@ -3,6 +3,25 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.3.0] — 2026-07-16
+
+### Added
+- **`CTA-AND-LINKS.md`** — керування кнопками й лінками через конфіг: усі дії (URL, `event_action`-id)
+  в одному типізованому `config/actions.ts`; `useCtaAction()`-резолвер каналу за середовищем
+  (`<a>` / `target="_top"` в iframe / `sendMessage('event_action')` / anchor, з `fallbackHref` для
+  standalone); єдиний `<CtaButton action-id>` з обов'язковим `analyticsId`; правила станів кнопок.
+  Зміна лінка = правка одного рядка конфігу, не компонента.
+- **`GA-ANALYTICS-SPEC.md`** — GA4-специфікація для передачі продуктовим аналітикам: naming/ліміти GA4,
+  словник подій із власниками (лендінг ніколи не шле `page_view`), спільні параметри
+  (`landing_id`/`embed_mode`/`locale`/`theme`/`has_auth`; без PII/token), канали доставки за режимом
+  вбудовування (full-page → `dataLayer` продукту; iframe → тип повідомлення узгодити з продуктом),
+  `useAnalytics()`-адаптер «один track() → один канал», UTM/consent-правила, хендоф-чекліст.
+
+### Changed
+- §15 головного документа, `PHASE-PROMPTS.md` §14, `CHECKLISTS.md` (Discovery, секції, pre-deploy),
+  `IFRAME-BRIDGE-INTEGRATION.md` §C — зшито з новими документами: `cta_id` в аналітиці == `analyticsId`
+  у конфігу дій за побудовою; перелік `event_action`-id — пункт Discovery.
+
 ## [1.2.0] — 2026-07-16
 
 ### Added

@@ -460,6 +460,9 @@ export default defineNuxtPlugin(() => {
   повний перелік id — у контент-менеджерів/Confluence (див. контракт вище).
 - **Зовнішній перехід**: звичайний `<a href="…" target="_blank" rel="noopener noreferrer">` (за контрактом).
 - Плейсхолдерів немає й тут: перелік `event_action`-id — це тепер частина Discovery-чекліста (як раніше «точні URL»).
+- **Реалізація в коді лендінгу:** усі дії (URL і `event_action`-id) — в одному `config/actions.ts`,
+  кнопки — через єдиний `<CtaButton>`, який сам обирає канал за середовищем і має `fallbackHref` для
+  standalone. Повна система — у [`CTA-AND-LINKS.md`](CTA-AND-LINKS.md).
 
 ## D. Доповнення до QA-чекліста iframe-інтеграції — Рекомендовано
 
