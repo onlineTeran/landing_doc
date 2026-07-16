@@ -3,6 +3,26 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.8.0] — 2026-07-17
+
+### Added
+- **`ANIMATION-PATTERNS.md`** — словник motion-патернів: левітація, паралакс, entrance/reveal,
+  fade-in lazy-картинок, scrub-journey (+embedded-заміна time-based fill), marquee, ambient-дрейф,
+  обертання, мікро-інтеракції. Головне правило «один власник на властивість на елемент»
+  (Спостережено: shorthand `animation:` fade-in фолбека перекрив власні анімації картинок, а
+  `animation: none` вимкнув їх назавжди; фікс — fade лише через opacity+transition і окрема
+  обгортка під паралакс). Таблиця поведінки кожного патерна в embedded і reduced-motion.
+- **`DEVICE-TEST-MATRIX.md`** — аналітика аудиторії як QA-гейт адаптиву (Спостережено, зріз
+  2026-07): 100% mobile; Android 64% депозитів / iOS 36% (iOS «важчий» за гроші → Safari-регресії
+  high-severity); топ-браузери (Chrome Mobile 60%, Mobile Safari 24%, ~5% in-app/WebView);
+  топ-10 viewport-ів 360–440px з найважчою точкою 360×800 (бюджетні Android). Правило: адаптив
+  перевіряється на топ-10 реальних розширень зі зрізу, не на «стандартних» брейкпоінтах.
+
+### Спостережено (референсний лендінг)
+- Паралакс усередині iframe не працює принципово: вікно iframe не скролиться (скрол у батька),
+  ScrollTrigger не отримує подій — скрол-залежні ефекти в embedded пропускати або замінювати
+  time-based варіантами.
+
 ## [1.7.0] — 2026-07-16
 
 ### Added

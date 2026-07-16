@@ -1,6 +1,6 @@
 # Методологія розробки промо-лендінгів
 
-**Версія:** 1.7.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
+**Версія:** 1.8.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
 
 Брендонезалежна, багаторазова методологія створення сучасних інтерактивних промо-лендінгів
 Awwwards-рівня, які інтегруються у продукт (full-page embed або iframe). Дистильована з реальних
@@ -42,6 +42,8 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 | [LANDING-PROMPT-TEMPLATE.md](LANDING-PROMPT-TEMPLATE.md) | Master-prompt зі змінними для старту нового лендінгу |
 | [CHECKLISTS.md](CHECKLISTS.md) | Компактні чеклісти (старт / код / hero / секція / адаптив / motion / асети / iframe / деплой) |
 | [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) | Що виносити в reusable starter, чого НЕ абстрагувати, API компонентів, ризики над-абстракції |
+| [ANIMATION-PATTERNS.md](ANIMATION-PATTERNS.md) | Словник motion-патернів (левітація, паралакс, reveal, scrub-journey, marquee, fade-in…): власники властивостей («один власник на властивість на елемент»), поведінка в embedded/reduced-motion, чеклист додавання анімації |
+| [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md) | Аналітика аудиторії → QA-гейт адаптиву: топ-10 реальних розширень екрана, розподіл ОС/браузерів/брендів, iOS-вага за депозитами, чеклист перевірок, процес оновлення зрізу |
 | [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) | Генерація AI-іконок: style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA — доповнює §9 головного документа |
 | [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) | **Офіційний контракт продукту** для iframe-інтеграції (IframeBridge: loaded/height/event_action/token) + адаптація до Nuxt 3 і наслідки для motion; готове ядро — [`assets/iframe-bridge.js`](assets/iframe-bridge.js), дослівний оригінал фронтів — [`assets/IFRAME-BRIDGE-README.md`](assets/IFRAME-BRIDGE-README.md), офіційна таблиця `event_action`-id — [`assets/EVENT-ACTIONS.md`](assets/EVENT-ACTIONS.md) |
 | [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md) | **Runbook деплою і запуску**: git→Vercel флоу, мультилендінговий Vercel-патерн, CDN-асети в сорсі, біллінг-гігієна, порядок запуску iframe (origin whitelist — блокер №1), таблиця інцидентів симптом→причина→фікс |
