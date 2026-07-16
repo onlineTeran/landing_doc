@@ -467,7 +467,8 @@ export default defineNuxtPlugin(() => {
 ## C. CTA та навігація — Рекомендовано
 
 - **Дія всередині продукту** (відкрити касу, реєстрацію тощо): `IframeBridge.sendMessage('event_action', '<id>')` —
-  повний перелік id — у контент-менеджерів/Confluence (див. контракт вище).
+  **повний офіційний перелік id — [`assets/EVENT-ACTIONS.md`](assets/EVENT-ACTIONS.md)** (відновлено з
+  продуктового документа «Універсальні івенти»; там же — логіка auth-редіректу і шаблони `:term`/`:id`).
 - **Зовнішній перехід**: звичайний `<a href="…" target="_blank" rel="noopener noreferrer">` (за контрактом).
 - Плейсхолдерів немає й тут: перелік `event_action`-id — це тепер частина Discovery-чекліста (як раніше «точні URL»).
 - **Реалізація в коді лендінгу:** усі дії (URL і `event_action`-id) — в одному `config/actions.ts`,

@@ -3,6 +3,22 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.4.0] — 2026-07-16
+
+### Added
+- **`assets/EVENT-ACTIONS.md`** — офіційна таблиця «Універсальні івенти» продукту (відновлена з PDF
+  продуктової команди, SC+CB, Web/iOS/Android): усі `event_action`-id по розділах (auth/каса/
+  верифікація/акції/профіль/ігри/бонуси/турніри/info), шаблони `:term`/`:id`/`section?subsection`,
+  логіка auth-редіректу на боці продукту, deprecated-список. Закриває Discovery-пункт «перелік
+  event_action-id» — тепер id беруться звідси, лише кастомні `promotions/:term` підтверджуються
+  контентом. Лінки з IFRAME-BRIDGE-INTEGRATION §C та README.
+
+### Спостережено (лендінг bezdep-month)
+- `scroll-behavior: smooth` у CSS несумісний з Lenis (вимога доки Lenis): браузер анімує кожен крок
+  Lenis → лаг/дрейф позиції. Правило: з Lenis — тільки нативний scroll-behavior.
+- Hosted test-parent (`/test-parent.html` на домені лендінгів, origin у whitelist) — обовʼязковий
+  артефакт деплою: єдиний спосіб показати embed робочим без стенда продукту.
+
 ## [1.3.1] — 2026-07-16
 
 ### Added
