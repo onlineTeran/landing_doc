@@ -532,9 +532,16 @@ _Аліас у списку задач: "iframe". Фаза: Iframe/embed-інт�
 реалізуй обраний. (Примітка чесності: reference-білд використовував FULL-PAGE EMBED і НЕ вправлявся в
 iframe-інтеграції, тож уся iframe-специфіка нижче — Рекомендовано/Виведено, не Спостережено.)
 
+ЯКЩО режим = IFRAME: існує ОФІЦІЙНИЙ контракт продукту — методологія/IFRAME-BRIDGE-INTEGRATION.md
+(ядро assets/iframe-bridge.js копіюється без змін; IframeBridge.init(); loaded/height автоматично;
+event_action для дій у продукті; token через onParentMessage; auth/locale/theme з config; БЕЗ
+100vh/svh-розмірів; motion без scrub/pin — лише IO-reveal + time-based). Він авторитетний і має
+пріоритет над узагальненими порадами нижче.
+
 ВХІДНІ ДАНІ
 - Рішення про режим вбудовування з технічного плану. Висоти header/footer host-а + кольори chrome.
-  Host CSP / дозволені origin-и асетів. Реальні CTA route URL.
+  Host CSP / дозволені origin-и асетів. Реальні CTA route URL; для iframe — перелік event_action-id
+  від контент-менеджерів.
 
 ПРАВИЛО ВИБОРУ (обери одне)
 - FULL-PAGE EMBED (Спостережено в reference-білді): продукт постачає header + footer; лендінг

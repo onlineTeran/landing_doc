@@ -3,6 +3,23 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.2.0] — 2026-07-16
+
+### Added
+- **`IFRAME-BRIDGE-INTEGRATION.md`** — офіційний контракт продукту для iframe-інтеграції (ядро
+  `IframeBridge`: авто `loaded`/`height`, `event_action` → батько, `token` ← батько, query
+  `auth/locale/theme/parentOrigin`, origin-whitelist) + наші адаптаційні розділи: підключення в Nuxt 3
+  (head-script + client-плагін), наслідки для motion в авторозмірному iframe (без внутрішнього скролу →
+  без scrub/pin/Lenis, лише IO-reveal + time-based; заборона `100vh/svh/dvh` через resize-петлю),
+  мапінг CTA (`event_action` vs `<a target="_blank">`), QA-чекліст.
+- **`assets/iframe-bridge.js`** — готове до копіювання ядро (копіювати в лендінг без змін).
+
+### Changed
+- §11 головного документа: банер про авторитетний контракт (він має пріоритет над узагальненою моделлю;
+  формат повідомлень `{type, payload}`, прапорець `auth` у query дозволений — сам token у query ніколи).
+- `CHECKLISTS.md`: iframe-блок переписано під офіційний контракт.
+- `PHASE-PROMPTS.md` §13: у промпт додано вказівку на контракт і його пріоритет.
+
 ## [1.1.0] — 2026-07-16
 
 ### Added

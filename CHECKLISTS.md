@@ -91,13 +91,16 @@ Full-page embed **[O]** — використано цієї сесії:
 - [ ] ScrollTrigger-offset-и враховують висоту продуктового sticky-header. **[O]**
 - [ ] CTA — це звичайні лінки на продуктові роути; postMessage/auto-resize не потрібні. **[O]**
 
-Iframe embed **[R/I]** — цієї сесії НЕ відпрацьовано; forward-looking контракт:
+Iframe embed — за **офіційним контрактом продукту** (`IFRAME-BRIDGE-INTEGRATION.md`; ще не відпрацьовано в реальному лендінгу):
+- [ ] `iframe-bridge.js` скопійовано без змін (з `assets/`), підключено ДО app-коду; `IframeBridge.init()` викликано один раз. **[R]**
+- [ ] `loaded`/`height` відлітають автоматично; висота стабілізується — немає resize-петлі. **[R]**
+- [ ] Жодних `100vh/svh/dvh`-розмірів (авторозмірний iframe = петля зворотного зв'язку). **[I]**
+- [ ] Motion не залежить від внутрішнього скролу: IO-reveal-и + time-based ambient; без scrub/pin/Lenis. **[I]**
+- [ ] Дії в продукті — через `sendMessage('event_action', '<id>')` (перелік id — від контент-менеджерів); зовнішні лінки — `<a target="_blank" rel="noopener noreferrer">`. **[R]**
+- [ ] `token` — через `onParentMessage('token', …)`; `hasAuth/locale/theme` — з `IframeBridge.config`. Сам token НІКОЛИ не в query. **[R]**
+- [ ] Домен лендінга у whitelist ядра або переданий через `init({ allowedParentOrigins })`. **[R]**
+- [ ] Standalone-відкриття (без iframe/query) не ламається: `sendMessage` тихо ігнорується, дефолти застосовуються. **[R]**
 - [ ] Заповнювати 100% ширини; ніколи не припускати фіксовану px-ширину. **[R]**
-- [ ] Дитина вимірює власну висоту (`ResizeObserver` на `documentElement`) → `postMessage`-ить нагору; батько змінює розмір. **[R]**
-- [ ] Версіонований, з origin-allow-list контракт повідомлень `{ source:'landing', type, payload }`. **[R]**
-- [ ] CTA верхнього вікна використовують `target="_top"` або враховуваний батьком `postMessage({type:'navigate'})`. **[R]**
-- [ ] Handshake `landingReady`, стан завантаження, fallback на integration-error і надано standalone URL. **[R]**
-- [ ] Немає залежності від third-party cookie; жодного auth у query strings; не чіпати сховище батька. **[R]**
 
 ## Перед деплоєм (QA → Деплой)
 
