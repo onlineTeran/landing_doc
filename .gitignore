@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+*.swp
+
+# never commit deps or build output into the methodology repo
+node_modules/
+.output/
+.nuxt/
+dist/
