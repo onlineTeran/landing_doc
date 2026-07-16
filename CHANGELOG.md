@@ -3,6 +3,22 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.5.0] — 2026-07-16
+
+### Added
+- **`CONTENT-CONFIG.md`** — контент-система (Спостережено на bezdep-month): тексти в
+  `content/copy.json` (блок → ключ → {ua, ru}, редагує копірайтер), кнопки в `content/actions.json`
+  (label{ua,ru} + `ga`-мітка для аналітиків + action), `useCopy()` з locale продукту за контрактом,
+  hydration-правило (локаль/auth/канал — ПІСЛЯ mount через app:mounted hook), процес хендофу
+  копірайтеру, чекліст. CTA-AND-LINKS: лейбли кнопок переїхали в content-шар.
+
+### Спостережено (лендінг bezdep-month)
+- Секції з власним opaque-фоном ховають глобальний starfield/засвіти — фон секцій має бути
+  transparent (локальні дубль-зорі прибрано разом із фоном мапи).
+- Спред computed без `.value` (`[...items]`) — краш SSR «items is not iterable».
+- Після `nuxi generate` в каталозі запущеного dev-сервера ламається `.nuxt`/Vite dep-кеш
+  (`#app-manifest`) — лікується `rm -rf .nuxt node_modules/.vite` + рестарт.
+
 ## [1.4.0] — 2026-07-16
 
 ### Added
