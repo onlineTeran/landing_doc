@@ -3,6 +3,21 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.6.0] — 2026-07-16
+
+### Milestone: iframe-інтеграція → Спостережено
+- Контракт IframeBridge відпрацьовано end-to-end на реальному стейджі продукту: авторозмір (~5300px),
+  event_action, локаль. Блокер запуску був один — origin whitelist (продукт слав усе правильно).
+
+### Added
+- **`DEPLOY-AND-LAUNCH.md`** — runbook деплою і запуску (все Спостережено): git→Vercel як єдиний
+  деплой-флоу (замість інлайн-передачі через AI-канал, яку рвуть 529); мультилендінговий Vercel-патерн
+  (buildCommand ≤256 → npm script; NITRO_PRESET=static; compose-outdir); CDN-адреси закріплені в сорсі
+  (репо == прод; Vite падає на нерезолвлених /img); заборона приватних submodules; біллінг-гігієна
+  (SSR-деплой лендінга палить ISR Writes — тільки статика); порядок запуску iframe (origin-и продукту
+  ДО першого тесту, hosted test-parent, діагностика через консоль iframe); таблиця 10 реальних
+  інцидентів симптом→причина→фікс; go-live чекліст.
+
 ## [1.5.0] — 2026-07-16
 
 ### Added

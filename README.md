@@ -9,10 +9,10 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 > Кожне нетривіальне твердження позначене міткою: **Спостережено** (бачили в реальній роботі/коді) ·
 > **Виведено** (логічний висновок) · **Рекомендовано** (пропозиція на майбутнє, ще не відпрацьована).
 >
-> **Чесне застереження:** референс-проєкт інтегрувався як **full-page embed** (хедер/футер продукту, без
-> iframe). Для iframe тепер є **офіційний контракт продукту** ([IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md)) —
-> сам контракт авторитетний, але його застосування в реальному лендінгу ще не відпрацьоване, тож
-> адаптаційні поради позначені `Рекомендовано`/`Виведено`, а не `Спостережено`.
+> **Iframe-інтеграція — Спостережено (2026-07-16):** контракт продукту
+> ([IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md)) відпрацьовано end-to-end на реальному
+> стейджі продукту. Повний runbook деплою і запуску з усіма інцидентами —
+> [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md).
 
 ---
 
@@ -40,6 +40,7 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 | [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) | Що виносити в reusable starter, чого НЕ абстрагувати, API компонентів, ризики над-абстракції |
 | [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) | Генерація AI-іконок: style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA — доповнює §9 головного документа |
 | [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) | **Офіційний контракт продукту** для iframe-інтеграції (IframeBridge: loaded/height/event_action/token) + адаптація до Nuxt 3 і наслідки для motion; готове ядро — [`assets/iframe-bridge.js`](assets/iframe-bridge.js), дослівний оригінал фронтів — [`assets/IFRAME-BRIDGE-README.md`](assets/IFRAME-BRIDGE-README.md), офіційна таблиця `event_action`-id — [`assets/EVENT-ACTIONS.md`](assets/EVENT-ACTIONS.md) |
+| [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md) | **Runbook деплою і запуску**: git→Vercel флоу, мультилендінговий Vercel-патерн, CDN-асети в сорсі, біллінг-гігієна, порядок запуску iframe (origin whitelist — блокер №1), таблиця інцидентів симптом→причина→фікс |
 | [CONTENT-CONFIG.md](CONTENT-CONFIG.md) | Контент-система: `content/copy.json` (блок → текст → {ua, ru}) для копірайтера + `content/actions.json` (кнопки: переклади + GA-мітка + лінк/event_action), `useCopy()`, hydration-правило післягідраційної локалі |
 | [CTA-AND-LINKS.md](CTA-AND-LINKS.md) | Кнопки й лінки через конфіг: `config/actions.ts` (усі URL/`event_action`-id в одному файлі), `useCtaAction()` + єдиний `<CtaButton>`, який сам обирає канал (`<a>` / `target="_top"` / `event_action`) |
 | [GA-ANALYTICS-SPEC.md](GA-ANALYTICS-SPEC.md) | GA4-специфікація подій для продуктових аналітиків: словник подій із власниками, спільні параметри, канали за режимом вбудовування, `useAnalytics()`-адаптер, хендоф-чекліст |
