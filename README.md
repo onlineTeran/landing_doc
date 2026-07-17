@@ -1,6 +1,6 @@
 # Методологія розробки промо-лендінгів
 
-**Версія:** 1.8.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
+**Версія:** 1.9.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
 
 Брендонезалежна, багаторазова методологія створення сучасних інтерактивних промо-лендінгів
 Awwwards-рівня, які інтегруються у продукт (full-page embed або iframe). Дистильована з реальних
@@ -46,6 +46,7 @@ Awwwards-рівня, які інтегруються у продукт (full-pag
 | [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md) | Аналітика аудиторії → QA-гейт адаптиву: топ-10 реальних розширень екрана, розподіл ОС/браузерів/брендів, iOS-вага за депозитами, чеклист перевірок, процес оновлення зрізу |
 | [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) | Генерація AI-іконок: style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA — доповнює §9 головного документа |
 | [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) | **Офіційний контракт продукту** для iframe-інтеграції (IframeBridge: loaded/height/event_action/token) + адаптація до Nuxt 3 і наслідки для motion; готове ядро — [`assets/iframe-bridge.js`](assets/iframe-bridge.js), дослівний оригінал фронтів — [`assets/IFRAME-BRIDGE-README.md`](assets/IFRAME-BRIDGE-README.md), офіційна таблиця `event_action`-id — [`assets/EVENT-ACTIONS.md`](assets/EVENT-ACTIONS.md) |
+| [SMARTICO-INTEGRATION.md](SMARTICO-INTEGRATION.md) | **Інтеграція гейміфікації Smartico** у iframe-лендінг: бутстрап (`_smartico.api` null до хендшейку), отримання id авторизованого користувача крізь межу iframe (токен cross-origin → JWT-декод / `profile/info`), блокер №1 — origin whitelist лейбла (silent timeout), форма `TMissionOrBadge`, `getMissions`/opt-in/claim, діагностика-first, Discovery-питання |
 | [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md) | **Runbook деплою і запуску**: git→Vercel флоу, мультилендінговий Vercel-патерн, CDN-асети в сорсі, біллінг-гігієна, порядок запуску iframe (origin whitelist — блокер №1), таблиця інцидентів симптом→причина→фікс |
 | [CONTENT-CONFIG.md](CONTENT-CONFIG.md) | Контент-система: `content/copy.json` (блок → текст → {ua, ru}) для копірайтера + `content/actions.json` (кнопки: переклади + GA-мітка + лінк/event_action), `useCopy()`, hydration-правило післягідраційної локалі |
 | [CTA-AND-LINKS.md](CTA-AND-LINKS.md) | Кнопки й лінки через конфіг: `config/actions.ts` (усі URL/`event_action`-id в одному файлі), `useCtaAction()` + єдиний `<CtaButton>`, який сам обирає канал (`<a>` / `target="_top"` / `event_action`) |

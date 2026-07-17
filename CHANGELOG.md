@@ -3,6 +3,23 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.9.0] — 2026-07-17
+
+### Milestone: iframe + сторонні платформи → Спостережено
+- Ланцюг «продукт → токен у iframe → user id → API сторонньої платформи» відпрацьовано end-to-end
+  на реальному проді (Smartico: місії авторизованого користувача).
+
+### Added
+- **`SMARTICO-INTEGRATION.md`** — інтеграція гейміфікації Smartico у iframe-лендінг (усе Спостережено):
+  бутстрап (`_smartico.api` = null до init-хендшейку → чекати; зміна user id після init не працює;
+  vapi для гостя); **отримання id авторизованого користувача крізь межу iframe** — токен продукту
+  лежить у cookie на його origin і cross-origin недоступний, тож приходить лише через контракт
+  iframe (postMessage token) → id дістається JWT-декодом на клієнті або через `{apiBase}/profile/info`
+  (Bearer); **блокер №1 — origin лендінга у whitelist лейбла** (інакше identify мовчки не проходить,
+  getMissions таймаутиться — симптом як «немає авторизації»); форма `TMissionOrBadge`, повний API
+  місій (getMissions/requestMissionOptIn/requestMissionClaimReward); діагностика-first (тест-блок
+  завжди видимий + сирий лог усіх postMessage); Discovery-питання й чекліст; правило безпеки токена.
+
 ## [1.8.0] — 2026-07-17
 
 ### Added
