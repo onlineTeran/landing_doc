@@ -487,29 +487,26 @@ export default defineNuxtPlugin(() => {
 - [ ] Motion не залежить від внутрішнього скролу (IO-reveal-и працюють, scrub/pin відсутні).
 - [ ] Standalone-відкриття (без iframe, без query-параметрів) не ламається: `sendMessage` тихо ігнорується, дефолти `locale/theme` застосовуються.
 
-## E. Safe-area під overlay-хром хоста (сайдбари/доки) — Спостережено
+## E. Overlay-хром хоста (сайдбар поверх iframe) — Спостережено
 
-Хост-сайт може малювати свій хром (сайдбар, нижній док) **поверх** iframe — тоді він
-перекриває контент лендінгу, і лендінг мусить сам відступити.
+Хост може малювати сайдбар **поверх** iframe — він перекриває контент лендінгу зліва.
+**Спостережено:** лівий сайдбар продукту (88px, видимий ≥1380px) налазив на текст на екранах ≤1520px.
 
-**Спостережено:** лівий сайдбар продукту налазив на текст hero на ≥1380px.
-
-Рецепт:
-1. Взяти у фронтів продукту **точні брейкпоінти і позиції** їхнього хрому (де сайдбар:
-   знизу / прихований / зліва).
-2. У embedded-режимі додати паддінги на root лендінгу **дзеркалом цих брейкпоінтів**;
-   розміри — у CSS-змінних (одна правка, коли зміряєте реальний сайт):
+**Робочий рецепт (Спостережено):** зсувати ЛИШЕ контейнерний контент, full-width декор
+(фони, hero-visual, marquee) не чіпати; на широких екранах формула сама повертає центр:
 
 ```css
-html.embedded { --product-rail-w: 128px; --product-dock-h: 88px; }
-html.embedded .landing-root { padding-bottom: var(--product-dock-h); }        /* base: док знизу */
-@media (min-width: 768px) { html.embedded .landing-root { padding-bottom: 0; } } /* прихований */
-@media (min-width: 660px) and (max-width: 1000px) and (orientation: landscape) {
-  html.embedded .landing-root { padding-bottom: var(--product-dock-h); } }    /* док знизу */
-@media (min-width: 1380px) { html.embedded .landing-root { padding-left: var(--product-rail-w); } } /* рейл зліва */
+/* лівий край .container ≥ ширини сайдбара; від (vw−maxW)/2 ≥ rail — звичайний центр */
+@media (min-width: 1380px) {
+  html.embedded .landing-root .container {
+    margin-left: max(calc((100% - 1400px) / 2), 88px); /* margin-right лишається auto */
+  }
+}
 ```
 
-- Media queries в iframe міряють ширину **самого iframe** — працює лише якщо iframe на всю
-  ширину вьюпорта (overlay-хром). Якщо iframe звужений — брейкпоінти зсунуться, звірити.
-- Порядок media — той самий, що в хоста (landscape-правило ПІСЛЯ 768 перебиває його).
-- Питання у Discovery-чеклист: «чи є у продукту overlay-хром поверх iframe? брейкпоінти/розміри?»
+**Анти-патерн (Спостережено, відкочено):** padding на root лендінгу — зсуває і full-width
+елементи, ламає hero; і не додавати відступи «на всяк випадок», поки не підтверджено, що
+хром саме overlay (у flex-розкладці хост сам звужує iframe і нічого не треба).
+
+- Media queries в iframe міряють ширину **самого iframe** — з overlay вона збігається з вьюпортом.
+- Питання у Discovery-чеклист: «хром поверх iframe чи поруч (flex)? брейкпоінти й розміри?»

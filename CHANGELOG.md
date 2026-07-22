@@ -3,6 +3,13 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.10.1] — 2026-07-22
+
+### Changed
+- IFRAME §E переписано за реальним запуском: правильний рецепт — margin-left:
+  max((100%−maxW)/2, rail) ЛИШЕ на .container (full-width декор не чіпати); padding на root —
+  зафіксований анти-патерн (зсував усе, ламав hero, відкочено).
+
 ## [1.10.0] — 2026-07-22
 
 ### Added
