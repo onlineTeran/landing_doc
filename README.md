@@ -1,6 +1,6 @@
 # Методологія розробки промо-лендінгів
 
-**Версія:** 1.9.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
+**Версія:** 1.10.0 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
 
 Брендонезалежна, багаторазова методологія створення сучасних інтерактивних промо-лендінгів
 Awwwards-рівня, які інтегруються у продукт (full-page embed або iframe). Дистильована з реальних

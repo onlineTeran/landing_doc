@@ -3,6 +3,13 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.10.0] — 2026-07-22
+
+### Added
+- IFRAME-BRIDGE-INTEGRATION.md §E — safe-area під overlay-хром хоста (Спостережено: сайдбар
+  продукту налазив на контент): паддінги root дзеркалом брейкпоінтів хрому продукту, розміри
+  в CSS-змінних; застереження про media queries в iframe (міряють ширину iframe).
+
 ## [1.9.0] — 2026-07-17
 
 ### Milestone: iframe + сторонні платформи → Спостережено

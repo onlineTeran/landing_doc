@@ -486,3 +486,30 @@ export default defineNuxtPlugin(() => {
 - [ ] Жодних `100vh/svh/dvh`-розмірів; немає внутрішнього скролу; висота стабілізується (немає resize-петлі).
 - [ ] Motion не залежить від внутрішнього скролу (IO-reveal-и працюють, scrub/pin відсутні).
 - [ ] Standalone-відкриття (без iframe, без query-параметрів) не ламається: `sendMessage` тихо ігнорується, дефолти `locale/theme` застосовуються.
+
+## E. Safe-area під overlay-хром хоста (сайдбари/доки) — Спостережено
+
+Хост-сайт може малювати свій хром (сайдбар, нижній док) **поверх** iframe — тоді він
+перекриває контент лендінгу, і лендінг мусить сам відступити.
+
+**Спостережено:** лівий сайдбар продукту налазив на текст hero на ≥1380px.
+
+Рецепт:
+1. Взяти у фронтів продукту **точні брейкпоінти і позиції** їхнього хрому (де сайдбар:
+   знизу / прихований / зліва).
+2. У embedded-режимі додати паддінги на root лендінгу **дзеркалом цих брейкпоінтів**;
+   розміри — у CSS-змінних (одна правка, коли зміряєте реальний сайт):
+
+```css
+html.embedded { --product-rail-w: 128px; --product-dock-h: 88px; }
+html.embedded .landing-root { padding-bottom: var(--product-dock-h); }        /* base: док знизу */
+@media (min-width: 768px) { html.embedded .landing-root { padding-bottom: 0; } } /* прихований */
+@media (min-width: 660px) and (max-width: 1000px) and (orientation: landscape) {
+  html.embedded .landing-root { padding-bottom: var(--product-dock-h); } }    /* док знизу */
+@media (min-width: 1380px) { html.embedded .landing-root { padding-left: var(--product-rail-w); } } /* рейл зліва */
+```
+
+- Media queries в iframe міряють ширину **самого iframe** — працює лише якщо iframe на всю
+  ширину вьюпорта (overlay-хром). Якщо iframe звужений — брейкпоінти зсунуться, звірити.
+- Порядок media — той самий, що в хоста (landscape-правило ПІСЛЯ 768 перебиває його).
+- Питання у Discovery-чеклист: «чи є у продукту overlay-хром поверх iframe? брейкпоінти/розміри?»
