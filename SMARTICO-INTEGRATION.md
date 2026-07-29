@@ -180,3 +180,81 @@ _smartico.vapi(language: string).getMissions()   // visitor mode (гості; Su
 Тест-інтеграцію тримати ізольовано (окремий компонент + composable, позначені як «прибрати»),
 щоб після підтвердження прибрати одним рухом. Постійна фіча гейміфікації — окрема, чиста
 імплементація вже без діагностичного обвісу.
+
+## 11. Deep links `dp:` — керування віджетом Smartico ззовні
+
+**Спостережено** (перевірено проти офіційної сторінки
+`help.smartico.ai/welcome/products/tools-and-guides/deep-links`; кожен рядок нижче знайдено
+в документації дослівно, незалежним другим проходом).
+
+Коли власний UI не має покривати все, віджет Smartico відкривається однією стрічкою:
+
+```js
+// dp() — це стрічковий роутер: помилка в назві падає МОВЧКИ, без throw і без
+// значення, що повертається. Тому виклик завжди через guard.
+if (window._smartico?.dp) _smartico.dp('dp:gf_missions');
+```
+
+| Дія | Що відкриває |
+|---|---|
+| `dp:gf` | головний екран гейміфікації (**не** місії) |
+| `dp:gf_missions` | екран місій |
+| `dp:gf_missions&id=123` | конкретну місію |
+| `dp:gf_missions&id=123&opt_in=true` | місію + одразу opt-in |
+| `dp:gf_missions&category=completed` | категорію місій |
+| `dp:gf_section&id=329&liquidParams={"mission_id":123}` | кастомну секцію з місією всередині |
+| `dp:gf_saw` / `dp:gf_saw&id=19` | Spin The Wheel / конкретний шаблон міні-гри |
+| `dp:gf_jackpots` / `dp:gf_jackpots&id=123` | джекпоти / конкретний шаблон |
+| `dp:gf_tournaments`, `dp:gf_store`, `dp:gf_badges`, `dp:gf_levels`, `dp:gf_activity`, `dp:inbox`, `dp:gf_clans`, `dp:gf_board&type=`, `dp:gf_bonuses&section=`, `dp:gf_matchx`, `dp:gf_quiz`, `dp:gf_raffle` | відповідні екрани |
+| `dp:go&url=…&target=_blank` | зовнішнє посилання |
+
+**Виведено:** документація каже лише «Opens mission with specific ID» — слова «модалка» там
+немає. Чи це попап, чи повний екран, залежить від скіна бренду. Не обіцяй продукту модалку,
+поки не побачив її на їхньому лейблі.
+
+Альтернатива для вбудовування без оверлея — `_smartico.showWidget(type, params?)`, де `type` ∈
+`missions | mini-game | achievements | tournaments | store | inbox | match-x-2 | quiz |
+custom-section | inbox-widget | ui-widget | liquid`. Форма `params` **не задокументована**, тож
+націлитись на конкретну місію через нього не вийде.
+
+## 12. Міні-ігри (SAW) і джекпоти
+
+**Спостережено** (офіційні `github.com/smarticoai/public-api` README + `docs/ui/minigames/`).
+
+```js
+_smartico.api.getMiniGames({ onUpdate: cb }).then(games => …)
+_smartico.api.playMiniGame(template_id, { acknowledge })  // → { err_code, request_id, prize }
+_smartico.api.miniGameWinAcknowledgeRequest(request_id, { lose: true })
+_smartico.api.getMiniGamesHistory() / playMiniGameBatch()
+_smartico.miniGame(saw_template_id, params?, pending_message_id?)   // standalone-режим
+_smartico.api.jackpotGet({ related_game_id? })   // ⚠ onUpdate тут НЕ підтримується
+_smartico.api.jackpotOptIn / jackpotOptOut / getJackpotWinners / getJackpotEligibleGames
+```
+
+Поля стану міні-гри: `spin_count`, `next_available_spin_ts`, `saw_buyin_type`,
+`buyin_cost_points|gems|diamonds`, і — так — `visibile_when_can_spin` (**друкарська помилка
+в самому API Smartico**, писати саме так).
+
+**Не існує:** `getSawMiniGames()`, `getJackpots()`. Правильні імена — `getMiniGames` і `jackpotGet`.
+
+**⚠ Пастка, що коштувала часу:** кільце прогресу навколо іконки міні-гри на слот-сіті
+(«4/7 депозитів для активації») **не має джерела в `getMiniGames`**. Там є `spin_count`, а не
+крок 0–7. Ці кроки приходять з CMS оператора й джойняться до прогресу окремої *місії*. Або
+підключай цей фід, або малюй бінарний стан «доступно / недоступно» з реальних полів — але не
+вигадуй проміжні кроки.
+
+## 13. Події віджета
+
+**Спостережено.** `_smartico.on(key, handler, params?)` / `_smartico.off(key, handler)`:
+
+- `gf_starting`, `gf_closing` — найкраще задокументовані (є і в help-центрі, і в репо);
+  `gf_started` є лише в репо. Для «відкрито/закрито» бери першу пару.
+- `gf_ux` — навігація всередині віджета: `{ screen_name_id, screen_subname_id, entity_id,
+  custom_section_id }`. **Конфлікт написання:** help-центр показує `screen_sub_name_id`, репо —
+  `screen_subname_id`. Залогуй payload один раз, перш ніж покладатись на ключ.
+- Решта: `saw_starting`, `inbox_starting`, `mini_game_win`, `jackpot_win`, `ach_game_opening`,
+  `init`, `label_init_completed`, `identify`, `login`, `logout`, `props_change`,
+  `page_navigation`, `session_based_dp_detected`, `protocol_error`.
+
+Окремої події «відкрито деталі місії» немає — якщо треба знати, що юзер туди дійшов,
+підписуйся на `gf_ux` і читай `screen_name_id` / `entity_id`.

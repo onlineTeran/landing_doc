@@ -3,6 +3,24 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.11.0] — 2026-07-29
+
+### Added
+- SMARTICO §11 Deep links `dp:` — повний перевірений каталог (`dp:gf_missions`,
+  `&id=`, `&opt_in=true`, `dp:gf_saw&id=`, `dp:gf_jackpots`, `dp:gf_section&liquidParams=`…),
+  guard-патерн (dp() падає мовчки) і застереження: доки «модалка деталей місії» офіційно не
+  обіцяна, це може бути повний екран — залежить від скіна бренду.
+- SMARTICO §12 Міні-ігри (SAW) і джекпоти — `getMiniGames({onUpdate})`, `playMiniGame`,
+  `miniGameWinAcknowledgeRequest`, `jackpotGet` (без onUpdate). Зафіксовано неіснуючі
+  `getSawMiniGames`/`getJackpots` і друкарську помилку `visibile_when_can_spin` в самому API.
+  ⚠ Кільце «4/7 депозитів» НЕ має джерела в `getMiniGames` — кроки приходять з CMS оператора.
+- SMARTICO §13 Події віджета — `gf_starting`/`gf_closing` (найкраще атестовані), `gf_ux`
+  з конфліктом написання `screen_subname_id` vs `screen_sub_name_id`, повний список подій.
+
+Джерело: help.smartico.ai/.../deep-links + github.com/smarticoai/public-api. Кожне твердження
+перевірено другим незалежним проходом; 22 з 25 викликів підтверджено дослівно, 0 спростовано,
+2 позначені як непідтверджені прямо в тексті.
+
 ## [1.10.1] — 2026-07-22
 
 ### Changed
