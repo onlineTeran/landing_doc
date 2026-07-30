@@ -3,6 +3,19 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.14.0] — 2026-07-30
+
+### Added
+- SMARTICO — правило «лише модалка = кастомна секція»: `dp:gf_missions&id=`
+  відкриває ВЕСЬ віджет (айфрейм `Achievements3.html` на всю сторінку), а
+  `dp:gf_section&id=…&liquidParams={"mission_id":N}` — компактну панель із самим
+  лише хрестиком. Спостережено на живому лейблі. Перевірено й відкинуто:
+  `showWidget('missions', …)` і `gamificationBlock({container})` не рендерять
+  нічого, URL віджета несе тільки `bridgeId`.
+- Закрито розбіжність написання: у `gf_ux` живий payload має `screen_subname_id`
+  (як у репо), не `screen_sub_name_id` (як у хелп-центрі). Екран місій — id 2,
+  кастомна секція — 23.
+
 ## [1.13.0] — 2026-07-30
 
 ### Changed
