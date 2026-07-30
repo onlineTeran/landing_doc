@@ -281,22 +281,52 @@ custom-section | inbox-widget | ui-widget | liquid`. Форма `params` **не 
 
 **Спостережено** (офіційні `github.com/smarticoai/public-api` README + `docs/ui/minigames/`).
 
-**Правило:** `getMiniGames()` **нічого не фільтрує** — повертає ВСІ налаштовані
-шаблони, включно з тими, які гравець не може зіграти (трансформ SDK це голий
-`map`, без жодного `filter`). Фільтрація — обов'язок споживача:
+### ⛔ ПРАВИЛО: міні-ігри рендеряться на рівні СЕКЦІЙ, не шаблонів
 
-| Поле | Ховати, коли |
+`getMiniGames()` **нічого не фільтрує** — повертає ВСІ шаблони лейбла (трансформ
+SDK це голий `map`). Але фільтрувати їх за прапорцями шаблона — **пастка**.
+
+**Спостережено** на живому лейблі SlotCity (авторизована сесія, stage, 2026-07-30):
+33 шаблони, з них `flow_builder_only` — у **0**, `only_in_custom_section` — у **32**.
+Тобто фільтр, який випливає з документації SDK, лишив би **одну** гру і спорожнив
+би блок.
+
+**Поле, яке насправді відповідає «чи допущена гра до проду», — `custom_section_id`,
+звірений із `getCustomSections()`.** Шаблони посилаються на 14 секцій, з яких
+опублікованих лише 7; у 7 «сиротинських» лежать саме зняті кампанії
+(BLACK FRIDAY 1/2, BLACK DROP, LoveBox, test box, Щоденний бонус дроп, Test_New).
+
+```js
+const [sections, games] = await Promise.all([
+  _smartico.api.getCustomSections(),   // тільки опубліковані
+  _smartico.api.getMiniGames(),        // геть усі шаблони
+])
+// одна плитка на СЕКЦІЮ, а не на шаблон
+const tiles = sections
+  .map(sec => ({ sec, own: games.filter(g => g.custom_section_id === sec.id) }))
+  .filter(x => x.own.length)
+```
+
+Це ще й той рівень, який показує сам продукт: кругла іконка — це `menu_img`
+секції, підпис — `menu_name`, а тап відкриває `dp:gf_section&id=<id>`, не окремий
+шаблон.
+
+**Порожній стан беремо в оператора, не вигадуємо:** `no_attempts_message` шаблона
+містить його власний текст («Виконуй місії для отримання спроб»). Обрізати краще
+через CSS, повний рядок лишати в `title`.
+
+Решта корисного по шаблону:
+
+| Поле | Сенс |
 |---|---|
-| `saw_template_ui_definition.flow_builder_only` | `true` — доступна лише з кампанії |
-| `saw_template_ui_definition.only_in_custom_section` | `true` — належить кастомній секції |
-| `activeFromDate` / `activeTillDate` (epoch **ms**, не множити) | поза вікном |
-| `visibile_when_can_spin` + `saw_buyin_type === 'spins'` | `spin_count === 0` |
+| `thumbnail` | артворк 256×256, ніколи не порожній (**не** `ui_definition.img` — такого поля не існує) |
+| `activeFromDate` / `activeTillDate` | epoch **ms**, не множити; невиставлене приходить як Long-сентинел ±9223372036854775807 |
+| `saw_template_ui_definition.priority` | сортування, менше = вище |
+| `saw_template_ui_definition.flow_builder_only` | доступна лише з кампанії |
+| `section_type_id` (у секції) | на цьому лейблі `5` — секції міні-ігор; тестове сміття мало `10`/`11` |
 
-Відсутнє поле = показувати. Сортування — `saw_template_ui_definition.priority`
-(менше = вище). Полів статусу (Active/Draft/Archived) у публічному об'єкті
-**НЕМАЄ**: сирий `is_visible` не переживає трансформ, а виключення чернеток і
-сегментів — серверне. Артворк лежить у `thumbnail` (256×256, ніколи не порожній),
-а **не** в `ui_definition.img`.
+Полів статусу (Active/Draft/Archived) у публічному об'єкті **немає**: сирий
+`is_visible` не переживає трансформ.
 
 ```js
 _smartico.api.getMiniGames({ onUpdate: cb }).then(games => …)
