@@ -3,6 +3,31 @@
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 
+## [1.12.0] — 2026-07-29
+
+### Added
+- SMARTICO — **ГОЛОВНЕ ПРАВИЛО «межа iframe»** винесено на початок документа, до
+  всіх прикладів: усередині iframe продукту `_smartico.dp()` викликати заборонено
+  (віджет це `position: fixed` оверлей — відкриється обрізаним у вбудованому
+  блоці). Дію делегуємо через `event_action/smartico/<dp>`. Три випадки
+  (standalone / батько підтвердив / підтвердження немає), обмеження парсера
+  продукту, безкоштовне рукостискання через `token`, і чого канал не дає.
+- SMARTICO §12 — правило фільтрації міні-ігор: `getMiniGames()` не фільтрує
+  нічого, таблиця полів (`flow_builder_only`, `only_in_custom_section`,
+  `activeFromDate`/`activeTillDate` у ms, `visibile_when_can_spin`), сортування
+  за `priority`, і що артворк лежить у `thumbnail`, а не в `ui_definition.img`.
+
+### Changed
+- `assets/EVENT-ACTIONS.md` — рядок Smartico уточнено (RAW, без `/` і `?`) з
+  робочим прикладом виклику.
+
+### Fixed
+- Усунено суперечність між документами: §11 радив лендінгу викликати `dp()`
+  самому, тоді як `EVENT-ACTIONS.md` увесь час документував
+  `event_action/smartico/:id`. Ця розбіжність коштувала трьох ітерацій Daily Hub
+  і двох релізів, де віджет відкривався всередині 250px-фрейму. Локальний `dp()`
+  тепер явно позначений як «лише для standalone».
+
 ## [1.11.0] — 2026-07-29
 
 ### Added

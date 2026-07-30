@@ -58,7 +58,7 @@
 | Акції → конкретна таба | `/promotions?list-id=…` | `event_action/promotions_tab` |
 | Акція promobuilder з якорем | — | `event_action/promotions/:term?anchor={value}` |
 | Проскрол до кастомного блоку на сторінці (web) | — | `event_action/anchor/:anchor_id` |
-| Модалки Smartico | — | `event_action/smartico/:id` (`:id` = `dp:…`) |
+| Модалки Smartico | — | `event_action/smartico/:id` (`:id` = `dp:…`, RAW, без URL-encode, без `/` і `?`) |
 | Зовнішній URL (напр. опитування, оферта) | — | `event_action/url/:id` (`:id` = повний URL) |
 
 ### Профіль
