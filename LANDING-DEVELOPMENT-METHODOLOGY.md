@@ -1,5 +1,12 @@
 # Методологія розробки промо-лендінгів (головний документ)
 
+> **Framework 2.0 bridge:** цей документ зберігає детальну технічну базу v1. Канонічний порядок,
+> CATBET/SlotCity routing, legal/copy gate, Brand Archive, full-design approval і project-local skills
+> визначені у [framework/README.md](framework/README.md),
+> [PLAYCITY-COPYWRITING-RULES.md](PLAYCITY-COPYWRITING-RULES.md) та
+> [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md). Якщо тут описано code/design раніше, ніж дозволяє G7/G8,
+> перемагає Framework 2.0.
+
 > Мета: універсальний, наскрізний playbook для проєктування та збірки високоякісних, насичених анімацією промо-лендінгів (Nuxt 3 / Vue 3 / TypeScript, статична генерація, з можливістю embed у host-продукт) — дистильований з однієї реальної збірки, щоб команда без жодного доступу до тієї сесії могла почати абсолютно новий лендінг лише з цього документа.
 
 Кожне нетривіальне твердження позначене як **Спостережено** (бачено в референсній збірці/коді), **Виведено** (обґрунтований висновок) або **Рекомендовано** (перспективне, не обов'язково відпрацьоване). Усі назви, кольори та копірайт нижче — це generic-плейсхолдери, підставляйте власні.
@@ -88,6 +95,10 @@
 
 Discovery — це перша фаза (див. документ Workflow). Пропуск її — корінна причина більшості пізніх переробок. Мета — перетворити розпливчасте «зробіть нам промо-сторінку» на нормалізований бриф, що фіксує конверсійну ціль, обмеження та integration-контракт *до* будь-якого дизайну.
 
+Framework 2.0 починає Discovery з product route: `CATBET` або `SlotCity`. Після вибору завантажується
+відповідний Product KB і Brand Archive; змішувати їхні visual/ToV rules заборонено. Для cross-brand
+сторінки до концепції потрібні Brand Bridge і письмове Legal confirmation placement/advertiser/group.
+
 ### 2.1 Що треба встановити
 
 | Вимір | Питання, на які треба відповісти | Чому це болить пізніше, якщо пропустити |
@@ -96,6 +107,8 @@ Discovery — це перша фаза (див. документ Workflow). Пр
 | **Аудиторія** | Хто, який пристрій, який настрій, які заперечення? | Керує тоном, щільністю та mobile-обробкою. |
 | **Основна пропозиція** | Обіцянка на одне речення. Точні цифри/твердження беруться з авторитетного джерела, ніколи не вигадуються. | Вигадані цифри — це ризик для compliance і довіри. |
 | **Юридичні / compliance-обмеження** | Вікове маркування, ліцензування, обов'язкові дисклеймери, посилання на повні правила, блоки responsible-use. | Доклеювання юридичних блоків заднім числом руйнує layout і ритм. |
+| **Product/brand route** | CATBET чи SlotCity; host/destination; same-brand чи cross-brand; selected Product KB/Brand Archive. | Без routing AI змішує палітри, CTA, маскотів і Tone of Voice. |
+| **Advertiser/placement** | Хто licensed advertiser, який channel, relationship між брендами, як забезпечено 21+, хто Legal owner? | Copy може бути неприйнятним незалежно від якості дизайну. |
 | **Формат інтеграції** | Full-page embed (host chrome + тіло лендінга) **чи** iframe embed? Чи потрібен standalone URL? | Визначає власність header/footer, навігацію CTA, обробку висоти. Див. §2.3 і Секцію 11. |
 | **Доступні API / роути** | Точні URL для кожного CTA (реєстрація, логін, checkout, каталог продукту тощо). | **Спостережене** правило: ніколи не вигадуй роути; бери реальні у команди. |
 | **Аналітика** | Яка платформа? Хто власник таксономії подій? Модель згоди? | **Спостережений пробіл:** аналітику не імплементували в референсній сесії — плануй її заздалегідь (Секція 15). |
@@ -110,6 +123,9 @@ Discovery — це перша фаза (див. документ Workflow). Пр
 
 ```
 [ ] Single conversion goal stated in one sentence
+[ ] Product selected: CATBET / SlotCity; correct Product KB + Brand Archive snapshot loaded
+[ ] Advertiser / advertised brand / host / destination / relationship / placement classified
+[ ] PlayCity copy review completed or blockers assigned to Legal
 [ ] Primary CTA action + EXACT destination URL(s) confirmed by the team
 [ ] Secondary/cross-sell actions (if any) + URLs
 [ ] Core offer promise + source of every number/claim (no invented figures)

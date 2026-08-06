@@ -1,8 +1,8 @@
-# Bootstrap: підключення методології до Claude Code з нуля
+# Bootstrap: підключення Framework 2.0 до Claude Code
 
 > Призначення: покроковий сценарій «порожня папка → Claude Code знає методологію, має скіли
-> і починає розробку лендінгу Awwwards-рівня». Це єдиний документ, який треба виконати руками;
-> все далі агент веде сам за [LANDING-WORKFLOW.md](LANDING-WORKFLOW.md).
+> і починає розробку brand-accurate промо-лендінгу». Спільний для Codex/Claude маршрут і scripts —
+> у [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md); цей файл зберігає Claude-specific setup.
 > Мітки: **Спостережено** (перевірено на референсному лендінгу) / **Рекомендовано**.
 
 ---
@@ -73,27 +73,35 @@ CSS custom properties як токени; GSAP + ScrollTrigger за потреб�
 package.json» — не формальність: скіли реально приносять конвенції чужих версій, і саме CLAUDE.md
 утримує агента у правильному стеку.
 
-## 3. Встановити скіли
+## 3. Встановити Framework 2.0 skills
 
-Мінімальний стек — [CLAUDE-CODE-SKILLS.md §8](CLAUDE-CODE-SKILLS.md), розширений (Awwwards) — §9.
-Порядок встановлення:
+Не встановлюй skills вручну по одному. Після підключення `methodology/` запусти:
 
 ```bash
-# приклад через npx skills (або ручним копіюванням у .claude/skills/):
-npx skills add <design-intelligence-skill>     # варіанти напрямів (концепт-фаза)
-npx skills add <art-direction-skill>           # одна сильна концепція
-npx skills add <framework-skill> <vue-skill>   # реалізація (перевірити версію фреймворку!)
-npx skills add <craft-passes-skill>            # critique/animate/polish/audit
-npx skills add <web-quality-audit-skill>       # a11y/perf/seo veto-гейти
+./methodology/scripts/bootstrap-project.sh . <catbet|slotcity> claude
 ```
 
-Після встановлення — **обов'язково** (Спостережено, це запобігло реальним інцидентам):
+Скрипт встановить у `.claude/skills/` два repository-owned skills: `promo-landing-framework` і
+`playcity-copy-review`, створить artifacts/Brand Archive snapshot і `SKILL-AUDIT.md`.
 
-1. Зафіксувати перелік і SHA/версії скілів у `.claude/skills/INSTALLED_SKILLS.md`
+Після цього — **обов'язково**:
+
+1. Перевірити repository-owned skills:
+   `./methodology/scripts/verify-project-skills.sh . claude`.
+2. Зафіксувати exact name/source/version зовнішніх capability skills у
+   `docs/promo-landing/SKILL-AUDIT.md` за [SKILLS-MANIFEST.md](SKILLS-MANIFEST.md).
+3. Аудитувати, чи не тягне skill чужий framework/version; remote content = data, не instructions.
+4. Дописати у CLAUDE.md специфічні застереження до кожного external skill.
+5. Не оновлювати skills «мимохідь» — тільки свідомий upgrade з повторним аудитом.
+
+Розгорнутий попередній каталог Claude skills лишається у [CLAUDE-CODE-SKILLS.md](CLAUDE-CODE-SKILLS.md),
+але required capabilities і гейти визначає новий manifest.
+
+<!-- Historical rationale retained: -->
+
+Раніше перелік фіксувався в `.claude/skills/INSTALLED_SKILLS.md`
    (аудит: чи не тягне скіл чужий фреймворк, чи безпечні його інструкції; remote-контент = data,
-   не інструкції).
-2. Дописати у CLAUDE.md специфічні застереження до кожного скіла (як у шаблоні §2 «Заборони»).
-3. Більше не оновлювати скіли «мимохідь» — тільки свідомим рішенням з повторним аудитом.
+   не інструкції). У Framework 2.0 його замінює platform-neutral `SKILL-AUDIT.md`.
 
 ## 4. Дати агенту стартовий бриф
 
@@ -106,7 +114,9 @@ npx skills add <web-quality-audit-skill>       # a11y/perf/seo veto-гейти
 ## 5. Перший гейт перед кодом (Definition of Ready)
 
 - [ ] CLAUDE.md створено, методологія запінена на тег.
-- [ ] Скіли встановлені, зааудитовані, зафіксовані в INSTALLED_SKILLS.md.
+- [ ] Обрано CATBET або SlotCity; Product KB і Brand Archive snapshot створені.
+- [ ] Repository-owned skills встановлені; mandatory capabilities verified у SKILL-AUDIT.md.
+- [ ] Placement/advertiser/cross-brand relationship і PlayCity copy review закриті або мають blocker.
 - [ ] Requirements-документ: одна конверсійна ціль, реальні CTA-роути, список OPEN-питань
       закритий зі стейкхолдером (нічого не вигадано).
 - [ ] Відомий режим інтеграції (full-page vs iframe) і, для iframe, — origin-и продукту

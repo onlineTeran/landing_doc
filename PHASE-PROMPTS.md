@@ -1,5 +1,13 @@
 # Фазові промпти — готові до вставки брифи для high-end промо-лендінга
 
+> **Framework 2.0 notice:** запускай фазовий prompt лише з актуальними артефактами й статусом із
+> [templates/PROJECT-STATE.md](templates/PROJECT-STATE.md). Brand-neutral concept prompt не замінює
+> CATBET/SlotCity Product KB, Brand Bridge і три image-based visual directions.
+> Для gambling promo до Discovery встанови project-local skills через
+> [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md), обери продукт, завантаж Brand Archive і запусти
+> [PlayCity copy review](PLAYCITY-COPYWRITING-RULES.md). Standing constraint `Brand-neutral` нижче
+> стосується reusable технічних артефактів, а не дозволу ігнорувати selected brand evidence.
+
 > Призначення: один самодостатній copy-paste промпт на кожну фазу для побудови промо-лендінга рівня
 > Awwwards, придатного до вбудовування (Nuxt 3 / Vue 3 / TS, SSG). Кожен промпт самодостатній — передай
 > його агенту (чи колезі) окремо, і він несе власну ціль, вхідні дані, deliverables, обмеження та

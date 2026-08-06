@@ -1,0 +1,4 @@
+interface:
+  display_name: "Promo Landing Framework"
+  short_description: "Провести промо-лендінг від брифа до релізу"
+  default_prompt: "Use $promo-landing-framework to plan and deliver a brand-accurate CATBET or SlotCity promotional landing through explicit approval gates."

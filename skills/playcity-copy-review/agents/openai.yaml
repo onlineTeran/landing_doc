@@ -1,0 +1,4 @@
+interface:
+  display_name: "PlayCity Copy Review"
+  short_description: "Перевірити рекламний copy на PlayCity/legal risks"
+  default_prompt: "Use $playcity-copy-review to audit this CATBET or SlotCity promotional copy, CTA, mechanics, visuals, metadata, mandatory warning, and license block before approval."

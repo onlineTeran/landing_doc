@@ -1,5 +1,32 @@
 # Changelog
 
+## [2.0.0-draft] — 2026-08-06
+
+### Added
+
+- Framework 2.0 operating model with Full/Fast Track and 13 explicit approval gates.
+- Branching round-based questionnaire that skips redundant product/GEO/audience research for known
+  internal-product landings.
+- Separate CATBET and SlotCity product knowledge bases.
+- Cross-brand Brand Bridge, Claims Matrix, Mechanics Model, Asset Register and Project State contracts.
+- Image-based visual direction, Hero, full 1440/440/430/375 design and Asset Freeze gates before code.
+- Shared technical, analytics, QA/release and skill-orchestration layers.
+- Reusable `$promo-landing-framework` and `$playcity-copy-review` skills with progressive references.
+- Codex/Claude project bootstrap, mandatory capability manifest and skill audit.
+- PlayCity-based gambling advertising copywriting and legal red-team playbook.
+- Structured CATBET and SlotCity Brand Archives with design-system, asset, reference and ToV layers.
+- BETON × CATBET retrospective distilled into reusable process rules.
+
+### Changed
+
+- README now routes product designers through product/legal/brand/design work before technical build.
+- Existing v1.10.1 documents remain as the deep technical library instead of the primary workflow entry.
+
+### Migration note
+
+- Treat this as a draft until it has been trialed on one CATBET and one SlotCity campaign. Preserve the
+  v1 technical documents during the trial; consolidate duplicates only after both retrospectives.
+
 Формат натхнено [Keep a Changelog](https://keepachangelog.com/); версіонування — semver-подібне
 (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
 

@@ -1,5 +1,14 @@
 # Workflow лендінгу — від нульової ідеї до production і далі
 
+> **Framework 2.0 notice:** цей 17-фазовий runbook лишається детальною технічною бібліотекою.
+> Канонічні product/design/release гейти тепер визначені у [framework/README.md](framework/README.md).
+> Не починай Скафолдинг/Реалізацію, доки не пройдено G7 Design Approved і G8 Asset Freeze.
+
+До цієї технічної фази завжди виконуються: agent bootstrap → CATBET/SlotCity route → Product Truth →
+PlayCity copy review → Brand Archive snapshot/Brand Bridge → storyboard → 3 image-based directions →
+Hero approval → full 1440/440/430/375 approval → Asset Freeze. Фазу можна позначити `N/A`, але не
+переставити або обійти без owner/rationale у PROJECT-STATE.
+
 > Призначення: практичний, пофазовий runbook для побудови високоякісного інтерактивного промо-лендінгу (Nuxt 3 / Vue 3 / TypeScript, SSG-вивід, з можливістю embed у продуктову сторінку) — від чистого брифу через деплой до post-launch review.
 
 ---
@@ -45,12 +54,15 @@ Cross-references: `PHASE-PROMPTS.md` (готові до вставки пром�
 **Input:** сирий бриф, ціль кампанії, будь-які наявні бренд/дизайн-референси, продуктовий контекст (де житиме лендінг).
 
 **Ключові дії:**
+- Обери destination product: CATBET або SlotCity; завантаж лише відповідний Product KB/Brand Archive.
+- Класифікуй advertiser, host, destination, relationship, placement і 21+ treatment; активуй
+  `playcity-copy-review`.
 - Зафіксуй єдину конверсійну ціль (один головний CTA). Усе інше — вторинне.
 - Визнач аудиторію, тон, будь-які legal/compliance-обмеження (age gating, обов'язкові legal-лінки, ліцензійні застереження).
 - Визнач *ціль embed*: лендінг — це **full-page embed** (продукт постачає header/footer, лендінг заповнює простір між ними — **Спостережено** в референсній сесії) чи **iframe embed** (**Рекомендовано** для майбутніх лендінгів)? Це єдине рішення формує скафолдинг, CTA та стилізацію стиків.
 - Інвентаризуй наявні асети та можливості генерації асетів (image/video-генерація через MCP, CDN-хостинг).
 
-**Skills:** поки що нічого на рівні коду. `ui-ux-pro-max` можна прайміти на потім.
+**Skills:** project-local `promo-landing-framework`; `playcity-copy-review`; source/browser inspection.
 
 **Артефакти на виході:** коротка нотатка продуктової правди (ціль, аудиторія, один CTA, джерело реального копірайту, compliance-список), рішення щодо режиму embed (або позначка, що воно ще відкрите).
 
@@ -94,11 +106,13 @@ Cross-references: `PHASE-PROMPTS.md` (готові до вставки пром�
 **Input:** нормалізовані вимоги.
 
 **Ключові дії:**
-- Згенеруй 2–3 direction-кандидати (layout, type pairing, palette intent, interaction vocabulary, анти-патерни). Це база варіантів, а не фінал.
+- Згенеруй рівно 3 **image-based** direction-кандидати з exact brand sources (layout, type pairing,
+  palette intent, interaction vocabulary, anti-patterns). Prose-only direction не проходить.
 - Звузь до **однієї** сильної art-direction-концепції: одна central visual metaphor, один контрольований aesthetic risk. Відхиляй формулу-шаблон (centered hero + gradient + три однакові картки + glassmorphism).
 - Свідомо вибудуй послідовність дизайн-пайплайну: product truth → design intelligence → art direction. Не змішуй усі дизайнерські інструкції одночасно (**Спостережено** дисципліна).
 
-**Skills:** `ui-ux-pro-max` (direction-кандидати), тоді `frontend-design` + `design-taste-frontend` + `creative-director` (art direction, анти-slop). `impeccable` зарезервовано для пізніших craft-проходів.
+**Skills:** Product Design `ideate`, тоді один `creative-director` review. Exact names можуть
+відрізнятися; capability contract — у [SKILLS-MANIFEST.md](SKILLS-MANIFEST.md).
 
 **Артефакти на виході:** concept brief — обрана метафора, palette intent, type pairing, одна signature-інтеракція та явний список анти-патернів.
 

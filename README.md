@@ -1,125 +1,146 @@
-# Методологія розробки промо-лендінгів
+# Promo Landing Framework 2.0
 
-**Версія:** 1.10.1 · **Стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · GSAP/Lenis · CSS design tokens
+Практична методологія для продуктових дизайнерів, дизайн-інженерів і AI-агентів, які створюють
+акційні лендінги для **CATBET** та **SlotCity**: від першого опитування до дизайну, окремих асетів,
+Nuxt-реалізації, аналітики, QA, публікації та ретроспективи.
 
-Брендонезалежна, багаторазова методологія створення сучасних інтерактивних промо-лендінгів
-Awwwards-рівня, які інтегруються у продукт (full-page embed або iframe). Дистильована з реальних
-проєктів: увесь шлях від ідеї та storytelling до motion, адаптиву, performance, QA, інтеграції та деплою.
+Framework 2.0 зберігає сильну технічну базу попередньої методології, але змінює головний принцип:
+**спочатку продуктова й юридична правда, потім бренд і візуальний target, і лише після повного
+дизайн-апруву — асети та код**.
 
-> Кожне нетривіальне твердження позначене міткою: **Спостережено** (бачили в реальній роботі/коді) ·
-> **Виведено** (логічний висновок) · **Рекомендовано** (пропозиція на майбутнє, ще не відпрацьована).
->
-> **Iframe-інтеграція — Спостережено (2026-07-16):** контракт продукту
-> ([IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md)) відпрацьовано end-to-end на реальному
-> стейджі продукту. Повний runbook деплою і запуску з усіма інцидентами —
-> [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md).
+## Швидкий старт
 
----
+1. Запусти [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md): обери CATBET/SlotCity і Codex/Claude Code,
+   встанови project-local skills та створи project kit.
+2. Відкрий [framework/README.md](framework/README.md) і обери повний або швидкий маршрут.
+3. Проведи інтерв'ю за [framework/QUESTIONNAIRE.md](framework/QUESTIONNAIRE.md). Питання розгалужуються:
+   для внутрішнього лендінгу готового продукту не треба повторно досліджувати GEO, продукт і всю ЦА.
+4. Завантаж продуктову базу: [products/CATBET.md](products/CATBET.md) або
+   [products/SLOTCITY.md](products/SLOTCITY.md).
+5. Зафіксуй brand evidence у [Brand Archive](brand-archive/) і проведи copy/legal review за
+   [правилами PlayCity](PLAYCITY-COPYWRITING-RULES.md).
+6. Веди
+   [templates/PROJECT-STATE.md](templates/PROJECT-STATE.md) як єдину дошку гейтів.
+7. Проєктуй за [framework/DESIGN-PROCESS.md](framework/DESIGN-PROCESS.md); не переходь до коду,
+   доки не погоджені desktop 1440 і mobile 440/430/375.
+8. Підготуй асети за [framework/ASSET-PIPELINE.md](framework/ASSET-PIPELINE.md), реалізуй за
+   [framework/TECHNICAL-STANDARD.md](framework/TECHNICAL-STANDARD.md), перевір і випусти за
+   [framework/QA-RELEASE.md](framework/QA-RELEASE.md).
 
-## Швидкий старт (новий лендінг)
+Швидко створити project kit у репозиторії нового лендінгу:
 
-0. Порожня папка → Claude Code з методологією і скілами: виконай
-   [`CLAUDE-BOOTSTRAP.md`](CLAUDE-BOOTSTRAP.md) (submodule, CLAUDE.md-шаблон, встановлення
-   й аудит скілів, Definition of Ready).
-1. Відкрий [`LANDING-PROMPT-TEMPLATE.md`](LANDING-PROMPT-TEMPLATE.md), заповни змінні (`[LANDING_NAME]`,
-   `[BUSINESS_GOAL]`, …) і віддай агенту як стартовий бриф.
-2. Іди фазами за [`LANDING-WORKFLOW.md`](LANDING-WORKFLOW.md); на кожну фазу бери готовий prompt із
-   [`PHASE-PROMPTS.md`](PHASE-PROMPTS.md).
-3. Звіряйся з [`CHECKLISTS.md`](CHECKLISTS.md) на кожному гейті.
-4. Фіксуй рішення в [`DECISION-LOG-TEMPLATE.md`](DECISION-LOG-TEMPLATE.md).
-5. Після релізу заповни [`RETROSPECTIVE-TEMPLATE.md`](RETROSPECTIVE-TEMPLATE.md) — і поверни покращення
-   в цю методологію (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)).
-
-## Документи
-
-| Файл | Про що |
-|---|---|
-| [LANDING-DEVELOPMENT-METHODOLOGY.md](LANDING-DEVELOPMENT-METHODOLOGY.md) | Головний документ — 18 розділів: принципи, discovery, концепція, IA, візуал, архітектура, design tokens, motion, AI-асети, адаптив, iframe, performance, доступність, SEO, аналітика, QA, Definition of Done, ретроспектива |
-| [LANDING-WORKFLOW.md](LANDING-WORKFLOW.md) | Покроковий runbook від ідеї до production: input / дії / скіли / артефакти / критерії готовності / типові помилки |
-| [PHASE-PROMPTS.md](PHASE-PROMPTS.md) | Самодостатні prompt-и на кожну фазу з критеріями завершення |
-| [CLAUDE-CODE-SKILLS.md](CLAUDE-CODE-SKILLS.md) | Аналіз скілів/агентів/інструментів + мінімальний і розширений стеки |
-| [CLAUDE-BOOTSTRAP.md](CLAUDE-BOOTSTRAP.md) | **Старт з нуля**: порожня папка → Claude Code з методологією — submodule, шаблон CLAUDE.md лендінгу, встановлення/аудит скілів, стартовий бриф, Definition of Ready |
-| [LANDING-PROMPT-TEMPLATE.md](LANDING-PROMPT-TEMPLATE.md) | Master-prompt зі змінними для старту нового лендінгу |
-| [CHECKLISTS.md](CHECKLISTS.md) | Компактні чеклісти (старт / код / hero / секція / адаптив / motion / асети / iframe / деплой) |
-| [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) | Що виносити в reusable starter, чого НЕ абстрагувати, API компонентів, ризики над-абстракції |
-| [ANIMATION-PATTERNS.md](ANIMATION-PATTERNS.md) | Словник motion-патернів (левітація, паралакс, reveal, scrub-journey, marquee, fade-in…): власники властивостей («один власник на властивість на елемент»), поведінка в embedded/reduced-motion, чеклист додавання анімації |
-| [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md) | Аналітика аудиторії → QA-гейт адаптиву: топ-10 реальних розширень екрана, розподіл ОС/браузерів/брендів, iOS-вага за депозитами, чеклист перевірок, процес оновлення зрізу |
-| [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) | Генерація AI-іконок: style lock, reference icon, optical sizes, true alpha, safe area, export matrix, QA — доповнює §9 головного документа |
-| [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) | **Офіційний контракт продукту** для iframe-інтеграції (IframeBridge: loaded/height/event_action/token) + адаптація до Nuxt 3 і наслідки для motion; готове ядро — [`assets/iframe-bridge.js`](assets/iframe-bridge.js), дослівний оригінал фронтів — [`assets/IFRAME-BRIDGE-README.md`](assets/IFRAME-BRIDGE-README.md), офіційна таблиця `event_action`-id — [`assets/EVENT-ACTIONS.md`](assets/EVENT-ACTIONS.md) |
-| [SMARTICO-INTEGRATION.md](SMARTICO-INTEGRATION.md) | **Інтеграція гейміфікації Smartico** у iframe-лендінг: бутстрап (`_smartico.api` null до хендшейку), отримання id авторизованого користувача крізь межу iframe (токен cross-origin → JWT-декод / `profile/info`), блокер №1 — origin whitelist лейбла (silent timeout), форма `TMissionOrBadge`, `getMissions`/opt-in/claim, діагностика-first, Discovery-питання |
-| [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md) | **Runbook деплою і запуску**: git→Vercel флоу, мультилендінговий Vercel-патерн, CDN-асети в сорсі, біллінг-гігієна, порядок запуску iframe (origin whitelist — блокер №1), таблиця інцидентів симптом→причина→фікс |
-| [CONTENT-CONFIG.md](CONTENT-CONFIG.md) | Контент-система: `content/copy.json` (блок → текст → {ua, ru}) для копірайтера + `content/actions.json` (кнопки: переклади + GA-мітка + лінк/event_action), `useCopy()`, hydration-правило післягідраційної локалі |
-| [CTA-AND-LINKS.md](CTA-AND-LINKS.md) | Кнопки й лінки через конфіг: `config/actions.ts` (усі URL/`event_action`-id в одному файлі), `useCtaAction()` + єдиний `<CtaButton>`, який сам обирає канал (`<a>` / `target="_top"` / `event_action`) |
-| [GA-ANALYTICS-SPEC.md](GA-ANALYTICS-SPEC.md) | GA4-специфікація подій для продуктових аналітиків: словник подій із власниками, спільні параметри, канали за режимом вбудовування, `useAnalytics()`-адаптер, хендоф-чекліст |
-| [DECISION-LOG-TEMPLATE.md](DECISION-LOG-TEMPLATE.md) | Шаблон журналу рішень |
-| [RETROSPECTIVE-TEMPLATE.md](RETROSPECTIVE-TEMPLATE.md) | Шаблон ретроспективи після лендінгу |
-| [EVOLVING-THE-METHODOLOGY.md](EVOLVING-THE-METHODOLOGY.md) | Як розвивати цю методологію під час наступних лендінгів (PR-процес, версіонування, submodule) |
-| [CHANGELOG.md](CHANGELOG.md) | Історія змін методології |
+```bash
+./methodology/scripts/bootstrap-project.sh . catbet codex
+# або
+./methodology/scripts/bootstrap-project.sh . slotcity claude
+```
 
 ## Як підключити до нового лендінгу
 
-Рекомендований спосіб — **git submodule**, запінений на тег версії: лендінг залежить від конкретної,
-відтворюваної версії методології, а доопрацювання повертаються назад одним push-ем (див. нижче).
+Наявний submodule-flow збережено. Методологія має бути запінена на reviewed tag/commit, щоб кожен
+лендінг залишався відтворюваним:
 
 ```bash
-# 1. У корені репозиторію нового лендінгу:
 git submodule add https://github.com/onlineTeran/landing_doc.git methodology
-
-# 2. Запінити на потрібну версію (список: git -C methodology tag -l):
-git -C methodology checkout v1.1.0
+git -C methodology checkout <reviewed-tag-or-commit>
 git add .gitmodules methodology
-git commit -m "chore: pin methodology v1.1.0"
-
-# 3. Дати AI-агенту стартовий бриф:
-#    відкрий methodology/LANDING-PROMPT-TEMPLATE.md, заповни змінні, встав агенту.
-#    Далі — фазами за methodology/LANDING-WORKFLOW.md + methodology/PHASE-PROMPTS.md.
+git commit -m "chore: pin landing methodology"
 ```
 
-Клонування лендінгу з уже підключеною методологією:
+Клонування проєкту із submodule:
 
 ```bash
-git clone --recurse-submodules <url-лендінгу>
-# або в уже склонованому: git submodule update --init
+git clone --recurse-submodules <landing-repository-url>
+# для вже склонованого: git submodule update --init
 ```
 
-Оновити методологію в лендінгу до нової версії (свідомо, коли готовий):
+Оновлення — окрема зміна з review, а не випадковий pull посеред кампанії:
 
 ```bash
 git -C methodology fetch --tags
-git -C methodology checkout v1.2.0
-git commit -am "chore: bump methodology to v1.2.0"
+git -C methodology checkout <new-reviewed-tag-or-commit>
+git add methodology
+git commit -m "chore: bump landing methodology"
 ```
 
-Альтернатива без submodule — разова копія в `docs/methodology/` лендінгу (`npx degit onlineTeran/landing_doc docs/methodology`);
-тоді покращення повертаєш вручну через PR.
+Для private repo/hosting limitations див. [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md) і
+[DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md).
 
-## Як доопрацьовувати методологію прямо з лендінгу
+## Архітектура бази знань
 
-Submodule — це повноцінний git-репозиторій усередині лендінгу, тому правки робляться **на місці** й
-push-аться прямо сюди, у GitHub:
+| Шар | Відповідає на питання | Канонічні файли |
+|---|---|---|
+| **Процес** | У якому порядку працюємо і де зупиняємося на апрув? | [framework](framework/) |
+| **Продукт** | Які бренд-інваріанти, джерела й заборони діють? | [products](products/) |
+| **Brand evidence** | Де точні Figma nodes, asset rights, design system і ToV? | [brand-archive](brand-archive/) |
+| **Copy & compliance** | Як писати й перевіряти gambling promo copy? | [PLAYCITY-COPYWRITING-RULES.md](PLAYCITY-COPYWRITING-RULES.md) |
+| **Шаблони** | Які артефакти має залишити команда? | [templates](templates/) |
+| **AI orchestration** | Які скіли й промпти використовувати на кожному етапі? | [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md), [SKILLS-MANIFEST.md](SKILLS-MANIFEST.md), [skills](skills/) |
+| **Досвід** | Які реальні помилки не повторювати? | [case-studies](case-studies/) |
+| **Технічна бібліотека** | Як реалізувати motion, iframe, аналітику й деплой? | наявні верхньорівневі технічні документи |
 
-```bash
-# всередині лендінгу, під час роботи помітив, що методологію треба уточнити:
-cd methodology
-git switch main && git pull                  # стати на актуальний main
-# ... редагуєш потрібний .md ...
-git commit -am "docs: <що уточнено і чому>"
-git push origin main                          # ← методологія оновлена на GitHub
-cd ..
-git add methodology && git commit -m "chore: bump methodology"   # запінити новий коміт у лендінгу
-```
+## Непорушні правила
 
-Повний процес (мітки Спостережено/Виведено/Рекомендовано, версіонування, чеклист якості PR,
-цикл «лендінг → ретроспектива → оновлення методології») — в [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md).
+- Один лендінг — одна бізнес-ціль і одна основна конверсійна дія.
+- Кожна цифра, механіка та legal-теза має джерело й статус у Claims Matrix.
+- Legal/Product Truth → Campaign Argument → Brand ToV: нижчий шар не переписує вищий.
+- Якщо співіснують два бренди, створюється Brand Bridge: хто володіє оболонкою, CTA, фоном,
+  типографікою, маскотом і графічними ефектами.
+- Надані Figma, live-сторінки, approved copy та canonical assets важливіші за AI-смак.
+- Ніякого коду до вибору візуального напряму й апруву повного дизайну.
+- Mobile — окрема композиція, а не зменшений desktop.
+- AI-асет не приймається у великому preview: його перевіряють у реальному слоті, на 1440/440/430/375,
+  з альфою, crop-safe area та потрібною вагою файлу.
+- Локальна перевірка завершується до публікації. Деплой — лише після явного release approval.
 
-## Як читати
+## Мінімальний комплект артефактів проєкту
 
-GitHub рендерить `.md` нативно — просто відкривай файли або переходь за посиланнями в таблиці вище.
-Окремий веб-сайт не потрібен; усе живе в цих файлах.
+- Project Brief і список відкритих питань.
+- Product Truth + Claims Matrix + legal freeze.
+- Brand Bridge або Brand Sheet.
+- Content Map і storyboard.
+- Три візуальні напрями; один обраний target.
+- Hero approval, desktop 1440, mobile 440, 430 і 375; QA — на актуальному top-10 із
+  [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md).
+- Asset Register з master/delivery-файлами та prompt log.
+- Analytics Plan.
+- Design QA, Technical QA і release checklist.
+- Decision Log та ретроспектива.
 
-## Версіонування
+## Технічна бібліотека попередньої версії
 
-Semver-подібно (див. [`EVOLVING-THE-METHODOLOGY.md`](EVOLVING-THE-METHODOLOGY.md)):
-**MAJOR** — несумісна зміна процесу/структури · **MINOR** — новий розділ/патерн (напр. «iframe
-відпрацьовано на реальному лендінгу») · **PATCH** — уточнення й правки. Кожна суттєва зміна → запис у
-[CHANGELOG.md](CHANGELOG.md) і тег версії.
+Framework 2.0 не дублює глибокі технічні інструкції. Використовуй їх за потреби:
+
+- [LANDING-DEVELOPMENT-METHODOLOGY.md](LANDING-DEVELOPMENT-METHODOLOGY.md) — детальна технічна база.
+- [LANDING-WORKFLOW.md](LANDING-WORKFLOW.md) і [PHASE-PROMPTS.md](PHASE-PROMPTS.md) — попередній
+  17-фазовий runbook і розгорнуті промпти.
+- [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) — Nuxt/Vue структура.
+- [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) — глибока методологія іконок.
+- [ANIMATION-PATTERNS.md](ANIMATION-PATTERNS.md) — motion-патерни.
+- [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) і
+  [SMARTICO-INTEGRATION.md](SMARTICO-INTEGRATION.md) — продуктові інтеграції.
+- [CONTENT-CONFIG.md](CONTENT-CONFIG.md), [CTA-AND-LINKS.md](CTA-AND-LINKS.md),
+  [GA-ANALYTICS-SPEC.md](GA-ANALYTICS-SPEC.md) — контент, CTA й аналітика.
+- [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md), [CHECKLISTS.md](CHECKLISTS.md),
+  [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md) — QA і запуск.
+
+## Для AI-агента
+
+Використовуй [skills/promo-landing-framework/SKILL.md](skills/promo-landing-framework/SKILL.md) і
+[skills/playcity-copy-review/SKILL.md](skills/playcity-copy-review/SKILL.md).
+Skill проводить агента через product truth → brand evidence → visual target → approved design → assets →
+implementation → QA. Він не дозволяє моделі починати код або домальовувати бренд раніше часу.
+
+## Статус
+
+**Версія:** 2.0.0-draft · **Базовий стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · scoped CSS · optional GSAP.
+
+Framework 2.0 сформовано після ретроспективи реального кросбрендового лендінгу BETON × CATBET.
+Опис висновків — у [case-studies/BETON-CATBET.md](case-studies/BETON-CATBET.md).
+
+## Як повертати покращення
+
+Існуючий evolution-flow не змінено: findings із конкретного лендінгу спочатку проходять retrospective,
+потім оновлюють цей repository окремим commit/PR із міткою `Спостережено`, `Виведено` або
+`Рекомендовано`. Повний процес — [EVOLVING-THE-METHODOLOGY.md](EVOLVING-THE-METHODOLOGY.md), історія
+версій — [CHANGELOG.md](CHANGELOG.md).
