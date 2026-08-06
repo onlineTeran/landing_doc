@@ -9,7 +9,8 @@ QA має три окремі шари: content/legal truth, design fidelity і 
 - `verbatim` не перефразовано.
 - Заборонені claims відсутні у text, image, video, alt і metadata.
 - Механіка, thresholds, wager, строки й головний приз актуальні.
-- Legal/licence/responsible gaming block повний, читабельний і в правильному порядку.
+- Legal/licence/responsible-gaming ownership відповідає Integration Boundary: landing-owned блок
+  повний і читабельний; host-owned блок не дублюється, але підтверджений capture/node/owner-ом.
 - CTA label і destination відповідають placement approval.
 - Немає SEO/FAQ/final CTA, якщо brief їх заборонив.
 - Advertiser/brand/placement/cross-brand relationship відповідають G2 approval.
@@ -35,6 +36,8 @@ QA має три окремі шари: content/legal truth, design fidelity і 
 - Deposit/progress numbering і markers.
 - Legal density.
 - Mobile 440/430/375.
+- Editable Figma: 375/430/440/1440/context frames, editable text, Auto Layout/components/styles,
+  correct copy version; жодного page-wide flattened screenshot як «handoff».
 
 ### Visual anti-regression
 
@@ -81,6 +84,14 @@ QA має три окремі шари: content/legal truth, design fidelity і 
 - Font weights/glyphs відповідають фактичному використанню.
 - Delivery assets у межах Asset Register budget.
 - Offscreen ambient motion paused.
+- Mobile 375 перевірено першим; desktop не використано як єдиний performance profile.
+- Production raster delivery — WebP; alpha-потрібні cutouts перевірено; background media має окремий
+  crop/safe-zone contract.
+- Static output містить лише delivery allow-list; source/raw/unused versions відсутні.
+- Bundle, fonts, images, poster і video bytes записані `target / actual / status`.
+- CSS/video/frame-sequence рішення збігається з brief recommendation; Save-Data/RM fallback працює.
+
+Повний гейт — [PERFORMANCE-OPTIMIZATION.md](PERFORMANCE-OPTIMIZATION.md).
 
 ## 5. Interaction QA
 
@@ -104,6 +115,7 @@ QA має три окремі шари: content/legal truth, design fidelity і 
 | Design | Product design | 1440/440/430/375 final |
 | Analytics | Analyst | event QA |
 | Technical | Frontend/QA | build/test/browser report |
+| Editable design handoff | Product design | Figma link + 375/430/440/1440/context node IDs |
 | Publish | Release owner | exact version + target URL |
 
 `Publish` дозволяє зовнішню зміну стану. Не виводьте production URL із локального preview автоматично.

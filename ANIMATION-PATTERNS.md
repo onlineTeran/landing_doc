@@ -6,6 +6,20 @@
 
 ---
 
+## -1. Вибір формату до анімації
+
+Перевіряй рішення у такій послідовності: **CSS → video → frame sequence**.
+
+1. CSS transform/opacity — для простого float, pulse, glow, hover, scale/translate/rotate.
+2. Video — для складної character/fur/lighting анімації, яку CSS не відтворить без компромісу.
+3. Frame sequence — лише коли потрібні alpha, точний frame control або scroll-sync і після розрахунку
+   стисненої сумарної ваги, requests та decode memory.
+
+Для кожного варіанта в questionnaire записуються actual/estimated bytes, mobile CPU/memory, poster,
+Save-Data і reduced-motion behavior. Рекомендація обирає найменшу delivery cost, яка зберігає задум,
+а не найефектнішу технологію. Повний контракт — у
+[framework/PERFORMANCE-OPTIMIZATION.md](framework/PERFORMANCE-OPTIMIZATION.md).
+
 ## 0. Головне правило: один власник на властивість на елемент
 
 **Спостережено (реальний інцидент):** три механіки на одній картинці — CSS-левітація

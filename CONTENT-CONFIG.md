@@ -1,7 +1,8 @@
 # Контент-конфіг: тексти, переклади, кнопки
 
 > Призначення: система керування всім копірайтом лендінгу — тексти живуть у JSON-файлах, які можна
-> віддати копірайтеру без доступу до коду; мова перемикається `locale` продукту (контракт IframeBridge).
+> віддати копірайтеру без доступу до коду. Ці файли обов'язкові і для single-locale кампанії;
+> multi-locale проєкт додає locale contract продукту (наприклад IframeBridge).
 > **Спостережено** на референсному лендінгу (перша повна реалізація).
 
 Мітки: **Спостережено** / **Виведено** / **Рекомендовано**.
@@ -12,11 +13,15 @@
 
 | Файл | Хто редагує | Що всередині |
 |---|---|---|
-| `content/copy.json` | копірайтер | усі тексти лендінгу: блок → ключ → `{ ua, ru }` |
-| `content/actions.json` | копірайтер + контент-менеджер | кнопки/CTA: id → `{ label: {ua, ru}, ga, action }` |
+| `content/copy.json` | копірайтер + Legal | усі visible/a11y/legal тексти, version/status/claim IDs |
+| `content/actions.json` | копірайтер + контент-менеджер | label, CTA id, route/action, placement, analytics id |
 
-Правило «жодного тексту в компонентах»: grep кирилиці по `components/*.vue` темплейтах = 0 збігів
-(крім коментарів). Аналогічно `https?://` — усі URL лише в `content/actions.json`.
+Правило «жодного campaign copy в компонентах»: grep кирилиці по `components/*.vue` templates = 0
+збігів (крім generic UI/коментарів). Аналогічно `https?://` — campaign/destination URL лише в
+`content/actions.json`; legal rules URL може жити у versioned legal config.
+
+Кожен JSON починається `_meta`: `schemaVersion`, `campaign`, `locale(s)`, `version`, `status`,
+`editingRule`. Кожен legal-sensitive claim/CTA має Claims Matrix ID або section-level `claimIds`.
 
 ## 2. Структура `copy.json` — проста, для копірайтера
 
@@ -35,6 +40,8 @@
 ```
 
 Правила структури (**Спостережено**):
+- Для однієї мови значення може бути простим рядком; не створюйте штучну `ru`-версію. Для двох мов
+  використовуйте `{ ua, ru }` послідовно у всіх leaf nodes.
 - **Блок = секція лендінгу** (hero/marquee/steps/map/faq/promos + common для наскрізного).
 - Обидві мови поруч у кожному ключі — копірайтер бачить пару і не розсинхронізує переклади.
 - Заголовки зі стилізованою частиною (`<span class="t-outline">`) розбиваються на `title_a`/`title_b` —
@@ -101,3 +108,6 @@ const t = (node: Localized) => node[lang.value]
 - [ ] Локаль застосовується післягідраційно; `?locale=ru` перемикає ВСІ блоки; 0 hydration-помилок.
 - [ ] RU-тексти перевірені на переповнення/переноси на вузьких екранах.
 - [ ] `_readme` в обох JSON пояснює копірайтеру правила редагування.
+- [ ] `_meta.version/status` збігаються з Claims Matrix і final Figma cover.
+- [ ] Static delivery містить readable copies `copy.json`/`actions.json` або документований build-time
+      edit workflow; копірайт не захований лише у compiled JS.

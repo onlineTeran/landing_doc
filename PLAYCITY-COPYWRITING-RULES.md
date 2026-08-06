@@ -54,6 +54,14 @@ SlotCity · **власник фінального рішення:** Legal/compli
 Tone of Voice ніколи не маскує депозит, верифікацію, відіграш, строк, випадковість чи іншу умову.
 Поки офіційні ToV не надані, використовуй лише нейтральний campaign layer і познач `TOV PENDING`.
 
+### Пріоритет уже погодженого placement copy
+
+Якщо користувач надає точний чинний текст із конкретного placement і підтверджує, що його погодив
+Legal, зареєструй його як `APPROVED VERBATIM` із URL, версією/датою й owner-ом. Generic red-team
+правило може створити issue для повторної перевірки, але не дає дизайнеру або AI права самостійно
+видаляти чи переписувати такий claim. Зміна можлива тільки через нове рішення Legal або якщо
+доведено, що змінився продукт, закон, advertiser, channel чи сама рекламна одиниця.
+
 ## 4. Обов'язкові елементи
 
 ### Responsible-gaming warning
@@ -65,6 +73,11 @@ Tone of Voice ніколи не маскує депозит, верифікац�
 Для текстової реклами закон встановлює не менше 15% площі всієї реклами, чорний текст і білий фон.
 Designer не «вміщує дисклеймер красиво» на власний розсуд: Legal визначає межу рекламної одиниці,
 а дизайн перевіряє площу, читабельність і responsive-виконання на 1440/440/430/375.
+
+Для `content/full-page embed` зафіксуй **owner mandatory block**. Якщо host уже включає landing-content
+у свою рекламну одиницю і гарантовано рендерить warning зовні, embed не дублює білу плашку. Claims
+Matrix зберігає `HOST-OWNED`, node/URL host-warning і відповідального. Для `iframe` або standalone не
+припускай host ownership автоматично: Legal окремо визначає межу, дублювання/відсутність і 15%.
 
 ### Ліцензія
 
@@ -135,7 +148,8 @@ destination затверджує Legal для placement.
 
 ## 7. Workflow копірайту
 
-1. **Source capture:** зберегти promo rules, legal source, дату й owner-а.
+1. **Source capture:** зберегти promo rules, legal source, дату, owner-а і статус `APPROVED VERBATIM` /
+   `APPROVED EDITABLE` / `PENDING`.
 2. **Mechanics Model:** розкласти trigger, action, choice, reward, condition, time.
 3. **Claims Matrix:** кожне число/обіцянка отримує ID і статус.
 4. **Placement review:** advertiser, host, destination, group relationship, channel, 21+.
@@ -158,7 +172,8 @@ destination затверджує Legal для placement.
 - [ ] Немає easy-win/income/quick-enrichment framing.
 - [ ] Немає заборонених персонажів, тем або вразливої аудиторії.
 - [ ] CTA не є неапрувленим прямим закликом до гри.
-- [ ] Exact warning не змінено; його area/color treatment підтверджено.
+- [ ] Warning ownership зафіксований: `LANDING-OWNED`, `HOST-OWNED` або `PENDING`; для host-owned є
+      доказ outer implementation, а для landing-owned exact warning і area/color treatment підтверджені.
 - [ ] Ліцензійні відомості повні й належать рекламодавцю.
 - [ ] Текст правдивий у hero, body, CTA, visual, video, alt, metadata й OG.
 - [ ] Legal approval містить version, owner, date, placement і final URL.

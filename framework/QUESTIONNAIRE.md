@@ -7,9 +7,12 @@
 
 1. Для якого destination product робимо сторінку: CATBET чи SlotCity?
 2. Де вона живе: всередині того самого продукту, на партнерському host-продукті чи standalone?
-3. Тип задачі: нова promo-механіка, перезапуск існуючої, cross-brand traffic bridge чи інформаційна сторінка?
-4. Чи вже погоджені продукт, GEO, аудиторія, механіка й legal copy?
-5. Що треба віддати: Figma, окремі асети, код, live URL — у яких комбінаціях?
+3. Який **integration mode**: `content/full-page embed`, `iframe` чи `standalone`? Це блокуюче поле,
+   а не технічна деталь наприкінці.
+4. Тип задачі: нова promo-механіка, перезапуск існуючої, cross-brand traffic bridge чи інформаційна сторінка?
+5. Чи вже погоджені продукт, GEO, аудиторія, механіка й legal copy?
+6. Що треба віддати: editable Figma, окремі masters/delivery assets, static HTML+assets, Nuxt source,
+   live URL — у яких комбінаціях?
 
 ### Рішення
 
@@ -41,11 +44,13 @@
 6. Які числа, бонуси, thresholds, wager, строки й умови є обов'язковими?
 7. Які claims уже погоджені **дослівно**, а які мають статус `APPROVED EDITABLE`?
 8. Що заборонено рекламувати у цьому placement/GEO?
-9. Які license, 21+, responsible gambling, dates і rules links обов'язкові? Що Legal вважає
-   advertising unit для warning-area treatment?
+9. Які license, 21+, responsible gambling, dates і rules links обов'язкові? Для кожного постав owner:
+   `landing`, `host` або `pending`. Що Legal вважає advertising unit для warning-area treatment?
 10. Що робить користувач, якщо механіка залежить від верифікації, депозиту, місії або каналу?
 11. Який головний приз/вигода має домінувати? Які деталі другорядні?
 12. Хто й коли ставить `LEGAL APPROVED` для exact copy version і final URL?
+13. Чи є чинний placement із Legal-approved copy? Зафіксуй URL/version і розділи рядки на
+    `APPROVED VERBATIM` та `APPROVED EDITABLE`; AI не переписує першу групу самостійно.
 
 ### Mechanics Model
 
@@ -105,16 +110,23 @@ Selected evidence реєструється через [Brand Archive](../brand-a
 
 ## Раунд 5. Responsive, build, analytics і handoff
 
-1. Контекстні viewport-и: host screenshot, content desktop 1440, mobile 440/430/375.
+1. Підтверди mobile-first порядок: 375 → 430 → 440 → актуальний device matrix → 1440 → host context.
 2. Чи актуальний зріз у `DEVICE-TEST-MATRIX.md`? Якщо ні — хто надає свіжий top-10?
-3. Full-page embed, iframe чи component mount? Хто володіє scroll, height, background і navigation?
+3. Для обраного integration mode хто володіє scroll, height, background, navigation, routing, CSP і
+   analytics? Для iframe — parent/child origin та bridge owner; для embed — CSS isolation і host chrome.
 4. Який стек і версії? Де репозиторій? Які заборонені залежності?
-5. Де живуть content, CTA routes, analytics ids і legal copy?
-6. Які asset formats потрібні: transparent PNG, transparent WebP, AVIF/WebP, MP4/WebM?
-7. Чи треба передати masters, prompt log, source references й окремі animation layers?
-8. Які analytics events і cross-domain attribution потрібні?
-9. Які performance budgets і device floor?
-10. Де local preview, staging і production? Хто дає release approval?
+5. Підтверди обов'язкові `content/copy.json` і `content/actions.json`: хто редагує, хто апрувить і як
+   версіонуються legal claims?
+6. Які standalone raster assets потребують alpha WebP? Які **окремі background tasks** потребують
+   baked background, responsive crop і mobile variant?
+7. Для кожного animated slot: чи достатньо CSS; якщо ні — video чи frame sequence? Яка стиснена вага,
+   mobile CPU/memory, poster, Save-Data і reduced-motion fallback? Яку рекомендацію приймаємо?
+8. Чи треба передати masters, prompt log, source references й окремі animation layers?
+9. Які analytics events і cross-domain attribution потрібні?
+10. Які performance budgets, output-size limit і device floor?
+11. Чи фінальний runtime має бути static HTML+assets? Який allow-list/manifest входить у delivery?
+12. Які editable Figma frames потрібні: 375, 430, 440, 1440 і host context? Хто отримує file link?
+13. Де local preview, staging і production? Хто дає release approval?
 
 **Вихід:** Technical Brief, Analytics Plan, Delivery Matrix, Release Route.
 
@@ -137,13 +149,16 @@ Selected evidence реєструється через [Brand Archive](../brand-a
 - незрозуміло, який бренд володіє CTA/оболонкою;
 - немає canonical mascot/logo/font source;
 - немає точного primary CTA destination;
+- не обрано integration mode;
 - legal просить рекламувати те, що заборонено у placement.
 
 Зупини перехід до Build, якщо:
 
 - не погоджено hero;
-- немає повного desktop 1440;
-- mobile 440/430/375 не спроєктовані;
+- немає повного mobile 375, 430 і 440;
+- desktop 1440 не розширює погоджену mobile-ієрархію;
 - assets ще змінюють форму, стиль або формат;
 - текст не має version/status;
-- невідомий integration boundary.
+- невідомий integration boundary;
+- не визначено motion format і performance budget для кожного важкого slot-а;
+- не погоджено структуру editable Figma та static delivery.

@@ -19,6 +19,7 @@ Register є snapshot конкретних slots; він не замінює cano
 - editable variables;
 - camera/angle/lighting/material;
 - background/alpha requirement;
+- якщо background baked — окремий background task ID, ratio, crop map і mobile variant;
 - master і delivery format;
 - crop-safe area;
 - animation/layer requirements;
@@ -85,6 +86,10 @@ history. «Зроби як минулого разу» не є відтворю�
 Якщо генератор не дає true alpha, використовуйте контрольований chroma key, потім видалення фону,
 деcontamination edge pixels і ручний QA волосся/хутра.
 
+Standalone illustration за замовчуванням transparent. Виняток `із фоном` не позначається одним
+прапорцем: це окрема задача з composition ownership, ratio, responsive crop, safe zone, seam/edge
+blend і delivery budget. Так background не «прилипає» до reusable icon-а випадково.
+
 ## 6. Реалістичні матеріали
 
 Для бетону описуйте не лише `concrete`, а:
@@ -121,13 +126,18 @@ edge blend, а не `cover`.
 
 | Тип | Master | Delivery |
 |---|---|---|
-| Photo/background | lossless/high-quality source | AVIF/WebP + responsive sizes |
-| Transparent character/icon | PNG/PSD layered source | transparent WebP або optimized PNG за вимогою host |
-| Fine fur/hair alpha | high-res PNG/PSD | WebP/PNG після edge QA |
+| Photo/background | lossless/high-quality source | WebP + optional AVIF і responsive sizes |
+| Transparent character/icon | PNG/PSD layered source | transparent WebP |
+| Fine fur/hair alpha | high-res PNG/PSD | transparent WebP після edge QA |
 | Video hero | high-quality master | MP4 H.264 + optional WebM, poster |
 | Vector logo/UI icon | canonical SVG | SVG, лише якщо дозволено brand source |
 
 Не конвертуйте canonical logo або supplied UI icon у AI-generated версію.
+
+PNG/PSD лишаються master-ами. Production raster delivery — WebP. Якщо конкретний host технічно не
+підтримує alpha WebP, exception фіксується в Technical Brief із доказом; він не змінює master policy.
+Правила ваги, responsive delivery і motion media — у
+[PERFORMANCE-OPTIMIZATION.md](PERFORMANCE-OPTIMIZATION.md).
 
 ## 9. Naming і папки
 

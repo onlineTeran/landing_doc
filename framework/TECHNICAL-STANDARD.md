@@ -41,8 +41,9 @@ composables/
   useMotionPreferences.ts
   useIframeBridge.ts        # лише для iframe
 content/
-  copy.ts
-  legal.ts
+  copy.json
+  actions.json
+  legal.json
 config/
   actions.ts
   analytics.ts
@@ -67,9 +68,9 @@ legal logic одночасно.
 
 ### Design deliverables
 
+- Mobile-first source: **375 px**, потім **430 px**, потім **440 px**.
+- Content-only desktop після mobile approval: **1440 px**.
 - Context frame із host chrome: актуальна ширина продуктового desktop.
-- Content-only desktop: **1440 px**.
-- Content-only mobile: **440 px**, **430 px** і **375 px**.
 
 ### Engineering QA
 
@@ -85,6 +86,8 @@ Viewport — це CSS px. Не плутайте з physical resolution або sc
 
 ## 5. Responsive contract
 
+- CSS пишеться mobile-first: base rules для 375+, `min-width` enhancement для ширших mobile/desktop.
+- 375 визначає hierarchy, reading order, title/button scale і touch targets; desktop її не перепризначає.
 - Mobile має власний layout note для кожної секції.
 - Заголовки й кнопки мають mobile token scale, не випадкові overrides.
 - Жодного horizontal overflow: `scrollWidth - clientWidth === 0` на всій матриці.
@@ -95,6 +98,10 @@ Viewport — це CSS px. Не плутайте з physical resolution або sc
 - Decorative layers не можуть бути єдиним носієм змісту.
 
 ## 6. Content і CTA config
+
+`content/copy.json` і `content/actions.json` обов'язкові для кожного лендінгу, навіть з однією мовою.
+Components не містять campaign copy, CTA labels або destination URLs. Config має `version`, `status`,
+редакторську інструкцію й Claims Matrix IDs для чисел/legal-sensitive тез.
 
 Кожен CTA має:
 
@@ -154,6 +161,8 @@ Approved legal copy зберігається окремо з version/source/stat
 | Fonts | лише потрібні family/weights/glyphs |
 
 Build-перевірка виконується на production output, не в dev mode.
+Повний mobile-first optimization, WebP/alpha policy, CSS → video → sequence decision і static delivery
+contract визначені у [PERFORMANCE-OPTIMIZATION.md](PERFORMANCE-OPTIMIZATION.md).
 
 ## 10. Accessibility
 
@@ -183,6 +192,10 @@ Build-перевірка виконується на production output, не в 
 - Legal text повний і відповідає approved source.
 - Host seam, header/footer offsets та background перевірені.
 - Production build і unit/integration checks зелені.
+- `copy.json`/`actions.json` є єдиним джерелом campaign copy і route-ів.
+- Production результат відкривається як static HTML+assets; delivery allow-list не містить raw,
+  source, contact-sheet або unused legacy assets.
+- Editable Figma frames 375/430/440/1440/context відповідають exact copy version і asset IDs.
 
 Деталі: [STARTER-ARCHITECTURE.md](../STARTER-ARCHITECTURE.md),
 [IFRAME-BRIDGE-INTEGRATION.md](../IFRAME-BRIDGE-INTEGRATION.md),

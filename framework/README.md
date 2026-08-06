@@ -57,7 +57,7 @@ Fast Track можна використовувати лише коли всі т
 | **7. Full Design** | Чи цілісна вся сторінка? | 1440 design + 440/430/375 designs | G7 Design Approved |
 | **8. Asset Production** | Чи всі елементи готові до коду? | Asset Register, masters, delivery files | G8 Asset Freeze |
 | **9. Implementation** | Чи реалізація вірна дизайну й host-контракту? | local Nuxt build | G9 Feature Complete |
-| **10. Analytics & QA** | Чи вимірюємо й чи все працює? | event evidence, visual/tech QA | G10 QA Green |
+| **10. Analytics & QA** | Чи вимірюємо, чи швидко вантажиться mobile і чи все працює? | event evidence, visual/tech/performance QA | G10 QA Green |
 | **11. Release** | Чи можна показувати публічно? | release approval, live URL | G11 Released |
 | **12. Learn** | Що зробить наступний лендінг швидшим? | retrospective, KB updates | G12 Learning Captured |
 
@@ -102,13 +102,13 @@ Truth, legal placement і Brand Evidence.
 
 Для embedded landing мінімум:
 
-1. дизайн із host chrome для контексту;
-2. дизайн контентної частини без host chrome: desktop 1440;
-3. mobile 440, 430 і 375 без host chrome;
-4. окремі оптимізовані асети з прозорістю там, де це потрібно;
-5. Nuxt/Vue код лише контентної частини;
-6. content/actions config, analytics map і integration notes;
-7. visual QA та technical QA;
+1. editable Figma mobile 375, 430, 440;
+2. editable Figma content-only desktop 1440 і host context;
+3. окремі WebP delivery assets з alpha для standalone cutouts; background assets як окремі tasks;
+4. Nuxt/Vue source лише погодженого integration boundary;
+5. static HTML+allow-listed assets;
+6. `content/copy.json`, `content/actions.json`, analytics map і integration notes;
+7. visual, technical та performance QA;
 8. live URL після release approval.
 
 ## 8. Наступні документи
@@ -119,6 +119,8 @@ Truth, legal placement і Brand Evidence.
 - [DESIGN-PROCESS.md](DESIGN-PROCESS.md) — як отримати стильний, а не generic дизайн.
 - [ASSET-PIPELINE.md](ASSET-PIPELINE.md) — як генерувати й готувати графіку.
 - [TECHNICAL-STANDARD.md](TECHNICAL-STANDARD.md) — спільний стек і viewport-и.
+- [PERFORMANCE-OPTIMIZATION.md](PERFORMANCE-OPTIMIZATION.md) — mobile-first budgets, formats, motion
+  choice, optimization і static delivery.
 - [ANALYTICS.md](ANALYTICS.md) — вимірювання cross-brand воронки.
 - [QA-RELEASE.md](QA-RELEASE.md) — дизайн QA, технічний QA й реліз.
 - [SKILLS.md](SKILLS.md) — скіли, послідовність і роль людини.

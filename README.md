@@ -21,11 +21,12 @@ Framework 2.0 зберігає сильну технічну базу попер
    [правилами PlayCity](PLAYCITY-COPYWRITING-RULES.md).
 6. Веди
    [templates/PROJECT-STATE.md](templates/PROJECT-STATE.md) як єдину дошку гейтів.
-7. Проєктуй за [framework/DESIGN-PROCESS.md](framework/DESIGN-PROCESS.md); не переходь до коду,
-   доки не погоджені desktop 1440 і mobile 440/430/375.
+7. Проєктуй mobile-first за [framework/DESIGN-PROCESS.md](framework/DESIGN-PROCESS.md): 375 → 430 →
+   440 → 1440 → host context; не переходь до коду без editable Figma approval.
 8. Підготуй асети за [framework/ASSET-PIPELINE.md](framework/ASSET-PIPELINE.md), реалізуй за
-   [framework/TECHNICAL-STANDARD.md](framework/TECHNICAL-STANDARD.md), перевір і випусти за
-   [framework/QA-RELEASE.md](framework/QA-RELEASE.md).
+   [framework/TECHNICAL-STANDARD.md](framework/TECHNICAL-STANDARD.md), оптимізуй за
+   [framework/PERFORMANCE-OPTIMIZATION.md](framework/PERFORMANCE-OPTIMIZATION.md), перевір і випусти
+   за [framework/QA-RELEASE.md](framework/QA-RELEASE.md).
 
 Швидко створити project kit у репозиторії нового лендінгу:
 
@@ -88,7 +89,11 @@ git commit -m "chore: bump landing methodology"
   типографікою, маскотом і графічними ефектами.
 - Надані Figma, live-сторінки, approved copy та canonical assets важливіші за AI-смак.
 - Ніякого коду до вибору візуального напряму й апруву повного дизайну.
-- Mobile — окрема композиція, а не зменшений desktop.
+- Mobile 375 — перша й канонічна композиція; 430/440 і desktop розширюють її, а не навпаки.
+- Campaign copy і CTA routes завжди редагуються через `content/copy.json` та `content/actions.json`.
+- Production raster assets — WebP; standalone illustrations зазвичай transparent, background —
+  окрема asset task.
+- Motion спочатку перевіряється як CSS, потім video, потім frame sequence з byte/CPU розрахунком.
 - AI-асет не приймається у великому preview: його перевіряють у реальному слоті, на 1440/440/430/375,
   з альфою, crop-safe area та потрібною вагою файлу.
 - Локальна перевірка завершується до публікації. Деплой — лише після явного release approval.
@@ -105,6 +110,7 @@ git commit -m "chore: bump landing methodology"
 - Asset Register з master/delivery-файлами та prompt log.
 - Analytics Plan.
 - Design QA, Technical QA і release checklist.
+- Static HTML+assets delivery, build-size report і editable Figma link із 375/430/440/1440/context.
 - Decision Log та ретроспектива.
 
 ## Технічна бібліотека попередньої версії

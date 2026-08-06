@@ -130,9 +130,10 @@ Hero проєктується й погоджується окремо до вс
 
 Перевіряйте в контексті host chrome і без нього. Показуйте мінімум:
 
-- desktop із host header/navigation;
+- content-only 375 — першим, як композиційний baseline;
+- content-only 430 і 440;
 - content-only 1440;
-- 440, 430 і 375;
+- desktop із host header/navigation;
 - перший і останній кадр loop;
 - frame із найширшим жестом/рухом;
 - fallback poster.
@@ -173,17 +174,36 @@ Hero проєктується й погоджується окремо до вс
 
 До коду потрібно погодити:
 
-1. усю сторінку в контексті host chrome;
-2. content-only desktop 1440;
+1. content-only mobile 375;
+2. content-only mobile 430;
 3. content-only mobile 440;
-4. content-only mobile 430;
-5. content-only mobile 375;
+4. content-only desktop 1440;
+5. усю сторінку в контексті host chrome;
 6. interaction/motion notes;
 7. legal block у фінальному обсязі;
 8. CTA states і реальні labels;
 9. asset map.
 
-Не погоджуйте desktop, якщо mobile існує лише як словесна обіцянка.
+375 — source composition. 430/440 доводять scaling; 1440 розширює hierarchy, а не визначає її заднім
+числом. Не погоджуйте desktop, якщо mobile існує лише як словесна обіцянка.
+
+### Editable Figma contract
+
+Фінальна Figma — не набір screenshot-ів. Вона містить:
+
+- named frames `Mobile / 375`, `Mobile / 430`, `Mobile / 440`, `Desktop / 1440`, `Host context`;
+- editable text layers із фінальним `copy.json` version;
+- Auto Layout для секцій, повторюваних steps/cards і CTA;
+- color/text/effect variables або styles з brand naming;
+- instances host CTA, а не перемальовані кнопки;
+- image fills/components, прив'язані до Asset Register IDs; masters не сплющуються в один page PNG;
+- component states для CTA й interaction/motion notes;
+- page `00 Cover & status` з brand, campaign, copy version, G7/G10 status і links на source/preview;
+- Dev handoff page з spacing, responsive behavior, export names, alpha/background policy й asset weights.
+
+Якщо автоматичне перенесення з HTML створило flatten/absolute-position mess, дизайнер нормалізує
+layers і Auto Layout до handoff. Editable означає, що інший дизайнер може змінити copy, spacing,
+component instance або asset без редагування одного великого raster.
 
 ## 9. Правила візуальної цілісності
 
