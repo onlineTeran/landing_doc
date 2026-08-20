@@ -1,0 +1,34 @@
+{
+  "brand": "SLOTCITY",
+  "designSystemVersion": "0.9",
+  "identity": "faceless-draped-city-figure",
+  "status": "live-reference-available-passport-and-rights-pending",
+  "evidenceAssetIds": ["SC-LIVE-MASCOT-001", "SC-DERIVED-MASCOT-002"],
+  "poseEvidenceAssetIds": ["SC-OWNER-POSE-003", "SC-DERIVED-POSE-004"],
+  "observed": [
+    "fully-draped-flowing-white-cloth",
+    "no-visible-face-skin-eyes-or-mouth",
+    "black-rounded-sunglasses",
+    "yellow-headwear",
+    "oversized-yellow-high-top-shoes",
+    "white-gloves",
+    "thick-gold-chain-language",
+    "dynamic-urban-confidence",
+    "relaxed-leaning-confidence"
+  ],
+  "forbiddenByDefault": [
+    "invented-visible-face",
+    "skull-or-horror-ghost-treatment",
+    "religious-figure-treatment",
+    "identity-color-change",
+    "removal-of-most-defining-accessories",
+    "invented-name-or-personality",
+    "fake-slotcity-logo"
+  ],
+  "requiredBeforeCanonicalProductionGeneration": [
+    "owner-approved-mascot-passport",
+    "allowed-modification-matrix",
+    "rights-status",
+    "brand-owner"
+  ]
+}

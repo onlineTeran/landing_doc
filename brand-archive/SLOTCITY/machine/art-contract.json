@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "designSystemVersion": "0.9",
+  "product": "slotcity",
+  "evidenceStatus": "EXTRACTED_NOT_BRAND_APPROVED",
+  "styleGroups": ["cinematic-character", "glossy-3d-object", "world-building", "transparent-cutout"],
+  "assetRoles": ["hero-banner", "promo-banner", "card-horizontal", "card-vertical", "card-square", "section-background", "decorative-cutout", "3d-icon"],
+  "rules": {
+    "styleGroupsMayMix": false,
+    "bakedTextLogoUiAllowed": false,
+    "desktopWiderThan2To1RequiresMobileRecomposition": true,
+    "criticalFeaturesMayCrop": false,
+    "fallback": "DESIGN_SYSTEM_GAP"
+  },
+  "threeDIcon": {
+    "roles": {
+      "standard": {"targetPx": [72, 132], "objectCount": [1, 3], "fillRatio": [0.6, 0.8]},
+      "compact": {"targetPx": [28, 84], "objectCount": [1, 1], "preferExistingComponent": true},
+      "heroAccent": {"targetPx": [160, 360], "objectCount": [1, 3], "environmentAllowed": false}
+    },
+    "camera": ["front", "soft-three-quarter"],
+    "materials": ["glossy-colored-plastic", "colored-metal", "limited-translucent-glass"],
+    "baseLighting": ["violet", "magenta", "cyan"],
+    "forbidden": ["matte-clay", "photoreal-natural-texture", "flat-vector-look", "deep-isometric", "more-than-three-equal-objects", "complex-environment", "character", "pastel-earth-palette", "long-black-shadow", "full-chrome", "micro-text"]
+  },
+  "decorativeBackground": {
+    "mainGlowGroupsMax": 1,
+    "secondaryLayersMax": 1,
+    "relatedHuesMax": 3,
+    "componentOpacity": [0.2, 0.7],
+    "blurPx": {"contour": [5, 30], "localGlow": [50, 100], "atmosphere": [150, 250], "largeArtsException": [300, 413]},
+    "contentZoneRequiresLowContrast": true,
+    "uiBackgroundBlurInScope": false,
+    "meshGradientStatus": "HYPOTHESIS"
+  }
+}

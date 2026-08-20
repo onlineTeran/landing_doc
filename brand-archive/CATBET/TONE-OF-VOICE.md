@@ -1,6 +1,6 @@
 # CATBET Tone of Voice
 
-**Status:** `TOV PENDING` — placeholder for the document the product/brand team will provide later.
+**Design System version:** `0.9` · **Status:** `BRAND-BIBLE EXTRACTED / PHRASE LIBRARY PARTIAL`
 
 ## Integration rule
 
@@ -8,7 +8,21 @@ ToV is applied only after Product Truth and Claims Matrix. It may rewrite only
 `APPROVED EDITABLE` copy and cannot modify legal wording, numbers, conditions, CTA destination or
 mandatory qualifiers. See [PlayCity copy rules](../../PLAYCITY-COPYWRITING-RULES.md).
 
-## Required input
+## Voice of Bet
+
+Bet speaks from the first person as the host/owner. He is confident without arrogance, calm, concise,
+witty without toxicity, warm without flattery, clever and slightly dramatic. He does not fuss, beg,
+repeat, hard-sell or explain the joke.
+
+- default unit: one short observation or cue + one clear action;
+- feline vocabulary is purposeful, not decorative spam;
+- the appearance of Bet may carry the setup; copy does not repeat what the frame already says;
+- no FOMO, caps-lock pressure, timers, false urgency or outcome certainty;
+- ToV never rewrites mechanics, conditions, legal language or CTA destination.
+
+See the executable detail and format rules in [BRAND-BIBLE.md](BRAND-BIBLE.md).
+
+## Remaining input for full copy library
 
 - ToV source/version/owner/date;
 - character and relationship to user;
@@ -21,15 +35,14 @@ mandatory qualifiers. See [PlayCity copy rules](../../PLAYCITY-COPYWRITING-RULES
 - tone for hero, explanation, mechanics, errors and legal-adjacent text;
 - 10 approved and 10 rejected examples with reasons.
 
-## Provisional observations — not canonical ToV
-
-The BETON × CATBET case used playful cat vocabulary (paws, tail, purr, hunting, territory, loot) while
-keeping mechanics literal. Treat these as case evidence only until brand owner confirms or replaces them.
+The owner-supplied Brand Bible closes character and core voice behavior. A dedicated copy library is
+still needed for official mechanic names, CTA families, error states, legal-adjacent examples and a set
+of reviewed approved/rejected phrases.
 
 ## Approval
 
-- Source:
-- Version:
+- Source: `CATBAT_Bible.png`, `CATBAT_LOR_WORLD.png`
+- Version: `0.9` (framework version; source document shows update `20.05.2026`)
 - Owner:
 - Approved:
-- Last verified:
+- Last verified: `2026-08-21`

@@ -122,6 +122,10 @@ QA має три окремі шари: content/legal truth, design fidelity і 
 
 ## 7. Release runbook
 
+For corporate delivery, [CORPORATE-GIT-RUNBOOK.md](../CORPORATE-GIT-RUNBOOK.md) is authoritative.
+Its `stage` → mandatory Stage QA → `prod` → Production smoke sequence and manual CI jobs are required;
+the generic steps below do not authorize skipping them.
+
 1. Freeze content, assets і version.
 2. Clean production build.
 3. Run automated tests і static assertions.

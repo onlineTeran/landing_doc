@@ -1,4 +1,8 @@
-# Деплой і запуск лендінга: runbook
+# Legacy Vercel deployment runbook
+
+> **Precedence:** для корпоративного `cb/ai_landings` цей документ не є deployment contract.
+> Використовуй [CORPORATE-GIT-RUNBOOK.md](CORPORATE-GIT-RUNBOOK.md). Нижче збережено історичний
+> GitHub/Vercel flow для окремих явно погоджених non-corporate deployment targets.
 
 > Призначення: повний перевірений шлях від коду до працюючого лендінга **всередині продукту** —
 > деплой-пайплайн, налаштування Vercel, порядок запуску iframe-інтеграції і таблиця розв'язань
@@ -7,7 +11,7 @@
 
 ---
 
-## 1. Стандартний деплой-флоу: git → Vercel (єдиний рекомендований)
+## 1. Legacy deployment flow: git → Vercel
 
 ```
 код → git push (секунди) → GitHub → Vercel Git Integration → авто-білд → прод

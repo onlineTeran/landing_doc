@@ -1,0 +1,50 @@
+{
+  "asset": "README hero — SlotCity × CATBET Worlds",
+  "frameworkVersion": "3.0.0-draft",
+  "brandSystemVersions": {"slotcity": "0.9", "catbet": "0.9"},
+  "status": "v8-self-qa-pass-brand-review-pending",
+  "createdAt": "2026-08-21",
+  "delivery": {
+    "path": "framework-worlds-vs-v8.webp",
+    "sha256": "6d3d8aaa4b0b5e3bd2e361ddac57e4706fe63e5530621a873faec1047a361ebc",
+    "width": 1600,
+    "height": 900,
+    "format": "webp"
+  },
+  "generatedMaster": {
+    "path": "source/framework-worlds-vs-generated-final-v8.png",
+    "sha256": "8a22decd75f144fff744a1be02c600c3cfa90e9e0c30d086b745408247a4d4f4",
+    "width": 1672,
+    "height": 941,
+    "format": "png"
+  },
+  "logoReferences": [
+    {
+      "path": "source/slotcity-logo.svg",
+      "sha256": "f020299e90d27574c81cd264f61042c49a2208708b66dca9bf42d9cb86290d30",
+      "role": "identity-reference-for-direct-3d-generation"
+    },
+    {
+      "path": "source/catbet-logo.svg",
+      "sha256": "f3ee8f3d66fb83cec510816e6e02772990dd3887b43af7351d8b2f90aa475af4",
+      "role": "identity-reference-for-direct-3d-generation"
+    }
+  ],
+  "negativeEvidence": [
+    {
+      "path": "source/worlds-vs-generated-v2-rejected.png",
+      "sha256": "b095a68c6d76399884fc9fc5c5cf01b7d38be5f2cdd533e3530e93b5c408e647",
+      "reason": "dark SlotCity direction and clothed CATBET cat"
+    },
+    {
+      "path": "source/worlds-vs-generated-v6-rejected.png",
+      "sha256": "166c6573c34a1aed4912cb40e8913a0a49956c1a4e58e26c8a67980adfb89b26",
+      "reason": "stepping SlotCity pose and jumping Bet pose"
+    },
+    {
+      "path": "framework-worlds-vs-v7.webp",
+      "sha256": "dfb759d5e60b28602331231d5ed9e30bc4f1debdee69188c3797bd59eccfba0f",
+      "reason": "post-composited logo treatment superseded by the requested directly generated 3D composition"
+    }
+  ]
+}

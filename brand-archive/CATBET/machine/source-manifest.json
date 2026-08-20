@@ -1,0 +1,62 @@
+{
+  "brand": "CATBET",
+  "designSystemVersion": "0.9",
+  "status": "owner-supplied-brand-bible-token-extraction-partial",
+  "sourceStrategy": "owner-supplied-brand-bible-plus-editable-source-when-available",
+  "primaryEvidence": [
+    {
+      "id": "CB-OWNER-BIBLE-001",
+      "type": "owner-supplied-raster-brand-source",
+      "role": "brand-core-mascot-voice-visual-grammar",
+      "path": "assets/reference/catbet-brand-bible-owner-supplied-v0.9-2026-08-21.png",
+      "sourceDocumentDate": "2026-05-20",
+      "verification": "checksummed-and-extracted"
+    },
+    {
+      "id": "CB-OWNER-LORE-001",
+      "type": "owner-supplied-raster-brand-source",
+      "role": "lore-creative-formats-artifacts-sound",
+      "path": "assets/reference/catbet-lore-world-owner-supplied-v0.9-2026-08-21.png",
+      "sourceDocumentDate": "2026-05-20",
+      "verification": "checksummed-and-extracted"
+    },
+    {
+      "id": "CB-FIG-001",
+      "type": "figma",
+      "role": "visual-assets-and-material-language",
+      "fileKey": "60GcNX5ozOg29YImVj1mNz",
+      "nodeId": "1:97",
+      "verification": "export-pending"
+    },
+    {
+      "id": "CB-FIG-005",
+      "type": "figma",
+      "role": "approved-campaign-layout-typography-color-evidence",
+      "fileKey": "Awy5S2tjqMYp9q6y0brMB8",
+      "nodeId": "3442:7005",
+      "verification": "export-pending"
+    },
+    {
+      "id": "CB-WEB-001",
+      "type": "production",
+      "role": "current-ui-and-brand-behavior",
+      "url": "https://catbet.com.ua/",
+      "verification": "dated-capture-required-per-campaign"
+    }
+  ],
+  "currentDesignSystem": {
+    "source": "owner-supplied-brand-bible-and-lore-world-raster",
+    "version": "0.9",
+    "owner": null,
+    "checksum": null,
+    "status": "brand-rules-available-editable-tokens-and-components-pending"
+  },
+  "neverInfer": [
+    "exact-token-values",
+    "font-families-or-licenses",
+    "component-properties",
+    "mascot-modification-rights",
+    "promo-mechanics",
+    "legal-copy"
+  ]
+}

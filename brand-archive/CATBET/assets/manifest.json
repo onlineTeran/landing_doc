@@ -1,0 +1,143 @@
+{
+  "brand": "CATBET",
+  "designSystemVersion": "0.9",
+  "capturedAt": "2026-08-21",
+  "status": "owner-supplied-brand-bible-plus-live-reference-pack",
+  "assets": [
+    {
+      "id": "CB-LIVE-LOGO-001",
+      "path": "reference/logo-live-2026-08-21.svg",
+      "sha256": "f3ee8f3d66fb83cec510816e6e02772990dd3887b43af7351d8b2f90aa475af4",
+      "sourceUrl": "https://catbet.com.ua/img/logo/logo.svg",
+      "evidenceClass": "LIVE_SNAPSHOT",
+      "allowedRoles": ["exact-logo-layer"],
+      "allowedUse": "composite-unchanged",
+      "rightsStatus": "brand-owner-contract-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-OWNER-BIBLE-001",
+      "path": "reference/catbet-brand-bible-owner-supplied-v0.9-2026-08-21.png",
+      "sha256": "ac88303ccd93e8083fa7c6fc9e23aee450f9af144a8750f350286836cb07d419",
+      "sourceProvidedBy": "user-in-framework-task",
+      "sourceDocumentDate": "2026-05-20",
+      "evidenceClass": "OWNER_SUPPLIED_BRAND_SOURCE",
+      "allowedRoles": ["brand-core", "mascot-identity", "voice", "visual-grammar", "composition"],
+      "allowedUse": "methodology-extraction-and-reference",
+      "rightsStatus": "internal-brand-use-assumed-owner-confirmation-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-OWNER-LORE-001",
+      "path": "reference/catbet-lore-world-owner-supplied-v0.9-2026-08-21.png",
+      "sha256": "5256030db4d521f85dc57589f2d58a8ce26b5431d2974b47bbc945e4e0d958d1",
+      "sourceProvidedBy": "user-in-framework-task",
+      "sourceDocumentDate": "2026-05-20",
+      "evidenceClass": "OWNER_SUPPLIED_BRAND_SOURCE",
+      "allowedRoles": ["lore", "mascot-character", "creative-format-system", "artifacts", "sound-direction"],
+      "allowedUse": "methodology-extraction-and-reference",
+      "rightsStatus": "internal-brand-use-assumed-owner-confirmation-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-DERIVED-MASCOT-003",
+      "path": "reference/cat-bet-identity-no-clothes-clean-v0.9.png",
+      "sha256": "ae748644b8334b06953103d24f61c027f58497e4b820b6051bac2e2cff1cbacc",
+      "derivedFrom": "CB-OWNER-BIBLE-001",
+      "crop": {"left": 930, "top": 900, "width": 900, "height": 790},
+      "evidenceClass": "DERIVED_IDENTITY_CROP",
+      "allowedRoles": ["mascot-identity"],
+      "identityRegion": "cat Bet without clothes, cyan fur, orange eyes and orange collar",
+      "allowedUse": "reference-only",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-DERIVED-MASCOT-CONTEXT-004",
+      "path": "reference/cat-bet-identity-no-clothes-v0.9.png",
+      "sha256": "83ab9d04af5d76a9cec87e5d28248561d913d64536c5bbe336fb4e3333e1fb02",
+      "derivedFrom": "CB-OWNER-BIBLE-001",
+      "crop": {"left": 930, "top": 900, "width": 900, "height": 1250},
+      "evidenceClass": "DERIVED_CONTEXT_CROP",
+      "allowedRoles": ["mascot-identity-cross-check", "brand-story-context"],
+      "allowedUse": "reference-only",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-LIVE-POSE-005",
+      "path": "reference/cat-bet-relaxed-yarn-pose-live-2026-08-21.png",
+      "sha256": "e1e9420c8afe1c263148b1a2772d240b823b8c4bc364aad798b2e6c16b8ded3d",
+      "sourcePage": "https://catbet.com.ua/promo",
+      "capturedAt": "2026-08-21",
+      "evidenceClass": "DERIVED_POSE_CROP",
+      "allowedRoles": ["mascot-pose"],
+      "identityRegion": "Bet lying calmly among yarn balls; no clothing",
+      "allowedUse": "pose-reference-only",
+      "rightsStatus": "owner-confirmation-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-DERIVED-LORE-STYLE-006",
+      "path": "reference/catbet-lore-world-style-v0.9.png",
+      "sha256": "290968e745a38df5ff716b4a9fef43278914a092852cee60d7d0873e6529f89f",
+      "derivedFrom": "CB-OWNER-BIBLE-001",
+      "crop": {"left": 0, "top": 5900, "width": 1920, "height": 2800},
+      "evidenceClass": "DERIVED_CONTEXT_CROP",
+      "allowedRoles": ["lore-style", "artifacts", "world-material"],
+      "allowedUse": "reference-only-ignore-baked-copy",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-DERIVED-LORE-BOOK-007",
+      "path": "reference/catbet-lore-book-art-v0.9.png",
+      "sha256": "c3b595af346157ed78f6d0281e02a279b5a1bccc118f4f45ae910d96df2c58e4",
+      "derivedFrom": "CB-OWNER-BIBLE-001",
+      "crop": {"left": 430, "top": 6900, "width": 1100, "height": 1000},
+      "evidenceClass": "DERIVED_CONTEXT_CROP",
+      "allowedRoles": ["lore-book", "world-material"],
+      "allowedUse": "reference-only-ignore-baked-copy-and-costume",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-DERIVED-TAIL-YARN-008",
+      "path": "reference/catbet-tail-yarn-art-v0.9.png",
+      "sha256": "a4a0c3c8b15147d77bf288bb232f147af5813e10cf15a9047ca4943bb353ba00",
+      "derivedFrom": "CB-OWNER-BIBLE-001",
+      "crop": {"left": 650, "top": 8000, "width": 1200, "height": 700},
+      "evidenceClass": "DERIVED_CONTEXT_CROP",
+      "allowedRoles": ["yarn-narrative", "tail-narrative"],
+      "allowedUse": "reference-only-ignore-baked-copy",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-CAMPAIGN-MASCOT-001",
+      "path": "reference/cat-bet-tuxedo-999-campaign-2026-08-21.webp",
+      "sha256": "1319f7f83a51679cc9503584f978fafe0d02a9ee659970a409aae0626a4ac729",
+      "sourceUrl": "https://sc-promo-builder-prod-s3.s3.eu-central-1.amazonaws.com/icons/83a11d001f663640ce4b37a62a19cc38-1782459364519.webp",
+      "sourcePage": "https://catbet.com.ua/promo",
+      "evidenceClass": "APPROVED_CAMPAIGN_STATUS_REVALIDATION_PENDING",
+      "allowedRoles": ["mascot-identity"],
+      "identityRegion": "cyan cat Bet in black tuxedo; ignore 999 and baked copy",
+      "allowedUse": "reference-only",
+      "rightsStatus": "campaign-owner-and-modification-rights-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "CB-LIVE-MASCOT-002",
+      "path": "reference/cat-bet-promo-og-live-2026-08-21.jpg",
+      "sha256": "921332c8c9857c589fce7f11370f49d7bc206231226f909a28d24afa56820ab2",
+      "sourceUrl": "https://catbet.com.ua/img/seo/promotions/1200_630.jpg",
+      "sourcePage": "https://catbet.com.ua/promo",
+      "evidenceClass": "LIVE_SNAPSHOT",
+      "allowedRoles": ["mascot-identity-cross-check", "yarn-narrative"],
+      "identityRegion": "cyan natural cat; ignore human character and logo",
+      "allowedUse": "reference-only",
+      "rightsStatus": "owner-confirmation-pending",
+      "lastVerified": "2026-08-21"
+    }
+  ]
+}

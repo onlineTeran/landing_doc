@@ -1,5 +1,66 @@
 # Changelog
 
+## [3.0.0-draft] — 2026-08-21
+
+### Added
+
+- Surface Router for `LANDING`, `ART`, `PRODUCT_UI`, `COMPONENT` and `AUDIT` tracks.
+- Brand Design Base contract, isolated A0–A8 art workflow, Art Brief and evidence-based Art QA.
+- Repository-owned `brand-design-base` skill for Codex/Claude with product routing, evidence precedence,
+  rights, design-system gaps and real-slot QA.
+- Standalone design-task bootstrap with A0–A8 state, selected Brand Archive, Art Brief/QA and managed
+  Codex/Claude instructions without landing release gates.
+- Detailed SlotCity design snapshot extracted locally from the supplied 1.58 GB Figma archive: source
+  provenance, 110 semantic color tokens, landing typography, layout, components, promo widgets, 3D icon,
+  landing art and decorative-background contracts.
+- Machine-readable SlotCity source manifest, color tokens, typography roles and art constraints.
+- Explicit SlotCity gap register for empty ToV, missing mascot/logo/motion/font-rights/component-spec and
+  pending Brand owner approval.
+- Structural CATBET Design System `0.9`: token and component contracts, mascot identity invariants,
+  art direction/generation rules, machine-readable contracts and an explicit canonical-source gap register.
+- Owner-supplied CATBET Brand Bible/Lore World evidence pack with checksums, AI-ready brand extraction,
+  Bet identity/no-clothes contract, core voice, lore boundaries, creative formats and mascot crops.
+- Local SlotCity/CATBET logo, mascot and world reference packs plus a methodology-produced README hero
+  demonstrating reference-locked direct 3D logo generation and an auditable rejected-to-corrected art loop.
+- Pose-specific evidence for the relaxed SlotCity mascot and current CATBET yarn pose, plus a final
+  cross-brand hero separating SlotCity city ownership from CATBET feline lore-world ownership.
+- README hero V8 with reduced gold, directly generated dimensional SlotCity/CATBET marks and an
+  oversized split-color `VS`; prompt provenance, checksums, self-QA and pending Brand review are recorded.
+
+### Changed
+
+- Framework scope now covers product art, design-system/component work and visual audits in addition to
+  full landing delivery.
+- Bootstrap installs and verifies three project-local skills; landing workflow calls Brand Design Base
+  for Brand Evidence, visual directions, assets and visual QA.
+- Root agent instructions now route visual requests before applying landing-only release gates.
+- SlotCity and CATBET design-system packages are versioned `0.9`; SlotCity ToV is explicitly pending
+  user-supplied source. Product (`slotcity|catbet`) and agent (`codex|claude`) are independent bootstrap
+  arguments, and every product/agent combination is supported.
+
+## [2.1.0-draft] — 2026-08-21
+
+### Added
+
+- Root `AGENTS.md` and `CLAUDE.md` contracts that force Codex/Claude to read Project State, obey
+  sequential gates and separate implementation permission from push/merge/deploy approval.
+- Seven-package Execution Protocol mapping questionnaire, design, references/mascots, technical
+  specification, product knowledge, corporate Git delivery and QA handoff onto the existing 13 gates.
+- Project templates for Functional Specification, Reference & Mascot Base, QA Task and Git Delivery.
+- Structural workflow validator for complete kits, consecutive approvals and approval metadata.
+- Corporate `cb/ai_landings` runbook covering `landings.json`, Stage/Production branches, manual CI
+  jobs, security scan, access roles, mandatory Stage QA, Production smoke, cache checks and removal.
+- Deterministic `landings.json` validator and Stage/Production Release Task template.
+- Idempotent bootstrap installation and verification of managed `AGENTS.md` / `CLAUDE.md` instructions.
+
+### Changed
+
+- Project bootstrap now creates the four new artifacts and points to workflow validation.
+- Project State now exposes current work, exact human approval records and links to the new artifacts.
+- Promo landing skill now requires repository artifacts, integration state models, testable QA handoff
+  and exact-commit release evidence.
+- Legacy GitHub/Vercel guidance is now explicitly subordinate to the corporate GitLab runbook.
+
 ## [2.0.0-draft] — 2026-08-06
 
 ### Added

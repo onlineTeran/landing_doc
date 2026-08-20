@@ -1,0 +1,14 @@
+{
+  "first": {
+    "enabled": true,
+    "path": "/duplicate",
+    "dist": "../outside",
+    "build": "static"
+  },
+  "second": {
+    "enabled": "yes",
+    "path": "/duplicate",
+    "dist": "second",
+    "build": ""
+  }
+}

@@ -1,8 +1,21 @@
 # Project State — <campaign>
 
+> Єдиний control surface проєкту. Агент оновлює його після кожної суттєвої відповіді або зміни.
+> Перехід дозволений лише при `APPROVED` попереднього гейта з owner, artifact/version і датою.
+
+## Current work
+
+- Active package (1–7):
+- Current phase / gate:
+- Expected artifact this turn:
+- Blocking questions:
+- Next human decision:
+- Last updated by / at:
+
 ## Routing
 
 - Track: `Full | Fast`
+- Operating agent: `<agent>`
 - Host brand:
 - Destination product: `CATBET | SlotCity`
 - Advertiser / advertised brand / placement:
@@ -65,7 +78,17 @@ Status: `TODO | IN PROGRESS | BLOCKED | APPROVED | SUPERSEDED`.
 - Hero:
 - Full design 1440/440/430/375:
 - Asset Register:
+- Reference & Mascot Base:
+- Functional Specification:
 - Analytics Plan:
 - Local preview:
-- QA report:
+- QA task/report:
+- Git Delivery / release record:
+- Stage / Production release task:
 - Production URL:
+
+## Approval log
+
+| ID | Gate | Exact approval scope and version | Approver/role | Date/timezone | Evidence link |
+|---|---|---|---|---|---|
+| A-001 | | | | | |

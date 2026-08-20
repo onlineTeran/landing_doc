@@ -1,0 +1,8 @@
+{
+  "promo": {
+    "enabled": true,
+    "path": "/promo",
+    "dist": "promo",
+    "build": "static"
+  }
+}

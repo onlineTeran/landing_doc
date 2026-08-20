@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "designSystemVersion": "0.9",
+  "product": "slotcity",
+  "evidenceStatus": "EXTRACTED_NOT_BRAND_APPROVED",
+  "selectionOrder": ["context", "semanticRole", "responsiveMode", "masterStyle"],
+  "componentOwnedTypographyMustBePreserved": true,
+  "roles": {
+    "landing/hero/title": ["Promo Heading 40/40", "Promo Heading 32/32", "Promo Heading 18/18"],
+    "landing/hero/description": ["Body Text 16/24", "Body Text 14/20"],
+    "landing/section/title": ["Heading H2 32/40", "Body Title 20/24", "Heading H3 18/24", "Body Title 18/24"],
+    "landing/section/description": ["Body Text 16/24", "Body Text 14/20"],
+    "landing/card/title": ["Promo Heading 18/18", "Body Title 18/24", "Body Title 16/22"],
+    "landing/card/description": ["Body Text 16/24", "Body Text 14/20", "Body Text 12/18"],
+    "landing/meta": ["Body Text 12/18 Light", "Body Text 12/18 SemiBold"],
+    "landing/action": ["Button 18/24", "Button 14/20", "Button 12/16", "Button 10/12"]
+  },
+  "fallback": "DESIGN_SYSTEM_GAP"
+}

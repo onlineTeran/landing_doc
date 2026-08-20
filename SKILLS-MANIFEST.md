@@ -8,6 +8,7 @@
 | Skill | Required gate | Contract | Source |
 |---|---|---|---|
 | `promo-landing-framework` | G0–G12 | routing, immutable sequence, artifacts, gates, QA/release discipline | `skills/promo-landing-framework/` |
+| `brand-design-base` | any brand task; G3/G5–G8 in landing | product/surface routing, evidence precedence, tokens/components/art, rights and visual QA | `skills/brand-design-base/` |
 | `playcity-copy-review` | G2, G10–G11 | placement/claims/CTA/art/metadata/legal red-team; no self-approval | `skills/playcity-copy-review/` |
 
 ## Mandatory external capabilities

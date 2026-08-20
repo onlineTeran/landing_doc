@@ -1,152 +1,122 @@
-# Promo Landing Framework 2.0
+# Corporate Design & Landing Framework 3.0
 
-Практична методологія для продуктових дизайнерів, дизайн-інженерів і AI-агентів, які створюють
-акційні лендінги для **CATBET** та **SlotCity**: від першого опитування до дизайну, окремих асетів,
-Nuxt-реалізації, аналітики, QA, публікації та ретроспективи.
+![SlotCity × CATBET — two brand worlds, one framework](assets/readme-hero/framework-worlds-vs-v8.webp)
 
-Framework 2.0 зберігає сильну технічну базу попередньої методології, але змінює головний принцип:
-**спочатку продуктова й юридична правда, потім бренд і візуальний target, і лише після повного
-дизайн-апруву — асети та код**.
+> **Одна керована система для створення лендінгів, рекламних артів, product UI та компонентів —
+> від бізнес-ідеї до перевіреного результату в корпоративному Git.**
+
+Цей framework перетворює дизайн і delivery з набору разових домовленостей на відтворювану
+корпоративну спроможність. Команда рухається швидше не через пропуск етапів, а тому що продуктова
+правда, бренд, рішення, відповідальність і критерії готовності зафіксовані до початку дорогого
+виробництва.
+
+## Навіщо він бізнесу
+
+| Цінність | Що змінюється |
+|---|---|
+| **Швидкість** | Кожен запит одразу потрапляє у правильний маршрут із готовими брифами, артефактами й next actions. |
+| **Якість бренду** | Команди та AI працюють із доказовими токенами, компонентами, арт-напрямами й продуктовими обмеженнями. |
+| **Контроль ризику** | Claims, legal, design, QA і release мають явних власників та людські approvals. |
+| **Масштабування** | Один підхід працює для різних команд, підрядників, AI-агентів і форматів без втрати стандарту. |
+| **Корпоративна пам'ять** | Рішення, джерела, асети й висновки залишаються у versioned knowledge base, а не зникають у чатах. |
+
+Результат — не просто ще один лендінг або арт. Це повторно використовуваний актив: наступна команда
+стартує з накопиченого знання, а не з чистого аркуша.
+
+## Це не бібліотека документів
+
+Framework працює як **операційна система delivery**:
+
+- визначає тип задачі та обов'язковий маршрут;
+- відділяє підтверджені факти від припущень і творчих рішень;
+- не дозволяє AI вигадувати бренд, claims або approvals;
+- фіксує гейти, власників, версії та критерії приймання;
+- з'єднує дизайн, реалізацію, QA, Stage і Production в один контрольований ланцюг;
+- повертає досвід кожного релізу назад у корпоративну базу знань.
+
+## П'ять робочих маршрутів
+
+| Track | Для чого |
+|---|---|
+| **Landing** | Повний шлях від intake і product truth до дизайну, реалізації, QA та релізу. |
+| **Art** | Hero, promo card, background, 3D object, social або інший isolated visual. |
+| **Product UI** | Екрани й сценарії цифрового продукту з опорою на brand evidence. |
+| **Component** | Новий або змінений елемент дизайн-системи з контрольованими станами й поведінкою. |
+| **Audit** | Перевірка існуючого дизайну на бренд, UX, консистентність і production readiness. |
+
+Точку входу для будь-якого запиту визначає [Surface Router](framework/SURFACE-ROUTER.md).
+
+## AI-ready, але human-controlled
+
+Codex і Claude отримують не вільний промпт, а керований контекст: product truth, brand evidence,
+дозволені джерела, stop conditions і точний очікуваний результат етапу. AI прискорює дослідження,
+варіативність і production work; Product, Legal, Brand, Design, QA та Release зберігають право
+рішення у своїх зонах відповідальності.
+
+Brand Design Base містить дві незалежні дизайн-системи версії **0.9**: детально вилучений AI-ready
+snapshot **SlotCity** та owner-supplied Brand Bible/Lore World **CATBET** з окремим шаром точних
+токенів і компонентів. CATBET не успадковує токени чи компоненти SlotCity, а майбутній editable
+source підключається через контрольований diff.
+
+- [SlotCity Design Base](brand-archive/SLOTCITY/INDEX.md)
+- [CATBET Brand Archive](brand-archive/CATBET/INDEX.md)
+- [Brand Design Base contract](framework/BRAND-DESIGN-BASE.md)
+
+## Як проходить робота
+
+`Route → Intake → Product Truth → Brand Evidence → Content → Directions → Hero → Full Design → Assets → Implementation → QA → Release → Learn`
+
+Кожен перехід залишає перевірюваний артефакт. Evidence-first підхід не обмежує креативність — він
+дає їй надійну основу. Production починається після дизайн-апруву; Production release — лише після
+QA та окремого погодження конкретної версії.
 
 ## Швидкий старт
 
-1. Запусти [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md): обери CATBET/SlotCity і Codex/Claude Code,
-   встанови project-local skills та створи project kit.
-2. Відкрий [framework/README.md](framework/README.md) і обери повний або швидкий маршрут.
-3. Проведи інтерв'ю за [framework/QUESTIONNAIRE.md](framework/QUESTIONNAIRE.md). Питання розгалужуються:
-   для внутрішнього лендінгу готового продукту не треба повторно досліджувати GEO, продукт і всю ЦА.
-4. Завантаж продуктову базу: [products/CATBET.md](products/CATBET.md) або
-   [products/SLOTCITY.md](products/SLOTCITY.md).
-5. Зафіксуй brand evidence у [Brand Archive](brand-archive/) і проведи copy/legal review за
-   [правилами PlayCity](PLAYCITY-COPYWRITING-RULES.md).
-6. Веди
-   [templates/PROJECT-STATE.md](templates/PROJECT-STATE.md) як єдину дошку гейтів.
-7. Проєктуй mobile-first за [framework/DESIGN-PROCESS.md](framework/DESIGN-PROCESS.md): 375 → 430 →
-   440 → 1440 → host context; не переходь до коду без editable Figma approval.
-8. Підготуй асети за [framework/ASSET-PIPELINE.md](framework/ASSET-PIPELINE.md), реалізуй за
-   [framework/TECHNICAL-STANDARD.md](framework/TECHNICAL-STANDARD.md), оптимізуй за
-   [framework/PERFORMANCE-OPTIMIZATION.md](framework/PERFORMANCE-OPTIMIZATION.md), перевір і випусти
-   за [framework/QA-RELEASE.md](framework/QA-RELEASE.md).
-
-Швидко створити project kit у репозиторії нового лендінгу:
+Для нового лендінгу:
 
 ```bash
-./methodology/scripts/bootstrap-project.sh . catbet codex
-# або
-./methodology/scripts/bootstrap-project.sh . slotcity claude
+./methodology/scripts/bootstrap-project.sh . slotcity codex
+# product: slotcity або catbet; agent: codex або claude
+# приклади: catbet codex | slotcity claude | catbet claude
 ```
 
-## Як підключити до нового лендінгу
+Для окремого арту, UI, компонента або аудиту:
 
-Наявний submodule-flow збережено. Методологія має бути запінена на reviewed tag/commit, щоб кожен
-лендінг залишався відтворюваним:
+```bash
+./methodology/scripts/bootstrap-design-task.sh . slotcity codex
+# product: slotcity або catbet; agent: codex або claude
+# приклади: catbet codex | slotcity claude | catbet claude
+```
+
+Підключення framework до нового repository:
 
 ```bash
 git submodule add https://github.com/onlineTeran/landing_doc.git methodology
 git -C methodology checkout <reviewed-tag-or-commit>
-git add .gitmodules methodology
-git commit -m "chore: pin landing methodology"
 ```
 
-Клонування проєкту із submodule:
+Методологія має бути запінена на reviewed tag/commit: оновлення framework є окремою контрольованою
+зміною, а не випадковим `pull` посеред кампанії.
 
-```bash
-git clone --recurse-submodules <landing-repository-url>
-# для вже склонованого: git submodule update --init
-```
+## Основні точки входу
 
-Оновлення — окрема зміна з review, а не випадковий pull посеред кампанії:
+- [Execution Protocol](EXECUTION-PROTOCOL.md) — повний контракт виконання та stop conditions.
+- [Landing Framework](framework/README.md) — маршрут створення лендінгу.
+- [Art Design Process](framework/ART-DESIGN-PROCESS.md) — керований процес для isolated visuals.
+- [Corporate Git Runbook](CORPORATE-GIT-RUNBOOK.md) — корпоративний GitLab, CI, Stage і Production.
+- [Agent Bootstrap](AGENT-BOOTSTRAP.md) — підключення Codex або Claude.
+- [Templates](templates/) — брифи, state, QA, delivery і release artifacts.
+- [Changelog](CHANGELOG.md) — розвиток системи.
 
-```bash
-git -C methodology fetch --tags
-git -C methodology checkout <new-reviewed-tag-or-commit>
-git add methodology
-git commit -m "chore: bump landing methodology"
-```
+## Corporate Git і release boundary
 
-Для private repo/hosting limitations див. [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md) і
-[DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md).
-
-## Архітектура бази знань
-
-| Шар | Відповідає на питання | Канонічні файли |
-|---|---|---|
-| **Процес** | У якому порядку працюємо і де зупиняємося на апрув? | [framework](framework/) |
-| **Продукт** | Які бренд-інваріанти, джерела й заборони діють? | [products](products/) |
-| **Brand evidence** | Де точні Figma nodes, asset rights, design system і ToV? | [brand-archive](brand-archive/) |
-| **Copy & compliance** | Як писати й перевіряти gambling promo copy? | [PLAYCITY-COPYWRITING-RULES.md](PLAYCITY-COPYWRITING-RULES.md) |
-| **Шаблони** | Які артефакти має залишити команда? | [templates](templates/) |
-| **AI orchestration** | Які скіли й промпти використовувати на кожному етапі? | [AGENT-BOOTSTRAP.md](AGENT-BOOTSTRAP.md), [SKILLS-MANIFEST.md](SKILLS-MANIFEST.md), [skills](skills/) |
-| **Досвід** | Які реальні помилки не повторювати? | [case-studies](case-studies/) |
-| **Технічна бібліотека** | Як реалізувати motion, iframe, аналітику й деплой? | наявні верхньорівневі технічні документи |
-
-## Непорушні правила
-
-- Один лендінг — одна бізнес-ціль і одна основна конверсійна дія.
-- Кожна цифра, механіка та legal-теза має джерело й статус у Claims Matrix.
-- Legal/Product Truth → Campaign Argument → Brand ToV: нижчий шар не переписує вищий.
-- Якщо співіснують два бренди, створюється Brand Bridge: хто володіє оболонкою, CTA, фоном,
-  типографікою, маскотом і графічними ефектами.
-- Надані Figma, live-сторінки, approved copy та canonical assets важливіші за AI-смак.
-- Ніякого коду до вибору візуального напряму й апруву повного дизайну.
-- Mobile 375 — перша й канонічна композиція; 430/440 і desktop розширюють її, а не навпаки.
-- Campaign copy і CTA routes завжди редагуються через `content/copy.json` та `content/actions.json`.
-- Production raster assets — WebP; standalone illustrations зазвичай transparent, background —
-  окрема asset task.
-- Motion спочатку перевіряється як CSS, потім video, потім frame sequence з byte/CPU розрахунком.
-- AI-асет не приймається у великому preview: його перевіряють у реальному слоті, на 1440/440/430/375,
-  з альфою, crop-safe area та потрібною вагою файлу.
-- Локальна перевірка завершується до публікації. Деплой — лише після явного release approval.
-
-## Мінімальний комплект артефактів проєкту
-
-- Project Brief і список відкритих питань.
-- Product Truth + Claims Matrix + legal freeze.
-- Brand Bridge або Brand Sheet.
-- Content Map і storyboard.
-- Три візуальні напрями; один обраний target.
-- Hero approval, desktop 1440, mobile 440, 430 і 375; QA — на актуальному top-10 із
-  [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md).
-- Asset Register з master/delivery-файлами та prompt log.
-- Analytics Plan.
-- Design QA, Technical QA і release checklist.
-- Static HTML+assets delivery, build-size report і editable Figma link із 375/430/440/1440/context.
-- Decision Log та ретроспектива.
-
-## Технічна бібліотека попередньої версії
-
-Framework 2.0 не дублює глибокі технічні інструкції. Використовуй їх за потреби:
-
-- [LANDING-DEVELOPMENT-METHODOLOGY.md](LANDING-DEVELOPMENT-METHODOLOGY.md) — детальна технічна база.
-- [LANDING-WORKFLOW.md](LANDING-WORKFLOW.md) і [PHASE-PROMPTS.md](PHASE-PROMPTS.md) — попередній
-  17-фазовий runbook і розгорнуті промпти.
-- [STARTER-ARCHITECTURE.md](STARTER-ARCHITECTURE.md) — Nuxt/Vue структура.
-- [ICON-GENERATION-METHODOLOGY.md](ICON-GENERATION-METHODOLOGY.md) — глибока методологія іконок.
-- [ANIMATION-PATTERNS.md](ANIMATION-PATTERNS.md) — motion-патерни.
-- [IFRAME-BRIDGE-INTEGRATION.md](IFRAME-BRIDGE-INTEGRATION.md) і
-  [SMARTICO-INTEGRATION.md](SMARTICO-INTEGRATION.md) — продуктові інтеграції.
-- [CONTENT-CONFIG.md](CONTENT-CONFIG.md), [CTA-AND-LINKS.md](CTA-AND-LINKS.md),
-  [GA-ANALYTICS-SPEC.md](GA-ANALYTICS-SPEC.md) — контент, CTA й аналітика.
-- [DEVICE-TEST-MATRIX.md](DEVICE-TEST-MATRIX.md), [CHECKLISTS.md](CHECKLISTS.md),
-  [DEPLOY-AND-LAUNCH.md](DEPLOY-AND-LAUNCH.md) — QA і запуск.
-
-## Для AI-агента
-
-Використовуй [skills/promo-landing-framework/SKILL.md](skills/promo-landing-framework/SKILL.md) і
-[skills/playcity-copy-review/SKILL.md](skills/playcity-copy-review/SKILL.md).
-Skill проводить агента через product truth → brand evidence → visual target → approved design → assets →
-implementation → QA. Він не дозволяє моделі починати код або домальовувати бренд раніше часу.
+Framework готує відтворюваний delivery для `git.sharkscode.com/cb/ai_landings`, але **не надає
+дозвіл на push, merge або deploy автоматично**. Stage дозволений лише в межах погодженого flow для
+QA. Production потребує пройденого фінального гейту й окремого release approval для точного
+commit/build і target. Канонічні правила: [Corporate Git Runbook](CORPORATE-GIT-RUNBOOK.md).
 
 ## Статус
 
-**Версія:** 2.0.0-draft · **Базовий стек:** Nuxt 3 · Vue 3 · TypeScript · SSG · scoped CSS · optional GSAP.
-
-Framework 2.0 сформовано після ретроспективи реального кросбрендового лендінгу BETON × CATBET.
-Опис висновків — у [case-studies/BETON-CATBET.md](case-studies/BETON-CATBET.md).
-
-## Як повертати покращення
-
-Існуючий evolution-flow не змінено: findings із конкретного лендінгу спочатку проходять retrospective,
-потім оновлюють цей repository окремим commit/PR із міткою `Спостережено`, `Виведено` або
-`Рекомендовано`. Повний процес — [EVOLVING-THE-METHODOLOGY.md](EVOLVING-THE-METHODOLOGY.md), історія
-версій — [CHANGELOG.md](CHANGELOG.md).
+**Версія: `3.0.0-draft`.** Framework активно розвивається; робочі проєкти мають використовувати
+reviewed і зафіксовану версію. Технічні версії завжди визначаються `package.json` конкретного
+проєкту, а не прикладами в методології.

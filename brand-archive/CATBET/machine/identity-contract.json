@@ -1,0 +1,34 @@
+{
+  "brand": "CATBET",
+  "designSystemVersion": "0.9",
+  "identity": "cat-bet-mascot",
+  "displayName": "кіт Бет",
+  "status": "owner-supplied-identity-evidence-layered-master-and-rights-pending",
+  "evidenceAssetIds": ["CB-OWNER-BIBLE-001", "CB-OWNER-LORE-001", "CB-DERIVED-MASCOT-003"],
+  "poseEvidenceAssetIds": ["CB-LIVE-POSE-005"],
+  "immutable": [
+    "canonical-cyan-blue-short-fur",
+    "orange-eyes-black-nose",
+    "orange-collar-accent",
+    "face-and-species-cues",
+    "body-shape-and-proportions",
+    "recognizability-without-logo",
+    "non-muscular-anatomy",
+    "no-clothes-default"
+  ],
+  "adaptableOnlyWithApproval": ["pose", "expression", "camera", "role-specific-clothing", "props", "animation"],
+  "forbiddenByDefault": [
+    "generic-blue-cat-substitute",
+    "base-color-change",
+    "face-or-species-drift",
+    "muscular-bodybuilder-deformation",
+    "unapproved-aggression-or-childishness",
+    "identity-changing-costume"
+  ],
+  "requiredBeforeProductionGeneration": [
+    "campaign-art-brief",
+    "rights-status",
+    "allowed-modification-matrix",
+    "brand-owner-review"
+  ]
+}

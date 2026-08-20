@@ -1,0 +1,31 @@
+{
+  "brand": "CATBET",
+  "designSystemVersion": "0.9",
+  "status": "provisional-evidence-based",
+  "signatureSignals": [
+    "canonical-mascot-identity",
+    "cyan-orange-semantic-palette",
+    "furry-tactile-material",
+    "catbox-or-current-reward-object",
+    "catbet-typography-treatment",
+    "cat-native-narrative-motif"
+  ],
+  "minimumIndependentSignalsPerKeyComposition": 3,
+  "composition": [
+    "one-signature-metaphor",
+    "one-dominant-reward-or-action",
+    "separate-copy-cta-legal-and-anatomy-safe-zones",
+    "intentional-desktop-and-mobile-composition",
+    "hero-story-repeats-in-lower-sections"
+  ],
+  "forbiddenByDefault": [
+    "logo-as-only-brand-signal",
+    "generic-casino-neon",
+    "unrelated-glassmorphism",
+    "invented-catbox-tier-or-reward",
+    "deposit-number-tier-conflation",
+    "rectangular-matte-on-transparent-assets",
+    "slotcity-token-or-component-substitution"
+  ],
+  "productionGenerationGate": "canonical-reference-rights-and-brand-approval-required"
+}

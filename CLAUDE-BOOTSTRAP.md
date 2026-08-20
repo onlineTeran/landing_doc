@@ -1,4 +1,4 @@
-# Bootstrap: підключення Framework 2.0 до Claude Code
+# Bootstrap: підключення Framework 3.0 до Claude Code
 
 > Призначення: покроковий сценарій «порожня папка → Claude Code знає методологію, має скіли
 > і починає розробку brand-accurate промо-лендінгу». Спільний для Codex/Claude маршрут і scripts —
@@ -73,16 +73,20 @@ CSS custom properties як токени; GSAP + ScrollTrigger за потреб�
 package.json» — не формальність: скіли реально приносять конвенції чужих версій, і саме CLAUDE.md
 утримує агента у правильному стеку.
 
-## 3. Встановити Framework 2.0 skills
+## 3. Встановити Framework 3.0 skills
 
 Не встановлюй skills вручну по одному. Після підключення `methodology/` запусти:
 
 ```bash
-./methodology/scripts/bootstrap-project.sh . <catbet|slotcity> claude
+./methodology/scripts/bootstrap-project.sh . <slotcity|catbet> claude
 ```
 
-Скрипт встановить у `.claude/skills/` два repository-owned skills: `promo-landing-framework` і
-`playcity-copy-review`, створить artifacts/Brand Archive snapshot і `SKILL-AUDIT.md`.
+Тут `<slotcity|catbet>` — незалежний вибір продукту, а `claude` — вибір агента. Для Codex та сама
+команда завершується аргументом `codex`.
+
+Скрипт встановить у `.claude/skills/` три repository-owned skills: `promo-landing-framework`,
+`brand-design-base` і `playcity-copy-review`, створить artifacts/Brand Archive snapshot і
+`SKILL-AUDIT.md`.
 
 Після цього — **обов'язково**:
 

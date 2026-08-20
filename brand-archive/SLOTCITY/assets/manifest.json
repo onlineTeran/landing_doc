@@ -1,0 +1,81 @@
+{
+  "brand": "SLOTCITY",
+  "designSystemVersion": "0.9",
+  "capturedAt": "2026-08-21",
+  "status": "reference-pack-not-canonical-master",
+  "assets": [
+    {
+      "id": "SC-LIVE-LOGO-001",
+      "path": "reference/logo-live-2026-08-21.svg",
+      "sha256": "f020299e90d27574c81cd264f61042c49a2208708b66dca9bf42d9cb86290d30",
+      "sourceUrl": "https://slotcity.ua/img/logo/logo.svg",
+      "evidenceClass": "LIVE_SNAPSHOT",
+      "allowedRoles": ["exact-logo-layer"],
+      "allowedUse": "composite-unchanged",
+      "rightsStatus": "brand-owner-contract-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "SC-LIVE-MASCOT-001",
+      "path": "reference/mascot-city-levels-live-2026-08-21.webp",
+      "sha256": "baa9d303f59c0840c5c29de410c468b7ddd72324e846eb50948e0d10d9cb2853",
+      "sourceUrl": "https://slotcity.ua/img/levels/levels-banner-fallback-desktop.webp",
+      "sourcePage": "https://slotcity.ua/levels",
+      "evidenceClass": "LIVE_SNAPSHOT",
+      "allowedRoles": ["mascot-identity"],
+      "identityRegion": "central white draped city figure",
+      "allowedUse": "reference-only",
+      "rightsStatus": "mascot-passport-and-modification-rights-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "SC-DERIVED-MASCOT-002",
+      "path": "reference/mascot-levels-identity-clean-v0.9.png",
+      "sha256": "267eef64a42218a7279d6df52f526f19efaafba438b7133d246e251ffee4058e",
+      "derivedFrom": "SC-LIVE-MASCOT-001",
+      "crop": {"left": 650, "top": 0, "width": 1100, "height": 950},
+      "evidenceClass": "DERIVED_IDENTITY_CROP",
+      "allowedRoles": ["mascot-identity"],
+      "identityRegion": "faceless white draped figure with sunglasses, yellow cap and shoes, gold chain",
+      "allowedUse": "reference-only",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "SC-OWNER-POSE-003",
+      "path": "reference/mascot-relaxed-pose-owner-supplied-v0.9-2026-08-21.png",
+      "sha256": "1f94042eb3a75c782d4015abf01c597458f754a6fab127b0974e483ce9a71a34",
+      "sourceProvidedBy": "user-in-framework-task",
+      "evidenceClass": "OWNER_SUPPLIED_BRAND_SOURCE",
+      "allowedRoles": ["mascot-pose"],
+      "identityRegion": "faceless mascot leaning with one elbow supported and ankles crossed; ignore social-media icons",
+      "allowedUse": "pose-reference-only",
+      "rightsStatus": "internal-brand-use-assumed-owner-confirmation-pending",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "SC-DERIVED-POSE-004",
+      "path": "reference/mascot-relaxed-pose-crop-v0.9.png",
+      "sha256": "6a9da10cc7da9621217f3e8ebde54e26925d857fc0647d186d5c44a359804c0e",
+      "derivedFrom": "SC-OWNER-POSE-003",
+      "crop": {"left": 830, "top": 0, "width": 760, "height": 720},
+      "evidenceClass": "DERIVED_POSE_CROP",
+      "allowedRoles": ["mascot-pose"],
+      "allowedUse": "pose-reference-only",
+      "rightsStatus": "inherits-source",
+      "lastVerified": "2026-08-21"
+    },
+    {
+      "id": "SC-LIVE-CITY-001",
+      "path": "reference/city-levels-og-live-2026-08-21.webp",
+      "sha256": "5799e257dab6a48c17d75ee369567deecf0f36ea98a17392685ad19f2bf01767",
+      "sourceUrl": "https://slotcity.ua/img/levels/seo/og/1200_630_levels.webp",
+      "sourcePage": "https://slotcity.ua/levels",
+      "evidenceClass": "LIVE_SNAPSHOT",
+      "allowedRoles": ["environment", "composition"],
+      "allowedUse": "reference-only",
+      "rightsStatus": "owner-confirmation-pending",
+      "lastVerified": "2026-08-21"
+    }
+  ]
+}

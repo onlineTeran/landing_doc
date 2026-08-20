@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [[ $# -ne 2 ]]; then
-  echo "Usage: $0 <project-root> <catbet|slotcity>" >&2
+  echo "Usage: $0 <project-root> <slotcity|catbet>" >&2
   exit 64
 fi
 
@@ -18,12 +18,14 @@ case "$product_name" in
     brand_archive="$methodology_root/brand-archive/CATBET"
     product_filename="CATBET.md"
     brand_directory="CATBET"
+    product_label="CATBET"
     ;;
   slotcity)
     product_file="$methodology_root/products/SLOTCITY.md"
     brand_archive="$methodology_root/brand-archive/SLOTCITY"
     product_filename="SLOTCITY.md"
     brand_directory="SLOTCITY"
+    product_label="SlotCity"
     ;;
   *)
     echo "Product must be catbet or slotcity." >&2
@@ -38,7 +40,8 @@ fi
 
 mkdir -p "$destination"
 mkdir -p "$destination/products" "$destination/brand-archive"
-cp "$methodology_root/templates/PROJECT-STATE.md" "$destination/PROJECT-STATE.md"
+sed "s@^- Destination product:.*@- Destination product: $product_label@" \
+  "$methodology_root/templates/PROJECT-STATE.md" > "$destination/PROJECT-STATE.md"
 cp "$methodology_root/templates/PROJECT-BRIEF.md" "$destination/PROJECT-BRIEF.md"
 cp "$methodology_root/templates/CLAIMS-MATRIX.md" "$destination/CLAIMS-MATRIX.md"
 cp "$methodology_root/templates/BRAND-BRIDGE.md" "$destination/BRAND-BRIDGE.md"
@@ -46,9 +49,15 @@ cp "$methodology_root/templates/STORYBOARD.md" "$destination/STORYBOARD.md"
 cp "$methodology_root/templates/ASSET-REGISTER.md" "$destination/ASSET-REGISTER.md"
 cp "$methodology_root/templates/ANALYTICS-PLAN.md" "$destination/ANALYTICS-PLAN.md"
 cp "$methodology_root/templates/DESIGN-QA.md" "$destination/DESIGN-QA.md"
+cp "$methodology_root/templates/FUNCTIONAL-SPEC.md" "$destination/FUNCTIONAL-SPEC.md"
+cp "$methodology_root/templates/REFERENCE-AND-MASCOT-BASE.md" "$destination/REFERENCE-AND-MASCOT-BASE.md"
+cp "$methodology_root/templates/GIT-DELIVERY.md" "$destination/GIT-DELIVERY.md"
+cp "$methodology_root/templates/QA-TASK.md" "$destination/QA-TASK.md"
+cp "$methodology_root/templates/RELEASE-TASK.md" "$destination/RELEASE-TASK.md"
 cp "$product_file" "$destination/products/$product_filename"
 cp "$methodology_root/PLAYCITY-COPYWRITING-RULES.md" "$destination/PLAYCITY-COPYWRITING-RULES.md"
 cp -R "$brand_archive" "$destination/brand-archive/$brand_directory"
 
 echo "Created promo landing project kit at $destination"
 echo "Start with PROJECT-STATE.md, PROJECT-BRIEF.md and the selected product/brand-archive snapshot."
+echo "Validate progress with: ./methodology/scripts/validate-project-state.sh $project_root"

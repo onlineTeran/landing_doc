@@ -8,6 +8,10 @@ description: Plan, design, asset-produce, implement, QA, and release brand-accur
 Guide the project through product truth, brand evidence, visual approval, asset freeze, implementation,
 QA and release. Treat the current project artifacts as source of truth; do not rely on chat memory.
 
+Resolve the methodology root first: use `./methodology/` in a landing repository; when the current
+repository itself contains `EXECUTION-PROTOCOL.md`, use its root. Resolve all methodology scripts and
+runbooks from that root rather than assuming both layouts exist.
+
 ## Load references
 
 Read [gates.md](references/gates.md) for every new project or phase change.
@@ -17,10 +21,14 @@ Read conditionally:
 - [product-routing.md](references/product-routing.md) when selecting CATBET/SlotCity or combining brands.
 - [artifact-contracts.md](references/artifact-contracts.md) during intake, handoff or status review.
 - [review-rubric.md](references/review-rubric.md) before selecting a direction, approving assets or QA.
+- [corporate-git.md](references/corporate-git.md) before changing `landings.json`, opening a corporate
+  MR, preparing Stage/Production deployment, rollback or removal.
 
 When the project contains gambling advertising copy, activate the repository-owned
 `playcity-copy-review` skill before G2 and again before release. Read the selected brand's Product KB,
 Brand Archive snapshot and Tone of Voice; if ToV is pending, do not invent it.
+Activate repository-owned `brand-design-base` for Brand Evidence, visual directions, art production,
+component selection and visual QA. Its art approval never replaces the landing's sequential gates.
 
 ## Route the request
 
@@ -45,6 +53,8 @@ Create or update a `PROJECT-STATE.md` containing:
 - open questions, decisions and change requests.
 
 After every material user answer, update the control surface and state the remaining blockers.
+Follow `<methodology-root>/EXECUTION-PROTOCOL.md` as the execution loop. Every phase must end in a repository artifact,
+verification evidence and a recorded human decision; a chat response alone is not phase completion.
 
 ## Conduct intake in rounds
 
@@ -118,6 +128,10 @@ styles, separate content/actions/legal/analytics config, and omit host chrome fr
 Preserve approved copy, CTA component ownership, asset identity and responsive layouts. Any redesign
 during implementation becomes a change request and reopens affected design gates.
 
+Before implementation, complete `FUNCTIONAL-SPEC.md`. Model every integration (including Smartico)
+with loading, empty, partial, error, unauthorized and success states, exact API/SDK ownership, secrets
+boundary, allowlists, analytics and acceptance tests.
+
 ## QA with evidence
 
 Run three distinct passes:
@@ -129,12 +143,20 @@ Run three distinct passes:
 Assert zero missing assets, zero horizontal overflow, no console/hydration errors, correct video ratio,
 real CTA routes, reduced-motion behavior, complete legal text and analytics events. Repeat visual
 comparison after fixes; a screenshot alone is not QA.
+Create `QA-TASK.md` for the exact build under test, with functional IDs, preconditions, steps, expected
+results, device/browser coverage, test-data location and evidence fields.
 
 ## Release only after approval
 
+Treat Stage and Production as separate external actions. A Stage deploy may occur after G9 with explicit
+Stage approval because Stage evidence is required for G10. It never grants Production permission.
 Finish all local changes, production build, tests, visual QA, legal/brand/product/analytics approvals and
 live-route preparation before publishing. Require an explicit release approval for the exact version and
 target. Poll deployment to a terminal result, then verify the public URL without owner-only authentication.
+Record branch, commit SHA, CI, explicit approval, target, rollback and post-deploy smoke evidence in
+`GIT-DELIVERY.md`. Do not treat permission to implement as permission to push, merge or deploy.
+For `cb/ai_landings`, validate `landings.json`, preserve the Stage-approved build identity, require
+manual Stage and Production jobs, and record separate Stage QA and Production smoke in `RELEASE-TASK.md`.
 
 ## Capture learning
 

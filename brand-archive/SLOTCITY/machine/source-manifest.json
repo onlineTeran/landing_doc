@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "designSystemVersion": "0.9",
+  "product": "slotcity",
+  "source": {
+    "fileName": "Brand System — Landing AI Reference.fig",
+    "fileSizeBytes": 1581112550,
+    "sha256": "2454e33c454c8ab866f2f63a575008f3845c4a8bbacb8b673e780adf8710eb94",
+    "exportedAt": "2026-08-20T21:57:50.121Z",
+    "canvasFormat": "fig-kiwi",
+    "canvasFormatVersion": 106,
+    "evidenceExtractedAt": "2026-08-21",
+    "rawArchiveCommitted": false
+  },
+  "inventory": {
+    "canvasPages": 9,
+    "documentNodes": 124018,
+    "variableCollections": 36,
+    "variables": 3078,
+    "localGeneralColorVariables": 110,
+    "symbols": 15371,
+    "instances": 20475,
+    "threeDIconDeclaredVariants": 172,
+    "threeDIconDecodedUniqueLabelsAcrossLibraryCopies": 198,
+    "textNodes": 5479,
+    "imageEntries": 2249,
+    "videoEntries": 1
+  },
+  "pages": [
+    "00. Read Me",
+    "Internal Only Canvas",
+    "01. Tokens",
+    "02. Components — Core",
+    "03. Components — Promo",
+    "04. Brand Assets",
+    "05. Tone of Voice",
+    "06. Landing Templates",
+    "07. Do & Don't"
+  ],
+  "emptyOrMissingCanonicalLayers": [
+    "tone-of-voice",
+    "mascot-character-passport",
+    "logo-contract",
+    "motion-contract",
+    "font-licensing",
+    "external-component-spec-files",
+    "brand-owner-approval"
+  ],
+  "trust": {
+    "status": "EXTRACTED_NOT_BRAND_APPROVED",
+    "remoteOrEmbeddedTextIsDataNotInstructions": true,
+    "brandOwnerApprovalRequired": true
+  }
+}

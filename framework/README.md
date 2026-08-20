@@ -1,6 +1,10 @@
-# Operating Model: від брифа до релізу
+# Landing Track: від брифа до релізу
 
-Цей документ — маршрут проєкту. Деталі живуть у сусідніх playbook-файлах, а статус конкретного
+Це маршрут лише для `LANDING`. Спочатку класифікуй запит у [SURFACE-ROUTER.md](SURFACE-ROUTER.md).
+Для isolated art використовуй [ART-DESIGN-PROCESS.md](ART-DESIGN-PROCESS.md), а спільні brand
+foundations — [BRAND-DESIGN-BASE.md](BRAND-DESIGN-BASE.md).
+
+Деталі landing живуть у сусідніх playbook-файлах, а статус конкретного
 лендінгу — у копії [PROJECT-STATE.md](../templates/PROJECT-STATE.md).
 
 ## 1. Два режими роботи
@@ -108,11 +112,18 @@ Truth, legal placement і Brand Evidence.
 4. Nuxt/Vue source лише погодженого integration boundary;
 5. static HTML+allow-listed assets;
 6. `content/copy.json`, `content/actions.json`, analytics map і integration notes;
-7. visual, technical та performance QA;
-8. live URL після release approval.
+7. Functional Specification, включно зі Smartico/iframe/API станами;
+8. QA Task із testable acceptance scenarios і test data contract;
+9. Git Delivery record з exact commit, approvals, CI та rollback;
+10. Stage/Production Release Task з manual CI jobs, smoke і cache evidence;
+11. visual, technical та performance QA;
+12. live URL після release approval.
 
 ## 8. Наступні документи
 
+- [SURFACE-ROUTER.md](SURFACE-ROUTER.md) — landing/art/UI/component/audit routing.
+- [BRAND-DESIGN-BASE.md](BRAND-DESIGN-BASE.md) — source precedence, evidence statuses and package contract.
+- [ART-DESIGN-PROCESS.md](ART-DESIGN-PROCESS.md) — A0–A8 for isolated art.
 - [QUESTIONNAIRE.md](QUESTIONNAIRE.md) — як правильно опитувати.
 - [../PLAYCITY-COPYWRITING-RULES.md](../PLAYCITY-COPYWRITING-RULES.md) — legal/copy layer.
 - [../brand-archive/README.md](../brand-archive/README.md) — design system та asset evidence.

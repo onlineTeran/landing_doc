@@ -1,0 +1,30 @@
+{
+  "brand": "CATBET",
+  "designSystemVersion": "0.9",
+  "status": "semantic-roles-confirmed-exact-values-pending",
+  "sourceOfTruth": "owner-supplied-brand-bible-plus-editable-token-source-pending",
+  "families": {
+    "color": {
+      "status": "semantic-roles-confirmed-values-pending",
+      "expectedRoles": ["brand-cyan", "brand-orange", "surface", "text", "action", "status", "auxiliary"]
+    },
+    "typography": {
+      "status": "pending-extraction",
+      "expectedRoles": ["display", "furry-art", "body", "ui", "legal"]
+    },
+    "layout": {
+      "status": "pending-extraction",
+      "expectedRoles": ["space", "size", "grid", "breakpoint", "safe-zone", "z-index"]
+    },
+    "shapeAndDepth": {
+      "status": "pending-extraction",
+      "expectedRoles": ["radius", "border", "shadow", "elevation", "blur"]
+    },
+    "motion": {
+      "status": "pending-extraction",
+      "expectedRoles": ["duration", "easing", "distance", "loop", "reduced-motion"]
+    }
+  },
+  "gapBehavior": "DESIGN_SYSTEM_GAP:<family>/<role>",
+  "crossBrandRule": "host-and-destination-tokens-must-remain-separate"
+}

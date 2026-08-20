@@ -1,0 +1,4 @@
+interface:
+  display_name: "Brand Design Base"
+  short_description: "Design product visuals from brand evidence"
+  default_prompt: "Use $brand-design-base to design a SlotCity art asset from canonical brand evidence."

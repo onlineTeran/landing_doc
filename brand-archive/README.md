@@ -1,6 +1,11 @@
 # Brand Archive
 
-Brand Archive — канонічний evidence layer між живою дизайн-системою та проєктним Product KB.
+**Current design-system package version:** `0.9` for both SlotCity and CATBET. Version `0.9` means the
+structure is usable by agents, but one or more canonical owner approvals or source layers are still
+pending. A later supplied source updates the package through review; it does not silently overwrite 0.9.
+
+Brand Archive — канонічний evidence layer між живою дизайн-системою та проєктним Product KB для
+лендінгів, окремих артів, product UI, компонентів і візуальних аудитів.
 Product KB пояснює, **як приймати рішення**; archive фіксує, **де лежить доказ**.
 
 ## Структура кожного бренду
@@ -12,7 +17,18 @@ Product KB пояснює, **як приймати рішення**; archive ф�
   ASSET-CATALOG.md       # asset families і modification rights
   REFERENCE-REGISTER.md  # Figma nodes, URLs, files і роль кожного reference
   TONE-OF-VOICE.md       # підключається після legal/product truth
+  TOKENS.md              # semantic foundations і responsive roles
+  COMPONENTS.md          # component selection, variants, states, restrictions
+  ART-DIRECTION.md       # composition/material/camera/light/style groups
+  ART-GENERATION.md      # prompt and QA contract
+  MASCOT.md              # identity evidence and modification gaps, when applicable
+  DESIGN-GAPS.md         # explicit stop conditions
+  assets/                # small dated evidence pack + checksums; canonical/ only after owner approval
+  machine/               # source manifest and deterministic contracts
 ```
+
+See [ASSET-EVIDENCE-STANDARD.md](ASSET-EVIDENCE-STANDARD.md) for local reference/master classes,
+manifest fields, prompt-role separation and update rules.
 
 ## Archive rules
 
@@ -27,5 +43,6 @@ Product KB пояснює, **як приймати рішення**; archive ф�
 
 ## Бренди
 
-- [CATBET](CATBET/INDEX.md) — seeded archive на основі BETON × CATBET.
-- [SlotCity](SLOTCITY/INDEX.md) — керований onboarding archive без вигаданих правил.
+- [CATBET](CATBET/INDEX.md) — owner-supplied Brand Bible/Lore World `0.9` з окремими gaps точних editable tokens/components.
+- [SlotCity](SLOTCITY/INDEX.md) — детально вилучена AI design base; ToV/mascot/logo/motion approval gaps explicit.
+- [SlotCity × CATBET bridge evidence](BRIDGES/SLOTCITY-CATBET/README.md) — owner-supplied ensemble reference without merging brand ownership.

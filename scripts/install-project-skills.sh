@@ -26,7 +26,7 @@ esac
 
 mkdir -p "$skills_root"
 
-for skill_name in promo-landing-framework playcity-copy-review; do
+for skill_name in promo-landing-framework brand-design-base playcity-copy-review; do
   source_dir="$methodology_root/skills/$skill_name"
   destination="$skills_root/$skill_name"
 

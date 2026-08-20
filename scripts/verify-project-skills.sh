@@ -10,13 +10,13 @@ project_root="$1"
 agent_name="$(printf '%s' "$2" | tr '[:upper:]' '[:lower:]')"
 
 case "$agent_name" in
-  codex) skills_root="$project_root/.agents/skills" ;;
-  claude) skills_root="$project_root/.claude/skills" ;;
+  codex) skills_root="$project_root/.agents/skills"; instructions_file="$project_root/AGENTS.md" ;;
+  claude) skills_root="$project_root/.claude/skills"; instructions_file="$project_root/CLAUDE.md" ;;
   *) echo "Agent must be codex or claude." >&2; exit 64 ;;
 esac
 
 status=0
-for skill_name in promo-landing-framework playcity-copy-review; do
+for skill_name in promo-landing-framework brand-design-base playcity-copy-review; do
   if [[ -f "$skills_root/$skill_name/SKILL.md" ]]; then
     echo "OK $skills_root/$skill_name/SKILL.md"
   else
@@ -24,6 +24,13 @@ for skill_name in promo-landing-framework playcity-copy-review; do
     status=1
   fi
 done
+
+if [[ -f "$instructions_file" ]] && rg -q '<!-- promo-landing-framework:begin -->' "$instructions_file"; then
+  echo "OK $instructions_file promo landing instructions"
+else
+  echo "MISSING managed promo landing instructions in $instructions_file" >&2
+  status=1
+fi
 
 audit_path="$project_root/docs/promo-landing/SKILL-AUDIT.md"
 if [[ -f "$audit_path" ]]; then

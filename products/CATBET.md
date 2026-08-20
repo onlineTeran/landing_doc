@@ -1,7 +1,7 @@
 # CATBET Product & Brand Knowledge Base
 
-**Status:** seeded from the BETON × CATBET case; validate against current brand/legal sources at the
-start of every campaign. Promo mechanics and advertising permissions are not permanent brand facts.
+**Status:** CATBET Brand Bible/Lore World `0.9` imported; product mechanics and advertising permissions
+still require current Product/Legal validation for every campaign.
 
 Detailed design-system, asset and reference evidence lives in the
 [CATBET Brand Archive](../brand-archive/CATBET/INDEX.md). This Product KB contains decision rules, not
@@ -28,6 +28,8 @@ Lower source never overrides higher source. Previous campaign copy cannot legali
 
 ### Brand and assets
 
+- [Owner-supplied Brand Bible extraction](../brand-archive/CATBET/BRAND-BIBLE.md)
+- [Bet mascot/identity contract](../brand-archive/CATBET/MASCOT.md)
 - [CATBET Visual Assets — general 3D language](https://www.figma.com/design/60GcNX5ozOg29YImVj1mNz/%F0%9F%90%88-Visual-Assets-CB?node-id=1-97)
 - [Welcome bonus assets](https://www.figma.com/design/60GcNX5ozOg29YImVj1mNz/%F0%9F%90%88-Visual-Assets-CB?node-id=2853-15963)
 - [Bonus icon family](https://www.figma.com/design/60GcNX5ozOg29YImVj1mNz/%F0%9F%90%88-Visual-Assets-CB?node-id=957-411)
@@ -65,12 +67,15 @@ At project start, export or capture exact referenced frames. A Figma URL alone i
 
 ## 4. CATBET mascot invariants
 
-These rules came directly from review feedback and require brand confirmation for new campaigns:
+These rules are extracted from the owner-supplied Brand Bible/Lore World. New campaign executions still
+require review for the exact pose, prop, environment and placement:
 
 - One canonical blue/cyan cat identity; do not change the base fur color.
 - Preserve canonical body shape, proportions, face and species cues.
+- Preserve orange/red eyes and the orange collar as an immutable marker.
 - Do not generate muscular/bodybuilder variants.
-- Clothing and props may change only when the base identity remains exact and the context is approved.
+- Default to no clothing. A role costume or prop is allowed only when the explicit concept requires it,
+  the base identity remains exact and the context is approved.
 - Emotional expression may adapt; aggression is not a default.
 - Fur material must remain consistent across cat, paws, letters and selected icons where style lock calls for it.
 - A generic blue cat is not automatically CATBET. Identity source must be attached to generation.
@@ -109,9 +114,9 @@ Design them with separate visual systems and validate the explanation with Produ
 - Metaphor must never obscure the actual action (`verify`, `deposit`, `subscribe`, `complete stakes`).
 - Legal and numeric conditions stay literal.
 
-These are provisional case observations, not the final Tone of Voice. The official document will be
-connected through [CATBET TONE-OF-VOICE.md](../brand-archive/CATBET/TONE-OF-VOICE.md). Until then mark
-brand copy `TOV PENDING`; follow Legal/Product Truth → Campaign Argument → ToV.
+The Brand Bible closes Bet's core character and voice behavior. The dedicated phrase library remains
+partial; see [CATBET TONE-OF-VOICE.md](../brand-archive/CATBET/TONE-OF-VOICE.md). Follow
+Legal/Product Truth → Campaign Argument → ToV.
 
 ## 8. Cross-brand rules
 

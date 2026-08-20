@@ -1,6 +1,10 @@
 # CATBET Design System Evidence
 
-Це не заміна Figma. Документ формалізує, що треба витягнути з canonical source перед дизайном.
+**Version:** `0.9` · **Status:** owner-supplied Brand Bible/Lore World extracted; exact editable tokens,
+components and masters remain partial until the source design file is connected.
+
+Це не заміна Figma. Документ формалізує confirmed case evidence, safe provisional rules і те, що треба
+витягнути з canonical source. Unknown values remain `PENDING`; agents must return `DESIGN_SYSTEM_GAP`.
 
 ## 1. Color roles
 
@@ -30,13 +34,15 @@ Furry lettering — art treatment, а не body font. На mobile title має �
 ### Immutable until brand approval
 
 - canonical cyan/blue fur color;
+- orange/red eyes and orange collar;
 - species, face, body shape і proportions;
 - узнаваність навіть без logo;
 - відсутність bodybuilder/muscular deformation.
+- no clothes by default.
 
 ### Potentially adaptable
 
-- pose, expression, camera, approved clothing/props;
+- pose, expression, camera, approved role-specific clothing/props;
 - interaction with product/host character;
 - animation, якщо identity frames лишаються canonical.
 

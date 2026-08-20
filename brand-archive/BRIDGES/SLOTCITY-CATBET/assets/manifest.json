@@ -1,0 +1,47 @@
+{
+  "bridge": "SLOTCITY-CATBET",
+  "designSystemVersions": {"slotcity": "0.9", "catbet": "0.9"},
+  "capturedAt": "2026-08-21",
+  "status": "owner-supplied-cross-brand-reference",
+  "assets": [
+    {
+      "id": "SC-CB-OWNER-ENSEMBLE-001",
+      "path": "reference/mascot-ensemble-owner-supplied-v0.9-2026-08-21.png",
+      "sha256": "68207f81c9b7cfed044aaa32bb28cd297c05b549940adda4a4da2e3bf908e69e",
+      "evidenceClass": "OWNER_SUPPLIED_BRAND_SOURCE",
+      "allowedRoles": ["cross-brand-composition", "secondary-character-identity"],
+      "allowedUse": "reference-only",
+      "rightsStatus": "internal-brand-use-assumed-owner-confirmation-pending"
+    },
+    {
+      "id": "SC-DERIVED-REDHEAD-003",
+      "path": "reference/slotcity-redhead-mascot-identity-v0.9.png",
+      "sha256": "0a6445c50a499801080225af7da951668659106f3f8aa79086244698afb1ec89",
+      "derivedFrom": "SC-CB-OWNER-ENSEMBLE-001",
+      "evidenceClass": "DERIVED_IDENTITY_CROP",
+      "allowedRoles": ["secondary-slotcity-character-identity"],
+      "allowedUse": "reference-only",
+      "rightsStatus": "inherits-source"
+    },
+    {
+      "id": "SC-DERIVED-GENIE-004",
+      "path": "reference/slotcity-genie-mascot-identity-v0.9.png",
+      "sha256": "6a27d9812ce673cc832bd91104f7975bd122c8ce2cd053c7278fa9e3d2e44a24",
+      "derivedFrom": "SC-CB-OWNER-ENSEMBLE-001",
+      "evidenceClass": "DERIVED_IDENTITY_CROP",
+      "allowedRoles": ["secondary-slotcity-character-identity"],
+      "allowedUse": "reference-only",
+      "rightsStatus": "inherits-source"
+    },
+    {
+      "id": "SC-DERIVED-ENSEMBLE-005",
+      "path": "reference/slotcity-secondary-mascots-identity-v0.9.png",
+      "sha256": "94e265d88f82e4131e1e65984453b1c00f25bc79dc23dc8c2c2c72ed3fe0a08a",
+      "derivedFrom": "SC-CB-OWNER-ENSEMBLE-001",
+      "evidenceClass": "DERIVED_CONTEXT_CROP",
+      "allowedRoles": ["secondary-ensemble-cross-check"],
+      "allowedUse": "reference-only",
+      "rightsStatus": "inherits-source"
+    }
+  ]
+}

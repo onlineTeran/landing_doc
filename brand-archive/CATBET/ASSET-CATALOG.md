@@ -1,12 +1,14 @@
 # CATBET Asset Catalog
 
+**Design System version:** `0.9` · actual asset rights and masters still require current owner evidence.
+
 `Source status`: `CANONICAL | APPROVED CAMPAIGN | REFERENCE-ONLY | GENERATED MASTER | RETIRED`.
 `Modification`: `IMMUTABLE | CROP | RECOLOR | DRESS | POSE | ANIMATE | REGENERATE` — only explicitly
 approved values apply.
 
 | Family | Source status | Default modification | Master/delivery expectation | Principal QA |
 |---|---|---|---|---|
-| CAT mascot | CANONICAL source required | IMMUTABLE; adaptation by approval | layered/hi-res master; transparent WebP/PNG delivery | face/body/color identity |
+| CAT mascot / кіт Бет | OWNER-SUPPLIED identity evidence; layered master pending | IMMUTABLE; no clothes by default; adaptation by approval | layered/hi-res master; transparent WebP/PNG delivery | face/body/color/eyes/collar identity |
 | CatBox closed tiers | CANONICAL | CROP/ANIMATE if approved | transparent master + responsive delivery | label/tier/mechanic correctness |
 | CatBox open tiers | CANONICAL | CROP/ANIMATE if approved | transparent master + responsive delivery | open state and reward semantics |
 | Furry utility icons | CANONICAL family | REGENERATE only from style lock | alpha master; WebP preferred | fiber/camera/light/weight consistency |
@@ -48,3 +50,6 @@ campaigns_used: []
    requires PNG. Legal/technical owner may require both.
 6. Compare contact sheet at equal canvas size and at actual rendered sizes.
 7. Store prompt, reference roles, generation mode and correction log in the campaign Asset Register.
+
+Local logo/mascot evidence and checksums: [`assets/README.md`](assets/README.md) and
+[`assets/manifest.json`](assets/manifest.json). Baked numbers/copy in campaign references are not Product Truth.
