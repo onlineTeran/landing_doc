@@ -1,32 +1,32 @@
-# CATBET Product & Brand Knowledge Base
+# Продуктова й брендова база знань CATBET
 
-**Status:** CATBET Brand Bible/Lore World `0.9` imported; product mechanics and advertising permissions
-still require current Product/Legal validation for every campaign.
+**Статус:** CATBET Brand Bible/Lore World `0.9` імпортовано; продуктові механіки й рекламні дозволи
+все одно потребують актуальної перевірки Product/Legal для кожної кампанії.
 
-Detailed design-system, asset and reference evidence lives in the
-[CATBET Brand Archive](../brand-archive/CATBET/INDEX.md). This Product KB contains decision rules, not
-a duplicate asset dump.
+Детальні докази щодо дизайн-системи, асетів і референсів зберігаються в
+[CATBET Brand Archive](../brand-archive/CATBET/INDEX.md). Ця Product KB містить правила рішень, а не
+дубльоване сховище асетів.
 
-## 1. Source precedence
+## 1. Пріоритет джерел
 
-1. Current legal/compliance approval for the exact placement and GEO.
-2. Current promo rules / canonical product page.
-3. CATBET brand Figma and canonical visual asset library.
-4. Current production CATBET interface.
-5. Approved previous CATBET promo designs.
-6. AI generations and third-party references.
+1. Актуальне погодження legal/compliance для точного placement і GEO.
+2. Актуальні правила промо / канонічна продуктова сторінка.
+3. Брендова Figma CATBET і канонічна бібліотека візуальних асетів.
+4. Актуальний production-інтерфейс CATBET.
+5. Погоджені попередні промодизайни CATBET.
+6. AI-генерації та сторонні референси.
 
-Lower source never overrides higher source. Previous campaign copy cannot legalize a current claim.
+Джерело нижчого рівня ніколи не перекриває вище. Copy попередньої кампанії не легалізує актуальне твердження.
 
-## 2. Canonical sources to attach
+## 2. Канонічні джерела для підключення
 
-### Product and promo
+### Продукт і промо
 
 - [CATBET](https://catbet.com.ua/)
 - [CATBET promos](https://catbet.com.ua/promo)
 - [Welcome Pack](https://catbet.com.ua/promo/welcome-pack)
 
-### Brand and assets
+### Бренд та ассети
 
 - [Owner-supplied Brand Bible extraction](../brand-archive/CATBET/BRAND-BIBLE.md)
 - [Bet mascot/identity contract](../brand-archive/CATBET/MASCOT.md)
@@ -38,49 +38,49 @@ Lower source never overrides higher source. Previous campaign copy cannot legali
 - [CATBET title lettering reference](https://www.figma.com/design/Awy5S2tjqMYp9q6y0brMB8/slotsonbet--Copy-?node-id=3968-24452)
 - [CATBET paw usage](https://www.figma.com/design/Awy5S2tjqMYp9q6y0brMB8/slotsonbet--Copy-?node-id=3449-8362)
 
-At project start, export or capture exact referenced frames. A Figma URL alone is not an evidence pack.
+На старті проєкту експортуйте або збережіть точні згадані frames. Сам URL Figma не є evidence pack.
 
-## 3. Visual DNA observed in the case
+## 3. Візуальна ДНК, зафіксована в кейсі
 
-### Core palette
+### Базова палітра
 
-- CATBET cyan/blue is the primary destination accent.
-- CATBET orange is the second core accent and should carry semantic emphasis, not disappear under cyan.
-- Purple, lime or other colors are auxiliary only when required by a canonical asset or host Brand Bridge.
-- Exact hex values and color profiles must be extracted from current Figma; do not infer from screenshots.
+- Cyan/blue CATBET — основний акцент продукту призначення.
+- Помаранчевий CATBET — другий ключовий акцент; він має нести змістовий наголос, а не губитися під cyan.
+- Фіолетовий, lime та інші кольори є допоміжними лише за вимогою канонічного асета або Brand Bridge хоста.
+- Точні HEX і колірні профілі беріть з актуальної Figma; не виводьте їх зі скриншотів.
 
-### Typography
+### Типографіка
 
-- Use current CATBET font families and weights from the brand Figma.
-- Expressive furry display lettering is appropriate for selected promo titles and large numeric rewards.
-- Split-color headlines may use cyan for one semantic phrase and orange for the second.
-- Body, mechanics and legal copy stay clean and highly legible.
-- Font names remain `TBD` here until the brand team exports the canonical typography sheet.
+- Використовуйте актуальні сімейства й насичення шрифтів CATBET із брендової Figma.
+- Виразний пухнастий display-летеринг доречний для вибраних промозаголовків і великих числових винагород.
+- Двоколірні заголовки можуть використовувати cyan для однієї змістової фрази й orange для другої.
+- Основний текст, механіка й legal-copy мають бути чистими та добре читатися.
+- Назви шрифтів лишаються `TBD`, доки бренд-команда не експортує канонічний typography sheet.
 
-### Material language
+### Мова матеріалів
 
-- Furry cyan/orange objects and letters.
-- Toy-like reward props are acceptable when they remain premium, tactile and coherent.
-- Yellow duck and fish/paw motifs are part of the observed promo vocabulary.
-- Concrete is not a CATBET default material; use it only as a host bridge (for example BETON), with
-  realistic matte gray surface rather than glossy toy stone.
+- Пухнасті cyan/orange об’єкти й літери.
+- Іграшкові reward props допустимі, якщо виглядають преміально, тактильно й цілісно.
+- Жовта качка та мотиви риби/лапи входять до підтвердженої промомови.
+- Бетон не є стандартним матеріалом CATBET; використовуйте його лише як міст із хостом (наприклад BETON)
+  і робіть реалістичним матово-сірим, а не глянцевим іграшковим каменем.
 
-## 4. CATBET mascot invariants
+## 4. Інваріанти маскота CATBET
 
-These rules are extracted from the owner-supplied Brand Bible/Lore World. New campaign executions still
-require review for the exact pose, prop, environment and placement:
+Ці правила вилучено з наданих власником Brand Bible/Lore World. Нові реалізації кампаній усе одно
+потребують перевірки конкретної пози, реквізиту, середовища й placement:
 
-- One canonical blue/cyan cat identity; do not change the base fur color.
-- Preserve canonical body shape, proportions, face and species cues.
-- Preserve orange/red eyes and the orange collar as an immutable marker.
-- Do not generate muscular/bodybuilder variants.
-- Default to no clothing. A role costume or prop is allowed only when the explicit concept requires it,
-  the base identity remains exact and the context is approved.
-- Emotional expression may adapt; aggression is not a default.
-- Fur material must remain consistent across cat, paws, letters and selected icons where style lock calls for it.
-- A generic blue cat is not automatically CATBET. Identity source must be attached to generation.
+- Є одна канонічна ідентичність синього/cyan кота; не змінюйте базовий колір шерсті.
+- Зберігайте канонічну форму тіла, пропорції, обличчя та видові ознаки.
+- Зберігайте помаранчево-червоні очі й помаранчевий нашийник як незмінний маркер.
+- Не генеруйте м’язисті/bodybuilder-варіанти.
+- За замовчуванням кіт без одягу. Рольовий костюм або реквізит дозволено лише за прямої вимоги концепту,
+  точного збереження базової ідентичності й погодженого контексту.
+- Емоція може адаптуватися; агресія не є стандартом.
+- Матеріал шерсті має бути послідовним для кота, лап, літер та вибраних іконок, якщо цього вимагає style lock.
+- Типовий синій кіт не стає CATBET автоматично. До генерації слід прикласти identity source.
 
-## 5. CATBET asset families
+## 5. Сімейства ассетів CATBET
 
 | Family | Invariants | Typical use | QA risk |
 |---|---|---|---|
@@ -91,12 +91,12 @@ require review for the exact pose, prop, environment and placement:
 | Paws/fish/yarn/duck | approved decorative vocabulary | bridge, markers, small narrative cues | decorative overload |
 | Mission art | current mission identity and reward | secondary offer | wrong mission icon or outdated reward |
 
-## 6. Promo mechanics discipline
+## 6. Дисципліна промомеханік
 
-Welcome Pack, CatBox tiers, deposits, missions, cashback/return mechanics and prize amounts must be
-loaded from the current canonical source. Never infer mechanics from a previous visual.
+Welcome Pack, CatBox tiers, депозити, місії, cashback/return-механіки й суми призів завантажуйте з
+актуального канонічного джерела. Ніколи не виводьте механіку з попереднього візуалу.
 
-For any CatBox campaign, explicitly distinguish:
+Для кожної кампанії CatBox явно розрізняйте:
 
 - **deposit sequence** — for example first through fifth deposit;
 - **box/tier choice** — which package depends on amount or other rule;
@@ -104,23 +104,23 @@ For any CatBox campaign, explicitly distinguish:
 - **main prize** — dominant value;
 - **activation/verification/wager/time conditions**.
 
-The BETON case exposed a recurring confusion: deposit number and package tier are different dimensions.
-Design them with separate visual systems and validate the explanation with Product before art production.
+Кейс BETON виявив повторювану плутанину: номер депозиту й tier пакета — різні виміри. Проєктуйте для них
+окремі візуальні системи й перевіряйте пояснення з Product до виробництва арту.
 
-## 7. Content tone
+## 7. Тональність контенту
 
 - Playful cat vocabulary can frame approved mechanics: paws, tail, hunting, purr, territory, loot.
 - Tone is charismatic and mischievous, not childish, aggressive or sales-script generic.
 - Metaphor must never obscure the actual action (`verify`, `deposit`, `subscribe`, `complete stakes`).
 - Legal and numeric conditions stay literal.
 
-The Brand Bible closes Bet's core character and voice behavior. The dedicated phrase library remains
-partial; see [CATBET TONE-OF-VOICE.md](../brand-archive/CATBET/TONE-OF-VOICE.md). Follow
+Brand Bible фіксує характер Бета й основну поведінку голосу. Окрема бібліотека фраз поки неповна; див.
+[CATBET TONE-OF-VOICE.md](../brand-archive/CATBET/TONE-OF-VOICE.md). Дотримуйтеся пріоритету
 Legal/Product Truth → Campaign Argument → ToV.
 
-## 8. Cross-brand rules
+## 8. Кросбрендові правила
 
-When CATBET is destination product on another host:
+Коли CATBET є продуктом призначення на іншому хості:
 
 - host owns chrome and usually CTA component shape;
 - CATBET owns offer titles, mascot, CatBox/reward objects and destination accent language;
@@ -129,17 +129,17 @@ When CATBET is destination product on another host:
 - do not place an oversized logo as a substitute for CATBET visual language;
 - hero and lower sections should reuse the same bridge material/story.
 
-## 9. Advertising and compliance
+## 9. Реклама й compliance
 
-Create a campaign-specific do-not-advertise list. In the BETON case, a `month without deposits`
-message had to be removed from advertising despite being visually developed. Treat this as a lesson,
-not a permanent universal ban: current Legal decides for exact placement/GEO.
+Створіть окремий для кампанії список do-not-advertise. У кейсі BETON повідомлення `month without deposits`
+довелося вилучити з реклами, хоча візуал уже був розроблений. Це урок, а не постійна загальна заборона:
+рішення для точного placement/GEO ухвалює актуальний Legal.
 
-Use [PlayCity copy rules](../PLAYCITY-COPYWRITING-RULES.md) and the `playcity-copy-review` skill at G2
-and before release. For cross-brand placement, written Legal confirmation of advertiser/brand/group
-relationship is a blocker, not a design detail.
+Застосовуйте [правила copy PlayCity](../PLAYCITY-COPYWRITING-RULES.md) і skill `playcity-copy-review` на G2
+та перед релізом. Для кросбрендового placement письмове підтвердження Legal щодо зв’язку
+рекламодавця/бренду/групи є блокером, а не деталлю дизайну.
 
-Required campaign checks:
+Обов’язкові перевірки кампанії:
 
 - approved offer copy and dates;
 - 21+ and responsible gaming wording;
@@ -149,12 +149,12 @@ Required campaign checks:
 - whether bonus, cashback, mission or no-deposit wording is allowed in this placement;
 - no misleading guarantee when reward is random or conditional.
 
-## 10. Definition of Brand Ready
+## 10. Критерії Brand Ready
 
-- Current Figma frames captured and attached.
-- Exact colors/fonts/CTA rules extracted.
-- Mascot identity reference approved.
-- Asset family style lock approved in one real slot.
-- Current promo mechanics and Claims Matrix approved.
-- Host/destination Brand Bridge approved.
-- Open product/brand questions have owner and deadline.
+- Актуальні Figma frames збережені й прикладені.
+- Точні правила кольорів/шрифтів/CTA вилучені.
+- Identity reference маскота погоджений.
+- Style lock сімейства асетів погоджений в одному реальному слоті.
+- Актуальна промомеханіка й Claims Matrix погоджені.
+- Brand Bridge host/destination погоджений.
+- Відкриті продуктово-брендові питання мають owner і deadline.

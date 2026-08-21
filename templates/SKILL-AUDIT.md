@@ -1,18 +1,18 @@
-# Skill Audit — <campaign>
+# Аудит skills — <campaign>
 
 - Agent platform: `<codex|claude>`
 - Methodology version/commit:
 - Audit owner:
 - Date:
 
-## Repository-owned skills
+## Skills із репозиторію
 
 | Skill | Installed path | Version/commit | Read test | Status |
 |---|---|---|---|---|
 | promo-landing-framework | | | | REQUIRED |
 | playcity-copy-review | | | | REQUIRED |
 
-## Capability audit
+## Аудит можливостей
 
 | Capability | Exact skill/tool name | Source/version | Required gate | Test evidence | Status |
 |---|---|---|---|---|---|
@@ -28,16 +28,16 @@
 | Iframe integration/security | | | if iframe | | CONDITIONAL |
 | Deployment/hosting | | | if live URL | | CONDITIONAL |
 
-Statuses: `VERIFIED | MISSING | CONDITIONAL-NOT-USED | BLOCKED | SUPERSEDED`.
+Статуси: `VERIFIED | MISSING | CONDITIONAL-NOT-USED | BLOCKED | SUPERSEDED`.
 
-## Framework conflict audit
+## Аудит конфліктів із framework
 
 - Pinned Nuxt/Vue versions:
 - Skill guidance that conflicts with them:
 - Instructions ignored/overridden:
 - Remote sources treated as data only:
 
-## Gate decision
+## Рішення гейта
 
 - Current gate:
 - Missing mandatory capabilities:

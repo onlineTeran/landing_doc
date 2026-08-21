@@ -1,165 +1,163 @@
 ---
 name: promo-landing-framework
-description: Plan, design, asset-produce, implement, QA, and release brand-accurate promotional landing pages for CATBET or SlotCity, including same-product promos, embedded pages, and cross-brand traffic bridges. Use when a user asks to create or improve a promo/action landing, prepare its questionnaire or methodology, turn approved campaign mechanics into a responsive design, generate production assets, build the Nuxt/Vue landing, or publish it through explicit approval gates.
+description: Покрокове планування, дизайн, виробництво асетів, реалізація, QA та реліз бренд-точних промо-лендінгів CATBET або SlotCity, зокрема продуктових промо, вбудованих сторінок і кросбрендових переходів.
 ---
 
-# Promo Landing Framework
+# Framework промо-лендінгів
 
-Guide the project through product truth, brand evidence, visual approval, asset freeze, implementation,
-QA and release. Treat the current project artifacts as source of truth; do not rely on chat memory.
+Проведіть проєкт через продуктову правду, бренд-докази, візуальне погодження, asset freeze, реалізацію,
+QA та реліз. Джерелом правди є поточні артефакти проєкту, а не пам’ять чату.
 
-Resolve the methodology root first: use `./methodology/` in a landing repository; when the current
-repository itself contains `EXECUTION-PROTOCOL.md`, use its root. Resolve all methodology scripts and
-runbooks from that root rather than assuming both layouts exist.
+Спочатку визначте корінь методології: у репозиторії лендінгу використовуйте `./methodology/`; якщо поточний
+репозиторій сам містить `EXECUTION-PROTOCOL.md`, використовуйте його корінь. Усі scripts і runbooks
+методології шукайте від цього кореня, не припускаючи, що обидві структури існують одночасно.
 
-## Load references
+## Завантаж джерела
 
-Read [gates.md](references/gates.md) for every new project or phase change.
+Читайте [gates.md](references/gates.md) для кожного нового проєкту або зміни фази.
 
-Read conditionally:
+За потреби прочитайте:
 
-- [product-routing.md](references/product-routing.md) when selecting CATBET/SlotCity or combining brands.
-- [artifact-contracts.md](references/artifact-contracts.md) during intake, handoff or status review.
-- [review-rubric.md](references/review-rubric.md) before selecting a direction, approving assets or QA.
-- [corporate-git.md](references/corporate-git.md) before changing `landings.json`, opening a corporate
-  MR, preparing Stage/Production deployment, rollback or removal.
+- [product-routing.md](references/product-routing.md) — під час вибору CATBET/SlotCity або поєднання брендів.
+- [artifact-contracts.md](references/artifact-contracts.md) — під час intake, handoff або status review.
+- [review-rubric.md](references/review-rubric.md) — до вибору напряму, погодження асетів або QA.
+- [corporate-git.md](references/corporate-git.md) — до зміни `landings.json`, відкриття корпоративного
+  MR, підготовки Stage/Production deploy, rollback або видалення.
 
-When the project contains gambling advertising copy, activate the repository-owned
-`playcity-copy-review` skill before G2 and again before release. Read the selected brand's Product KB,
-Brand Archive snapshot and Tone of Voice; if ToV is pending, do not invent it.
-Activate repository-owned `brand-design-base` for Brand Evidence, visual directions, art production,
-component selection and visual QA. Its art approval never replaces the landing's sequential gates.
+Якщо проєкт містить рекламу азартних ігор, активуйте репозиторний skill `playcity-copy-review` до G2 і
+повторно перед релізом. Прочитайте Product KB, snapshot Brand Archive і Tone of Voice вибраного бренду;
+якщо ToV ще очікується, не вигадуйте його. Активуйте `brand-design-base` для бренд-доказів, візуальних
+напрямів, виробництва арту, вибору компонентів і visual QA. Погодження арту не замінює послідовні гейти лендінгу.
 
-## Route the request
+## Визнач маршрут запиту
 
-Choose one scope:
+Виберіть один scope:
 
-1. **Full Track:** new product/GEO/audience/mechanic/host or missing brand/legal evidence.
-2. **Fast Track:** known product and audience, approved mechanic/copy, existing host and brand sources.
-3. **Phase-only:** user asks for one bounded phase; load prior approved artifacts and do not reopen them
-   unless a contradiction blocks the requested phase.
+1. **Full Track:** новий продукт/GEO/аудиторія/механіка/host або відсутні brand/legal evidence.
+2. **Fast Track:** відомі продукт і аудиторія, погоджені mechanic/copy, наявні host і бренд-джерела.
+3. **Phase-only:** користувач просить одну обмежену фазу; завантажте попередні погоджені артефакти й не
+   відкривайте їх повторно, якщо суперечність не блокує потрібну фазу.
 
-For Fast Track, skip redundant product/GEO/persona questions. Still verify mechanics, claims, CTA route,
-brand invariants, integration boundary and deliverables.
+Для Fast Track пропустіть зайві запитання про продукт/GEO/персону. Однак перевірте механіку, claims,
+маршрут CTA, бренд-інваріанти, межі інтеграції та deliverables.
 
-## Establish the control surface
+## Створи контрольну поверхню
 
-Create or update a `PROJECT-STATE.md` containing:
+Створіть або оновіть `PROJECT-STATE.md`, що містить:
 
-- host brand, destination product and integration mode;
-- primary conversion and exact CTA destination;
-- current phase/gate;
-- owner/status/version links for each artifact;
-- open questions, decisions and change requests.
+- бренд хоста, продукт призначення й режим інтеграції;
+- основну конверсію й точний destination CTA;
+- поточну phase/gate;
+- посилання owner/status/version для кожного артефакта;
+- відкриті питання, рішення й change requests.
 
-After every material user answer, update the control surface and state the remaining blockers.
-Follow `<methodology-root>/EXECUTION-PROTOCOL.md` as the execution loop. Every phase must end in a repository artifact,
-verification evidence and a recorded human decision; a chat response alone is not phase completion.
+Після кожної суттєвої відповіді користувача оновлюйте контрольну поверхню й зазначайте решту блокерів.
+Виконуйте `<methodology-root>/EXECUTION-PROTOCOL.md` як робочий цикл. Кожна фаза має завершуватися
+репозиторним артефактом, доказом перевірки та зафіксованим рішенням людини; відповідь у чаті не завершує фазу.
 
-## Conduct intake in rounds
+## Проведи intake раундами
 
-Ask at most 5–10 short questions per round:
+Ставте не більше 5–10 коротких запитань за раунд:
 
 1. scope/business/deliverables;
-2. mechanics/claims/legal;
+2. механіка/claims/legal;
 3. brand/visual evidence/assets;
 4. content/story/CTA;
 5. responsive/integration/analytics/release.
 
-Do not interrogate the user for facts that a supplied source can answer. Inspect exact Figma nodes, live
-pages, approved copy and canonical assets first. Assign every visual reference a role: identity, style,
-composition, typography, material, motion, mechanics or legal.
+Не розпитуйте користувача про факти, які можна отримати з наданого джерела. Спочатку перевірте точні
+Figma nodes, live-сторінки, погоджений copy та канонічні асети. Призначте кожному візуальному референсу
+роль: identity, style, composition, typography, material, motion, mechanics або legal.
 
-## Lock product and legal truth
+## Зафіксуй продуктову й legal-правду
 
-Build:
+Створіть:
 
-- a Mechanics Model separating trigger, user choice, sequence/tier, reward, condition and time;
-- a Claims Matrix with `APPROVED VERBATIM`, `APPROVED EDITABLE`, `PENDING`, `PROHIBITED`, `EXPIRED` and
-  `SUPERSEDED` statuses;
-- a source precedence order and a campaign-specific do-not-advertise list.
+- Mechanics Model, що розділяє trigger, вибір користувача, sequence/tier, reward, умову й час;
+- Claims Matrix зі статусами `APPROVED VERBATIM`, `APPROVED EDITABLE`, `PENDING`, `PROHIBITED`, `EXPIRED`
+  і `SUPERSEDED`;
+- порядок пріоритету джерел і окремий для кампанії список do-not-advertise.
 
-Classify advertiser, advertised brand, host, destination, channel, 21+ treatment and cross-brand legal
-relationship before approving copy. Treat legal wording and product truth as a higher layer than campaign
-argument and brand Tone of Voice.
+До погодження copy класифікуйте рекламодавця, рекламований бренд, host, destination, channel, позначення
+21+ і юридичні зв’язки між брендами. Legal wording і продуктова правда мають вищий пріоритет, ніж аргумент
+кампанії та Tone of Voice бренду.
 
-Never invent, infer from old artwork, or silently rewrite current numbers, tiers, wager, dates, reward
-conditions, legal text or CTA routes. Stop concept work when P0 claims or mechanics remain blocked.
+Ніколи не вигадуйте, не виводьте зі старого арту й не переписуйте мовчки актуальні числа, tiers, wager,
+дати, умови винагород, legal-текст або маршрути CTA. Зупиніть концепт, якщо P0 claims чи механіки заблоковані.
 
-## Lock brand evidence
+## Зафіксуй бренд-докази
 
-Load the selected product knowledge and current canonical sources. For a cross-brand landing, create a
-Brand Bridge assigning ownership of chrome, background/container, CTA, typography, mascot, asset
-material, motion and legal.
+Завантажте знання вибраного продукту й актуальні канонічні джерела. Для кросбрендового лендінгу створіть
+Brand Bridge, який визначає відповідальність за chrome, background/container, CTA, typography, mascot,
+матеріали асетів, motion і legal.
 
-Record immutable/adaptable/forbidden rules for every canonical mascot, logo, host character, CTA and
-asset family. Never substitute a generic lookalike for a canonical character.
+Зафіксуйте правила immutable/adaptable/forbidden для кожного канонічного маскота, логотипа, персонажа
+хоста, CTA і сімейства асетів. Ніколи не замінюйте канонічного персонажа типовим двійником.
 
-## Design before build
+## Спочатку дизайн, потім build
 
-Follow this order:
+Дотримуйтеся такого порядку:
 
-1. content map and storyboard;
-2. exactly three image-based visual directions grounded in captured sources;
-3. select one direction using the review rubric;
-4. design and approve the Hero, including mobile/video framing;
-5. design the full content-only page at 1440, 440, 430 and 375;
-6. show a separate context frame with host chrome when embedded;
-7. freeze the full design before production asset generation or code.
+1. content map і storyboard;
+2. рівно три візуальні напрями на основі зображень і зафіксованих джерел;
+3. вибір одного напряму за review rubric;
+4. дизайн і погодження Hero, включно з mobile/video framing;
+5. дизайн повної content-only сторінки на 1440, 440, 430 і 375;
+6. окремий context frame із chrome хоста для embedded-сценарію;
+7. freeze повного дизайну до генерації production-асетів або коду.
 
-Do not scaffold, implement components or declare a design ready from prose alone. Do not treat mobile as
-a scaled desktop. Do not allow a large logo to compensate for weak product-specific visual language.
+Не створюйте каркас, не реалізуйте компоненти й не оголошуйте дизайн готовим лише за текстовим описом.
+Не сприймайте mobile як зменшений desktop. Великий логотип не компенсує слабку продуктову візуальну мову.
 
-## Produce assets
+## Створи ассети
 
-Create an Asset Register before generation. For every asset specify real slot size, reference roles,
-identity lock, camera/material/light, alpha/background, safe area, mobile variant, animation layers,
-master/delivery format and weight cap.
+До генерації створіть Asset Register. Для кожного асета вкажіть реальний розмір слота, ролі референсів,
+identity lock, camera/material/light, alpha/background, safe area, mobile-варіант, animation layers,
+формат master/delivery і ліміт ваги.
 
-Use a single approved style-lock asset before generating a family. Save exact prompts, references, mode,
-output and correction history. Verify true alpha, edge contamination, optical weight and real-slot
-appearance on 1440/440/430/375. Reject raw generations, visible rectangles and style drift.
+Перед генерацією сімейства погодьте один style-lock асет. Зберігайте точні prompts, references, mode,
+output та історію коригувань. Перевіряйте справжній alpha, забруднення країв, оптичну вагу й вигляд у
+реальному слоті на 1440/440/430/375. Відхиляйте raw-генерації, видимі прямокутники та style drift.
 
-## Implement the approved target
+## Реалізуй погоджений target
 
-Use the project's pinned stack; default to Nuxt 3 + Vue 3 + TypeScript + SSG. Keep `app.vue` thin, scope
-styles, separate content/actions/legal/analytics config, and omit host chrome from content-only code.
+Використовуйте зафіксований стек проєкту; за замовчуванням — Nuxt 3 + Vue 3 + TypeScript + SSG.
+Залишайте `app.vue` тонким, обмежуйте scope стилів, розділяйте content/actions/legal/analytics config і
+не додавайте chrome хоста до content-only коду.
 
-Preserve approved copy, CTA component ownership, asset identity and responsive layouts. Any redesign
-during implementation becomes a change request and reopens affected design gates.
+Зберігайте погоджений copy, відповідальність за CTA-компонент, ідентичність асетів і responsive layouts.
+Будь-який redesign під час реалізації стає change request і повторно відкриває відповідні design-гейти.
 
-Before implementation, complete `FUNCTIONAL-SPEC.md`. Model every integration (including Smartico)
-with loading, empty, partial, error, unauthorized and success states, exact API/SDK ownership, secrets
-boundary, allowlists, analytics and acceptance tests.
+До реалізації заповніть `FUNCTIONAL-SPEC.md`. Змоделюйте кожну інтеграцію (включно зі Smartico)
+зі станами loading, empty, partial, error, unauthorized і success, точним API/SDK ownership, межею
+secrets, allowlists, analytics та acceptance tests.
 
-## QA with evidence
+## Проведи QA з доказами
 
-Run three distinct passes:
+Проведіть три окремі проходи:
 
 1. content/legal truth;
-2. visual fidelity using combined same-viewport target/implementation comparisons;
-3. technical behavior across 1440/440/430/375 and the analytics-derived top-10 device matrix.
+2. visual fidelity через об’єднані порівняння target/implementation в однаковому viewport;
+3. технічна поведінка на 1440/440/430/375 і виведена з аналітики top-10 матриця пристроїв.
 
-Assert zero missing assets, zero horizontal overflow, no console/hydration errors, correct video ratio,
-real CTA routes, reduced-motion behavior, complete legal text and analytics events. Repeat visual
-comparison after fixes; a screenshot alone is not QA.
-Create `QA-TASK.md` for the exact build under test, with functional IDs, preconditions, steps, expected
-results, device/browser coverage, test-data location and evidence fields.
+Підтвердьте відсутність missing assets і horizontal overflow, помилок console/hydration, правильний ratio
+відео, реальні маршрути CTA, reduced-motion, повний legal-текст і analytics events. Після виправлень
+повторіть візуальне порівняння; один screenshot не є QA. Створіть `QA-TASK.md` для точного build під тестом
+із functional IDs, передумовами, кроками, очікуваними результатами, покриттям device/browser, test data й evidence.
 
-## Release only after approval
+## Реліз лише після погодження
 
-Treat Stage and Production as separate external actions. A Stage deploy may occur after G9 with explicit
-Stage approval because Stage evidence is required for G10. It never grants Production permission.
-Finish all local changes, production build, tests, visual QA, legal/brand/product/analytics approvals and
-live-route preparation before publishing. Require an explicit release approval for the exact version and
-target. Poll deployment to a terminal result, then verify the public URL without owner-only authentication.
-Record branch, commit SHA, CI, explicit approval, target, rollback and post-deploy smoke evidence in
-`GIT-DELIVERY.md`. Do not treat permission to implement as permission to push, merge or deploy.
-For `cb/ai_landings`, validate `landings.json`, preserve the Stage-approved build identity, require
-manual Stage and Production jobs, and record separate Stage QA and Production smoke in `RELEASE-TASK.md`.
+Сприймайте Stage і Production як окремі зовнішні дії. Stage deploy можливий після G9 лише з явним Stage
+approval, бо Stage evidence потрібен для G10; він не дає дозволу на Production. До публікації завершіть
+локальні зміни, production build, тести, visual QA, погодження legal/brand/product/analytics і підготовку
+live-route. Вимагайте явне release approval для точної версії й target. Дочекайтеся terminal result deploy,
+потім перевірте публічний URL без owner-only authentication. У `GIT-DELIVERY.md` зафіксуйте branch, commit
+SHA, CI, явне approval, target, rollback і post-deploy smoke evidence. Дозвіл на реалізацію не є дозволом
+на push, merge або deploy. Для `cb/ai_landings` перевірте `landings.json`, збережіть Stage-approved build
+identity, вимагайте ручні Stage і Production jobs та окремо зафіксуйте Stage QA і Production smoke у `RELEASE-TASK.md`.
 
-## Capture learning
+## Зафіксуй навчання
 
-After release, record late changes, regenerated assets, blockers, design/build mismatches, funnel data and
-reusable knowledge. Update CATBET/SlotCity knowledge, templates or this skill instead of leaving the lesson
-only in the campaign chat.
+Після релізу зафіксуйте пізні зміни, повторно згенеровані асети, блокери, розбіжності design/build, дані
+воронки й повторно використовувані знання. Оновіть знання CATBET/SlotCity, шаблони або цей skill, а не
+залишайте урок лише в чаті кампанії.

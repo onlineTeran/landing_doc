@@ -2,7 +2,7 @@
 
 **Design System version:** `0.9` · **Status:** `SEMANTIC ROLES CONFIRMED / EXACT VALUES PENDING`
 
-Owner-supplied Brand Bible confirms black/dark surfaces, CATBET cyan and orange as semantic identity
+Надана власником Brand Bible підтверджує чорні/темні surfaces, cyan і orange CATBET як семантичні identity
 roles. This document deliberately does not invent exact hex, font names, radii, shadows or breakpoints;
 those values still require extraction from editable source and production verification.
 
@@ -38,7 +38,7 @@ Furry lettering is an asset/effect family, not a replacement for body/UI/legal t
 
 ## 4. Layout and responsive families
 
-The 0.9 contract expects `space/*`, `size/*`, `radius/*`, `border/*`, `shadow/*`, `grid/*`,
+Контракт 0.9 очікує `space/*`, `size/*`, `radius/*`, `border/*`, `shadow/*`, `grid/*`,
 `breakpoint/*`, `z/*` and `motion/*` families. Until extracted:
 
 - use the approved CATBET component or campaign-local specification;
@@ -55,6 +55,6 @@ them. At minimum record `light/dark`, interaction states and campaign/host overr
 
 ## 6. Extraction acceptance
 
-A token family becomes `CONFIRMED` only when it has exact source URL/node or variable ID, exported
+Сімейство токенів стає `CONFIRMED` лише за наявності точного source URL/node або variable ID, експортованого
 value, mode, semantic role, owner, verification date and usage example. Update
 `machine/token-contract.json`, then run visual and contrast QA before marking the family approved.

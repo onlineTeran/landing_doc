@@ -25,11 +25,11 @@ cross-brand sources так, щоб наступна команда не відн
 | BC-PRODUCT-002 | [CATBET promo index](https://catbet.com.ua/promo) | top promos/current naming |
 | BC-REF-001 | [SlotCity → CATBET page](https://slotcity.ua/promotions/catbet) | secondary cross-brand pattern, not primary visual reference |
 
-Product/legal source must be captured with date/version; production URLs may change after the case.
+Product/legal-джерело слід фіксувати з датою/версією; production URLs можуть змінитися після кейсу.
 
 ## 3. CATBET canonical visual evidence
 
-Use the full [CATBET Reference Register](../brand-archive/CATBET/REFERENCE-REGISTER.md). The case relied
+Використовуйте повний [CATBET Reference Register](../brand-archive/CATBET/REFERENCE-REGISTER.md). Кейс спирався
 especially on general 3D language, Welcome/bonus families, open CatBoxes, furry title treatment,
 typography/colors and paw composition. Exact nodes are preserved there rather than duplicated here.
 
@@ -62,6 +62,6 @@ Generated references never outrank canonical CATBET mascot/asset sources.
 
 ## 6. Evidence not stored here
 
-The final generated masters, hero video and delivery assets belong in the campaign implementation repo,
+Фінальні generated masters, hero-відео й delivery-асети мають зберігатися в implementation repo кампанії,
 with prompt logs and checksums. This documentation repo stores the contract and source map so assets are
 traceable without bloating the methodology or confusing historical art with canonical brand masters.

@@ -4,7 +4,7 @@
 
 ## Brand signature
 
-The supplied system describes SlotCity as a licensed, mobile-oriented iGaming/casino product with
+Надана система описує SlotCity як ліцензований, mobile-oriented iGaming/casino продукт із
 gamification, dark surfaces, modern neon lighting and controlled glass-like depth. The signature is not
 «more neon»: it is dark semantic UI, restrained promotional accents, role-based typography, rounded
 high-volume objects and disciplined content safe zones.
@@ -30,7 +30,7 @@ high-volume objects and disciplined content safe zones.
 - All colors are referenced by token; campaign identity comes from approved art/gradient choice, not
   ad-hoc new hex values.
 
-Exact rules: [TOKENS.md](TOKENS.md) and `machine/color-tokens.json`.
+Точні правила: [TOKENS.md](TOKENS.md) і `machine/color-tokens.json`.
 
 ## Landing layout system
 

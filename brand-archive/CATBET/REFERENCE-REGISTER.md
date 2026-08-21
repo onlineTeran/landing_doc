@@ -33,6 +33,6 @@ confirmed by the brand owner before production use.
 
 ## Campaign capture additions
 
-For every used row add campaign-local fields in Asset Register: `captured_at`, `capture_path`,
+Для кожного використаного рядка додайте локальні для кампанії поля в Asset Register: `captured_at`, `capture_path`,
 `source_version`, `owner`, `rights`, `used_as` (`identity/style/composition/content/motion/legal`) and
 `approved_by`. Never collapse multiple roles into “reference picture”.

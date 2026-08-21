@@ -44,7 +44,7 @@
 | G11 Released | TODO | | | | |
 | G12 Learning Captured | TODO | | | | |
 
-Status: `TODO | IN PROGRESS | BLOCKED | APPROVED | SUPERSEDED`.
+Статус: `TODO | IN PROGRESS | BLOCKED | APPROVED | SUPERSEDED`.
 
 ## Active decisions
 

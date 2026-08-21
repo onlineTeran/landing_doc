@@ -1,6 +1,6 @@
-# Design QA — <campaign/version>
+# Перевірка дизайну — <campaign/version>
 
-## Sources
+## Джерела
 
 - Approved target 1440:
 - Approved target 440:
@@ -9,7 +9,7 @@
 - Host context:
 - Brand/asset references:
 
-## Comparison matrix
+## Матриця порівняння
 
 | Viewport | Target capture | Implementation capture | Combined comparison | Verdict |
 |---|---|---|---|---|
@@ -18,7 +18,7 @@
 | 430 | | | | TODO |
 | 375 | | | | TODO |
 
-## Surface review
+## Перевірка поверхонь
 
 | Surface | Expected | Observed | Severity | Fix | Recheck |
 |---|---|---|---|---|---|
@@ -29,7 +29,7 @@
 | Asset identity/material | | | | | |
 | Legal | | | | | |
 
-## Runtime evidence
+## Runtime-докази
 
 - Missing images:
 - Horizontal overflow:
@@ -39,7 +39,7 @@
 - Reduced motion:
 - Analytics:
 
-## Final result
+## Фінальний результат
 
 `PASSED | PASSED WITH WAIVER | FAILED`
 

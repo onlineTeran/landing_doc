@@ -1,6 +1,6 @@
-# Stage / Production Release Task — <campaign> / <version>
+# Задача релізу Stage / Production — <campaign> / <version>
 
-## Traceability
+## Простежуваність
 
 - Board task:
 - Landing ID / `landings.json` path:
@@ -11,7 +11,7 @@
 - Production URL:
 - Related `QA-TASK.md` and `GIT-DELIVERY.md`:
 
-## Stage release
+## Реліз на Stage
 
 - [ ] Configuration validation, repository security scan and landing build passed.
 - [ ] Manual Stage deployment job and authorized operator recorded.
@@ -19,7 +19,7 @@
 - [ ] Mandatory Stage QA completed; P0/P1 status and evidence linked.
 - [ ] QA owner explicitly confirms Production readiness.
 
-## Production authorization
+## Авторизація Production
 
 - Promotion mechanism / MR into `prod` confirmed:
 - Exact source commit/build approved for Production:
@@ -27,7 +27,7 @@
 - Authorized deployment operator:
 - Rollback owner, signal and last-known-good version:
 
-## Production release and smoke
+## Production-реліз і smoke
 
 - [ ] Production CI validation, security scan and build passed.
 - [ ] Manual Production deploy job reached terminal success.
@@ -36,7 +36,7 @@
 - [ ] CDN/cache checked after the documented approximately 5-minute window.
 - [ ] QA owner recorded result; Critical/Blocker count is zero.
 
-## Incident decision
+## Рішення щодо інциденту
 
 - Result: `RELEASED | ROLLED BACK | HOTFIX IN PROGRESS | BLOCKED`
 - Issue/decision/owner/time:

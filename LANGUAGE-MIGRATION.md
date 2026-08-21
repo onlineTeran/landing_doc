@@ -8,10 +8,11 @@
 - стартовий аудит: 51 English-only Markdown-файл;
 - перша хвиля: README hero, cross-brand evidence, Art process, Brand Design skill, agent templates,
   SlotCity mascot/reference package — перекладено;
-- legacy backlog після першої хвилі: 36 файлів;
-- кінцева ціль: 0 файлів у `tests/language-legacy-allowlist.txt`.
+- друга хвиля: усі робочі шаблони, Product KB CATBET/SlotCity, Brand Archive, framework skill і його
+  довідкові контракти — перекладено;
+- legacy backlog: **0 файлів**; тимчасовий allowlist видалено.
 
-## Порядок наступних хвиль
+## Завершені хвилі
 
 1. шаблони робочих артефактів і `promo-landing-framework` skill;
 2. CATBET та SlotCity Brand Archive;

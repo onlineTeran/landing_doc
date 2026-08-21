@@ -1,6 +1,6 @@
-# Functional Specification — <campaign>
+# Функціональна специфікація — <campaign>
 
-## Runtime and delivery
+## Runtime і delivery
 
 | Item | Decision | Source/version | Owner |
 |---|---|---|---|
@@ -10,24 +10,24 @@
 | Hosting target | | | |
 | Browser/device baseline | | | |
 
-## Functional inventory
+## Реєстр функціональності
 
 | ID | User story | Trigger/input | States & errors | Expected result | Analytics ID | Acceptance test | Owner |
 |---|---|---|---|---|---|---|---|
 | F-001 | | | loading/empty/error/success | | | | |
 
-## CTA and navigation contract
+## Контракт CTA і навігації
 
 | Action ID | Label source | Destination | iframe/top-level behavior | Auth state | Event | Fallback |
 |---|---|---|---|---|---|---|
 | | | | | | | |
 
-## Product integrations
+## Продуктові інтеграції
 
-For every integration record SDK/API version, environments, owner, secrets boundary, allowlists,
-timeouts, retries, offline/guest behavior and a stage evidence link.
+Для кожної інтеграції зафіксуй SDK/API version, environments, owner, межу secrets, allowlists,
+timeouts, retries, offline/guest behavior і посилання на stage evidence.
 
-### Smartico checklist (use only when applicable)
+### Чекліст Smartico (лише коли застосовно)
 
 - [ ] `labelKey`, `brandKey`, script URL and owner recorded for stage/prod; secrets are not committed.
 - [ ] iframe auth/token contract and allowed `postMessage` origins documented.
@@ -37,9 +37,9 @@ timeouts, retries, offline/guest behavior and a stage evidence link.
 - [ ] Mission opt-in/claim/navigation flows have test data and expected error codes.
 - [ ] Analytics, PII rules, reduced-motion/performance impact and cleanup are covered.
 
-Reference: `methodology/SMARTICO-INTEGRATION.md` and `methodology/IFRAME-BRIDGE-INTEGRATION.md`.
+Довідка: `methodology/SMARTICO-INTEGRATION.md` і `methodology/IFRAME-BRIDGE-INTEGRATION.md`.
 
-## Non-functional requirements
+## Нефункціональні вимоги
 
 - Performance budgets:
 - Accessibility:
@@ -48,7 +48,7 @@ Reference: `methodology/SMARTICO-INTEGRATION.md` and `methodology/IFRAME-BRIDGE-
 - Analytics/consent:
 - Failure and recovery behavior:
 
-## Definition of Done
+## Критерії завершення
 
 - [ ] Every approved design interaction maps to a functional ID.
 - [ ] Loading, empty, partial, error, unauthorized and success states are designed and implemented.

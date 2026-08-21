@@ -1,33 +1,33 @@
-# Product routing
+# Маршрутизація продуктів
 
 ## CATBET
 
-Require current CATBET promo/legal source, exact brand Figma nodes and canonical mascot/assets. Preserve
+Вимагайте актуальне promo/legal-джерело CATBET, точні Figma nodes бренду й канонічні mascot/assets. Зберігайте
 the single blue/cyan cat identity and body proportions; do not generate muscular or generic variants.
-Use current CATBET fonts/colors from sources. Treat furry materials, CatBoxes, paws/fish/yarn/duck and
+Використовуйте актуальні шрифти/кольори CATBET із джерел. Сприймайте пухнасті матеріали, CatBoxes, лапи/рибу/пряжу/качку та
 blue/orange display emphasis as candidate vocabulary only when the current brand source supports them.
-Separate deposit sequence, package/tier and reward mechanics.
+Розділяйте послідовність депозитів, package/tier і механіку винагороди.
 
-Load `brand-archive/CATBET/INDEX.md` and its linked design, asset, reference and ToV files. `TOV PENDING`
+Завантажте `brand-archive/CATBET/INDEX.md` і пов’язані файли дизайну, асетів, референсів і ToV. `TOV PENDING`
 means use only literal approved campaign copy, not an invented CATBET voice.
 
 ## SlotCity
 
-Do not infer visual identity from generic casino patterns or from CATBET. Require a SlotCity brand pack:
+Не виводьте візуальну ідентичність із типових casino-патернів або CATBET. Вимагайте бренд-пакет SlotCity:
 logo, palette, typography, CTA, chrome, asset/character rules, motion and top promo examples. If it is not
 available, block G3 and complete brand onboarding rather than generating a guessed direction.
 
-Load `brand-archive/SLOTCITY/INDEX.md`. Its onboarding fields are blockers, not invitations to infer a
+Завантажте `brand-archive/SLOTCITY/INDEX.md`. Його onboarding-поля — блокери, а не запрошення вигадати
 palette, font, CTA or visual language.
 
-## Cross-brand traffic bridge
+## Кросбрендовий міст трафіку
 
-Assign host ownership of chrome and usually CTA/container. Assign destination ownership of offer imagery,
+Закріпіть за хостом chrome і зазвичай CTA/container. За продуктом призначення закріпіть offer imagery,
 mascot/rewards and destination-specific title language. Choose 2–3 anchors from each brand and one bridge
 device. Avoid 50/50 color mixing and oversized logos. Preserve the host seam and provide content-only code.
 
-Legal approval is campaign/placement/GEO specific. Never treat a past allowed or prohibited claim as a
+Legal approval стосується конкретних campaign/placement/GEO. Ніколи не вважайте попередній дозволений чи заборонений claim
 permanent product rule without current confirmation.
 
-Before any cross-brand copy or art, confirm advertiser, destination brand, channel and permitted group
+До створення кросбрендового copy або арту підтвердьте рекламодавця, бренд призначення, канал і дозволені групові
 relationship with Legal using the `playcity-copy-review` skill.

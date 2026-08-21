@@ -1,28 +1,28 @@
-# Content Map & Storyboard — <campaign>
+# Карта контенту й storyboard — <campaign>
 
-## One remembered sentence
+## Одне речення, яке має запам'ятатися
 
 `<what the visitor should remember>`
 
-## CTA map
+## Карта CTA
 
 | CTA ID | Label | Location | Destination | Why here | Event ID |
 |---|---|---|---|---|---|
 | | | | | | |
 
-## Sections
+## Секції
 
 | Order | Section ID | Job | P0 content | Visual | CTA | Desktop | Mobile 440/430/375 | Motion purpose | Asset IDs | Legal note |
 |---:|---|---|---|---|---|---|---|---|---|---|
 | 1 | hero | hook | | | | | | | | |
 
-## Detail budget
+## Рівні деталізації
 
 - P0 — must be understood without interaction:
 - P1 — supporting:
 - P2 — rules/details only:
 
-## Signature moment
+## Ключовий момент
 
 - Section:
 - Why it matters:
@@ -31,7 +31,7 @@
 - Reduced-motion state:
 - Performance budget:
 
-## Removed/merged sections
+## Видалені або об'єднані секції
 
 | Section | Decision | Reason | Approval |
 |---|---|---|---|

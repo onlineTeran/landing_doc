@@ -1,12 +1,12 @@
-# Art QA
+# Перевірка якості арту
 
-- Product / asset ID:
-- Master version:
-- Delivery set:
+- Продукт / ID ассета:
+- Версія master:
+- Набір delivery-файлів:
 - Reviewer/date:
-- Result: `GREEN | BLOCKED`
+- Результат: `GREEN | BLOCKED`
 
-| ID | Check | Expected | Evidence | Result |
+| ID | Перевірка | Очікування | Доказ | Результат |
 |---|---|---|---|---|
 | ART-01 | Product/identity | all locked features preserved | | |
 | ART-02 | Evidence/style group | one approved family; no accidental mixing | | |
@@ -20,13 +20,13 @@
 | ART-10 | Family consistency | optical weight/camera/light consistent with siblings | | |
 | ART-11 | Rights/provenance | references, prompt, master and allowed use recorded | | |
 
-## Blockers and fixes
+## Блокери й виправлення
 
-| Issue | Severity | Owner | Fix | Retest evidence |
+| Проблема | Критичність | Власник | Виправлення | Доказ повторного тесту |
 |---|---|---|---|---|
 | | | | | |
 
-## Human approval
+## Людське погодження
 
 - Approval quote:
 - Owner:

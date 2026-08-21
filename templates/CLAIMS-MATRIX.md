@@ -1,6 +1,6 @@
-# Claims Matrix — <campaign>
+# Матриця тверджень — <campaign>
 
-## Precedence
+## Пріоритет джерел
 
 1. Exact-placement legal approval.
 2. Current official promo rules.
@@ -8,7 +8,7 @@
 4. Current product page.
 5. Previous campaign copy.
 
-## Placement classification
+## Класифікація розміщення
 
 | Field | Value | Source/approval |
 |---|---|---|
@@ -22,21 +22,21 @@
 | Vulnerable-audience exclusion | | |
 | Legal advertising unit | | |
 
-## Claims
+## Твердження
 
 | ID | Exact claim/copy | Layer | Status | Editable? | Source/version | Placement/GEO | Owner | Design use |
 |---|---|---|---|---|---|---|---|---|
 | C-001 | | Legal/Product Truth | APPROVED VERBATIM | No | | | | P0 title/body/legal |
 
-Statuses: `APPROVED VERBATIM | APPROVED EDITABLE | PENDING | PROHIBITED | EXPIRED | SUPERSEDED`.
+Статуси: `APPROVED VERBATIM | APPROVED EDITABLE | PENDING | PROHIBITED | EXPIRED | SUPERSEDED`.
 
-## Numeric/mechanic facts
+## Числові факти й механіка
 
 | ID | Fact | Unit/condition | Source | Last verified | Used in section |
 |---|---|---|---|---|---|
 | F-001 | | | | | |
 
-## Mandatory legal block
+## Обов'язковий legal-блок
 
 ```text
 <paste exact approved text>
@@ -49,7 +49,7 @@ Statuses: `APPROVED VERBATIM | APPROVED EDITABLE | PENDING | PROHIBITED | EXPIRE
 - Advertising-unit area calculation / owner:
 - Minimum readable size/contrast:
 
-## Copy red-team
+## Red-team перевірка тексту
 
 - PlayCity rules version/date checked:
 - Easy-win/income/enrichment risk:
@@ -60,13 +60,13 @@ Statuses: `APPROVED VERBATIM | APPROVED EDITABLE | PENDING | PROHIBITED | EXPIRE
 - Visual/video/alt/metadata reviewed:
 - Findings link:
 
-## Prohibited list
+## Заборонені формулювання
 
 - Claim:
 - Reason/scope:
 - Replacement, if approved:
 
-## Legal approval
+## Погодження Legal
 
 - Version:
 - Approved by:

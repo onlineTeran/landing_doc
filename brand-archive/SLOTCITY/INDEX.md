@@ -1,4 +1,4 @@
-# SlotCity Brand Design Base
+# База бренд-дизайну SlotCity
 
 **Design System version:** `0.9`
 
@@ -8,7 +8,7 @@
 
 **Approval status:** extracted evidence; Brand owner approval still required before `CANONICAL`.
 
-## Readiness
+## Готовність
 
 | Layer | Status | Evidence / blocker |
 |---|---|---|
@@ -25,7 +25,7 @@
 | Motion | `PENDING` | no canonical timing/easing/reduced-motion contract found |
 | Brand approval | `PENDING` | owner/date/scope required for canonical promotion |
 
-## Required reading by task
+## Обов'язкові матеріали за типом задачі
 
 - Any SlotCity design: [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md), [TOKENS.md](TOKENS.md),
   [DESIGN-GAPS.md](DESIGN-GAPS.md).
@@ -37,8 +37,8 @@
 - Copy: [TONE-OF-VOICE.md](TONE-OF-VOICE.md) plus PlayCity rules; ToV is currently blocked.
 - Provenance: [REFERENCE-REGISTER.md](REFERENCE-REGISTER.md) and `machine/source-manifest.json`.
 
-## Agent rule
+## Правило для агента
 
-Use extracted rules as evidence, not as human approval. For any missing identity-critical layer return
+Використовуйте вилучені правила як докази, а не як людське погодження. За відсутності identity-critical шару поверніться
 `DESIGN_SYSTEM_GAP: <layer>` and request the canonical source/owner. Never borrow CATBET characters,
 furry material, paws, CatBoxes or vocabulary.

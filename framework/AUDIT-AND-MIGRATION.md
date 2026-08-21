@@ -1,88 +1,89 @@
-# Audit of v1.10.1 and migration to Framework 2.0
+# Аудит v1.10.1 і міграція до Framework 2.0
 
-## Executive finding
+## Висновок для керівництва
 
-The previous methodology is technically mature but visually under-constrained. It contains roughly
-7,300 lines across 20+ top-level documents, with strong implementation, motion, iframe, analytics and QA
-guidance. Its weakest part is the contract between `brief` and `code`: brand evidence, legal status,
-cross-brand ownership, visual targets, asset invariants and responsive approval are described as ideas,
-not enforced artifacts.
+Попередня методологія технічно зріла, але недостатньо обмежує візуальні рішення. Вона містить близько
+7 300 рядків у понад 20 документах верхнього рівня та добре описує реалізацію, motion, iframe, аналітику
+і QA. Найслабше місце — контракт між `brief` і `code`: бренд-докази, юридичний статус, відповідальність
+у кросбрендових проєктах, візуальні цілі, інваріанти асетів і погодження адаптивів були описані як ідеї,
+а не як обов’язкові артефакти.
 
-That gap explains why a compliant process can still produce a generic or stylistically incorrect page.
+Саме ця прогалина пояснює, чому формально правильний процес усе одно може створити типовий або
+стилістично хибний лендінг.
 
-## What v1 already does well
+## Що вже добре працює у v1
 
-- Explicit phase names and deploy approval.
-- Nuxt 3/Vue 3/SSG architecture.
-- Content/CTA config patterns.
-- Iframe bridge and Smartico integration.
-- Motion/reduced-motion discipline.
-- Device matrix and runtime assertions.
-- GA event specification.
-- AI icon technical methodology.
-- Decision log, retrospective and methodology versioning.
+- Явні назви фаз і погодження deploy.
+- Архітектура Nuxt 3/Vue 3/SSG.
+- Патерни конфігурації контенту й CTA.
+- Iframe bridge та інтеграція Smartico.
+- Дисципліна motion/reduced-motion.
+- Матриця пристроїв і runtime-перевірки.
+- Специфікація подій GA.
+- Технічна методологія AI-іконок.
+- Журнал рішень, ретроспектива й версіонування методології.
 
-Framework 2.0 preserves these as the technical library.
+Framework 2.0 зберігає це як технічну бібліотеку.
 
-## Main gaps
+## Основні прогалини
 
-### 1. Brand-neutral guidance used inside brand-specific concept work
+### 1. Бренд-нейтральні правила всередині брендового концепту
 
-The old concept prompts explicitly request brand-neutral token roles and generic subjects. That is useful
-for shared code, but harmful when choosing a real CATBET or SlotCity direction. Framework 2.0 separates
-neutral technical standards from product-specific visual knowledge and requires real sources at G3.
+Старі промпти прямо вимагали бренд-нейтральних ролей токенів і типових сюжетів. Це корисно для спільного
+коду, але шкодить вибору реального напряму CATBET або SlotCity. Framework 2.0 відокремлює нейтральні
+технічні стандарти від продуктових візуальних знань і вимагає реальні джерела на G3.
 
-### 2. No product knowledge split
+### 2. Відсутність окремих продуктових баз знань
 
-CATBET and SlotCity had no dedicated canonical files, so every session had to reconstruct mascot, font,
-CTA, material and source precedence from chat. Framework 2.0 adds independent Product KBs.
+CATBET і SlotCity не мали власних канонічних файлів, тому кожна сесія відновлювала маскота, шрифт,
+CTA, матеріали та пріоритет джерел із чату. Framework 2.0 додає незалежні Product KB.
 
-### 3. Textual concept before visual evidence
+### 3. Текстовий концепт раніше за візуальні докази
 
-The old process can approve a prose concept/storyboard without image-based alternatives. Generic layouts
-survive because they are not seen until implementation. Framework 2.0 requires three visual directions,
-then hero and full responsive design approvals.
+Старий процес дозволяв погодити текстовий концепт або storyboard без візуальних альтернатив. Типові
+композиції проходили далі, бо їх бачили лише під час реалізації. Framework 2.0 вимагає три візуальні
+напрями, а потім окреме погодження hero і повного адаптивного дизайну.
 
-### 4. Code starts before full design approval
+### 4. Код починається до погодження повного дизайну
 
-The old workflow scaffolds and implements Hero/sections after design tokens, but does not require a complete
-1440/440/430/375 page. Framework 2.0 makes G7 mandatory and postpones production assets/code.
+Старий workflow створював каркас і реалізовував Hero/секції після токенів, але не вимагав повної сторінки
+1440/440/430/375. Framework 2.0 робить G7 обов’язковим і відкладає production-асети та код.
 
-### 5. Legal is a checklist, not a versioned claim system
+### 5. Legal був чеклістом, а не версійованою системою тверджень
 
-The old discovery asks about compliance, but lacks claim-level statuses, source precedence and verbatim
-protection. Framework 2.0 adds Claims Matrix and legal freeze.
+Старий discovery запитував про compliance, але не мав статусів окремих тверджень, пріоритету джерел і
+захисту дослівно погодженого тексту. Framework 2.0 додає Claims Matrix і legal freeze.
 
-### 6. Cross-brand ownership is missing
+### 6. Не визначена відповідальність у кросбрендових проєктах
 
-Matching page edges to host chrome is documented, but there is no decision system for host CTA versus
-destination typography, mascot, colors and materials. Framework 2.0 adds Brand Bridge.
+Стикування країв сторінки з chrome хоста описане, але немає системи рішень щодо CTA хоста, типографіки
+продукту призначення, маскота, кольорів і матеріалів. Framework 2.0 додає Brand Bridge.
 
-### 7. Asset methodology is not connected tightly enough to page slots
+### 7. Методологія асетів недостатньо пов’язана зі слотами сторінки
 
-The icon guide is deep, but the overall workflow does not require slot dimensions, identity/style reference
-roles, alpha validation, real-size contact sheets and master/delivery mapping for every asset. Framework 2.0
-adds Asset Register and G8 Asset Freeze.
+Гайд з іконок детальний, але загальний workflow не вимагав розмірів слотів, ролей identity/style reference,
+перевірки alpha, contact sheet у реальному розмірі й відповідності master/delivery для кожного асета.
+Framework 2.0 додає Asset Register і G8 Asset Freeze.
 
-### 8. Questionnaire is universal rather than branching
+### 8. Опитувальник універсальний, а не розгалужений
 
-The old discovery checklist asks audience/GEO/product questions even when the team works inside a known
-product with approved content. Framework 2.0 adds Full/Fast Track and round-based conditional questions.
+Старий discovery-чекліст запитував про аудиторію/GEO/продукт навіть тоді, коли команда працювала з
+відомим продуктом і погодженим контентом. Framework 2.0 додає Full/Fast Track і умовні раунди запитань.
 
-### 9. Skill catalog is tied to a previous Claude setup
+### 9. Каталог skills прив’язаний до попереднього налаштування Claude
 
-Some named skills may not exist or may change. Framework 2.0 defines capability contracts and provides a
-portable `$promo-landing-framework` skill plus `$playcity-copy-review`, with Codex/Claude bootstrap.
+Деякі названі skills можуть бути відсутні або змінитися. Framework 2.0 визначає контракти можливостей і
+надає переносний `$promo-landing-framework` разом із `$playcity-copy-review` та bootstrap для Codex/Claude.
 
-### 10. Technical decisions dominate the entrypoint
+### 10. Технічні рішення домінують у точці входу
 
-The old README opens with stack and Awwwards-level implementation. Product designers need an entrypoint
-that starts with business truth, brand evidence and visual approvals. Framework 2.0 moves technical depth
-behind a dedicated layer.
+Старий README починався зі стеку й реалізації рівня Awwwards. Продуктовим дизайнерам потрібна точка входу,
+яка починається з бізнес-правди, бренд-доказів і візуальних погоджень. Framework 2.0 переносить технічну
+глибину в окремий шар.
 
-## Migration map
+## Карта міграції
 
-| v1 artifact | Framework 2.0 role |
+| Артефакт v1 | Роль у Framework 2.0 |
 |---|---|
 | LANDING-PROMPT-TEMPLATE | replaced as primary entry by Questionnaire + Project Brief |
 | LANDING-WORKFLOW | retained as deep technical runbook; operating gates live in framework/README |
@@ -94,24 +95,24 @@ behind a dedicated layer.
 | CHECKLISTS | retained; release ownership/evidence added in QA-RELEASE |
 | DECISION/RETRO templates | retained; Project State becomes daily control surface |
 
-## Recommended repository cleanup after team trial
+## Рекомендоване очищення репозиторію після командного пілоту
 
-Do not delete v1 documents immediately. Run Framework 2.0 on one CATBET and one SlotCity landing, then:
+Не видаляйте документи v1 одразу. Проведіть Framework 2.0 через один лендінг CATBET і один SlotCity, а потім:
 
-1. mark duplicated v1 sections as `legacy/deep reference`;
-2. replace old master prompt with the custom skill entrypoint;
-3. move product-agnostic technical docs under `technical/`;
-4. keep only one canonical definition of gates, viewports and status vocabulary;
-5. add real SlotCity brand evidence and case study;
-6. release v2.0.0 after the two-product trial.
+1. позначте дубльовані розділи v1 як `legacy/deep reference`;
+2. замініть старий master prompt точкою входу custom skill;
+3. перенесіть продуктово-нейтральні технічні документи до `technical/`;
+4. залиште одне канонічне визначення гейтів, viewport і словника статусів;
+5. додайте реальні бренд-докази SlotCity та case study;
+6. випустіть v2.0.0 після пілоту на двох продуктах.
 
-## Success criteria for the methodology itself
+## Критерії успіху методології
 
-- Designer reaches G5 without writing code.
-- No visual concept is generated without exact brand evidence.
-- Product/legal changes after G2 are measured and rare.
-- First implementation contains no placeholder art.
-- 1440/440/430/375 are approved before build; runtime QA follows the current analytics top-10.
-- Asset re-generation count drops because style lock and invariants exist.
-- Time from approved full design to public preview decreases.
-- Retrospectives update Product KB and skill, not only the campaign repo.
+- Дизайнер доходить до G5 без написання коду.
+- Жоден візуальний концепт не генерується без точних бренд-доказів.
+- Зміни Product/Legal після G2 вимірюються й трапляються рідко.
+- Перша реалізація не містить placeholder-артів.
+- 1440/440/430/375 погоджені до build; runtime QA спирається на актуальний analytics top-10.
+- Кількість повторних генерацій асетів зменшується завдяки style lock та інваріантам.
+- Час від погодження повного дизайну до публічного preview скорочується.
+- Ретроспективи оновлюють Product KB і skill, а не лише репозиторій кампанії.

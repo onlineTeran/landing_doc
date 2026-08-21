@@ -1,7 +1,7 @@
 # CATBET Asset Evidence Pack 0.9
 
-This pack combines owner-supplied Brand Bible/Lore World boards with dated live/campaign evidence.
-The owner-supplied source closes the visual and narrative identity of Bet for methodology `0.9`; it does
+Цей пакет поєднує надані власником boards Brand Bible/Lore World із датованими live/campaign доказами.
+Надане власником джерело фіксує візуальну й наративну ідентичність Бета для методології `0.9`; воно
 not by itself grant external reuse rights or replace editable masters. See [`../MASCOT.md`](../MASCOT.md),
 [`../BRAND-BIBLE.md`](../BRAND-BIBLE.md) and [`manifest.json`](manifest.json).
 
@@ -16,5 +16,5 @@ not by itself grant external reuse rights or replace editable masters. See [`../
 | `reference/cat-bet-tuxedo-999-campaign-2026-08-21.webp` | кіт Бет identity | `APPROVED_CAMPAIGN / STATUS_REVALIDATION_PENDING` | identity reference; ignore baked copy/value |
 | `reference/cat-bet-promo-og-live-2026-08-21.jpg` | natural-cat identity cross-check/yarn narrative | `LIVE_SNAPSHOT` | identity/narrative reference only |
 
-Use only one declared role per file in a prompt. Prefer the clean no-clothes crop for identity; costume
+У prompt використовуйте лише одну оголошену роль на файл. Для identity віддавайте перевагу чистому crop без одягу; костюм
 campaigns are not the default. Baked campaign text and numbers are never Product Truth.

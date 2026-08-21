@@ -1,12 +1,12 @@
-# SlotCity Tone of Voice
+# Тональність комунікації SlotCity
 
 **Design System version:** `0.9` · **Status:** `PENDING — USER WILL PROVIDE; SOURCE EMPTY`.
 
-The supplied Figma includes a visible page named `05. Tone of Voice`, but that page has no child nodes or
+Надана Figma містить видиму сторінку `05. Tone of Voice`, але вона не має дочірніх nodes або
 text. Therefore no character, vocabulary, address form, humour, emoji/caps policy, CTA verb family or
 surface-specific voice can be claimed from this source.
 
-## Interim rules
+## Тимчасові правила
 
 - Product/legal truth and approved campaign copy take precedence.
 - Apply [PlayCity copy rules](../../PLAYCITY-COPYWRITING-RULES.md) where relevant.
@@ -14,7 +14,7 @@ surface-specific voice can be claimed from this source.
 - Do not call generic energetic casino copy “SlotCity ToV”.
 - Mark editable brand copy `TOV_REVIEW_REQUIRED`; legal/verbatim copy remains unchanged.
 
-## Required canonical input
+## Необхідне канонічне джерело
 
 - source, version, owner and approval date;
 - brand character and relationship to the user;
@@ -26,7 +26,7 @@ surface-specific voice can be claimed from this source.
 - approved/rejected examples with rationale;
 - relationship to PlayCity/legal language.
 
-## Approval record
+## Запис погодження
 
 - Source:
 - Version:

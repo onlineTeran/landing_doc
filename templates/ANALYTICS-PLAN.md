@@ -1,6 +1,6 @@
-# Analytics Plan — <campaign>
+# План аналітики — <campaign>
 
-## Business measurement
+## Бізнес-вимірювання
 
 - Primary conversion:
 - Denominator:
@@ -9,7 +9,7 @@
 - Destination analytics owner:
 - Cross-domain mechanism:
 
-## Campaign dimensions
+## Параметри кампанії
 
 - campaign_id:
 - host_brand:
@@ -18,28 +18,28 @@
 - creative_version:
 - landing_version:
 
-## Events
+## Події
 
-| Event | Trigger | Parameters | Channel | Dedup rule | Owner | QA evidence |
+| Подія | Тригер | Параметри | Канал | Правило дедуплікації | Власник | Доказ QA |
 |---|---|---|---|---|---|---|
 | promo_landing_view | | | | once/session or view | | |
 | promo_cta_impression | | | | | | |
 | promo_cta_click | | | | | | |
 
-## CTA routes
+## Маршрути CTA
 
-| CTA ID | Visible label | Location | Route/event_action | Destination marker | QA status |
+| CTA ID | Видимий текст | Розташування | Route/event_action | Маркер призначення | Статус QA |
 |---|---|---|---|---|---|
 | | | | | | |
 
-## Privacy/consent
+## Приватність і згода
 
 - Consent source:
 - PII exclusions:
 - Iframe forwarding:
 - Data retention/owner:
 
-## Post-launch dashboard
+## Дашборд після запуску
 
 - CTR:
 - Registration rate:

@@ -3,7 +3,7 @@
 Це process retrospective, а не reusable visual template. Конкретні claims і promo mechanics треба
 перевіряти заново.
 
-Exact host/product/design/asset sources and slot contracts are recorded in
+Точні джерела host/product/design/assets і контракти слотів зафіксовано в
 [BETON-CATBET-ASSET-MAP.md](BETON-CATBET-ASSET-MAP.md).
 
 ## 1. Задача

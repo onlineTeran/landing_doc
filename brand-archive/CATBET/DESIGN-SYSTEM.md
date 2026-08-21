@@ -72,9 +72,9 @@ Furry lettering — art treatment, а не body font. На mobile title має �
 
 ## 6. CTA and host bridge
 
-For same-brand CATBET, extract CTA family from current CATBET design system before G3.
+Для same-brand CATBET вилучіть сімейство CTA з актуальної дизайн-системи CATBET до G3.
 
-For cross-brand:
+Для кросбрендового сценарію:
 
 - host normally owns button shape, states, spacing and UI typography;
 - CATBET owns offer language and visual anchors;
@@ -91,6 +91,6 @@ For cross-brand:
 
 ## 8. Design QA signature
 
-A CATBET design fails if swapping logo makes it look like any casino. Approval requires at least three
+Дизайн CATBET не проходить, якщо після заміни логотипа схожий на будь-яке казино. Погодження вимагає щонайменше три
 independent CATBET signals from canonical sources: for example mascot identity + material family +
 typography/offer object. A large logo counts as only one signal.

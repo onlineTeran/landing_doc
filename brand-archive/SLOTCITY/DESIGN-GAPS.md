@@ -1,8 +1,8 @@
-# SlotCity Design System Gaps
+# Прогалини дизайн-системи SlotCity
 
 **Design System version:** `0.9`
 
-These gaps are explicit stop conditions, not invitations for AI inference.
+Ці прогалини є явними умовами зупинки, а не запрошенням до AI-припущень.
 
 | ID | Gap | Impact | Required evidence / owner |
 |---|---|---|---|
@@ -17,7 +17,7 @@ These gaps are explicit stop conditions, not invitations for AI inference.
 | SC-GAP-009 | Brand owner approval missing | snapshot remains extracted, not canonical | approval quote, owner, date, exact snapshot scope |
 | SC-GAP-010 | 3D Icon variant-count drift (172 documented vs 198 decoded labels) | automated selection may target superseded/unpublished variants | current upstream component set and publishable-variant list |
 
-## Mascot passport required fields
+## Обов'язкові поля паспорта маскота
 
 - official name, role and relationship to SlotCity;
 - canonical front/side/three-quarter views and expression range;
@@ -29,5 +29,5 @@ These gaps are explicit stop conditions, not invitations for AI inference.
 - generation/editing rights, source masters and approver;
 - approved/rejected examples with rationale.
 
-Until these exist, character art may use only an explicitly approved campaign source unchanged or remain
+Доки цього немає, character art може використовувати лише явно погоджене джерело кампанії без змін або лишатися
 concept-only with `IDENTITY_UNVERIFIED`.

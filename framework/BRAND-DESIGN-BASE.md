@@ -72,14 +72,14 @@ machine/
   art-contract.json
 ```
 
-An extracted package may store full `color-tokens.json` and `typography-roles.json`; a partial
+Вилучений пакет може зберігати повні `color-tokens.json` і `typography-roles.json`; частковий
 package stores a `token-contract.json` with pending values so an agent cannot mistake guesses for
 tokens. Machine files support selection and validation; Markdown explains intent, precedence and known gaps.
 Neither format replaces owner approval.
 
 ## Request protocol
 
-Every design request must state or derive without guessing:
+Кожен дизайн-запит має вказати або без припущень вивести:
 
 - product and primary surface;
 - target slot, dimensions/aspect ratio, viewports and delivery format;
@@ -91,5 +91,5 @@ Every design request must state or derive without guessing:
 - legal/copy status;
 - QA criteria and approvers.
 
-Use [templates/ART-BRIEF.md](../templates/ART-BRIEF.md) for art and the landing project kit for
+Використовуйте [templates/ART-BRIEF.md](../templates/ART-BRIEF.md) для арту й project kit лендінгу для
 landing work. Unknown required values become blockers, not creative freedom.

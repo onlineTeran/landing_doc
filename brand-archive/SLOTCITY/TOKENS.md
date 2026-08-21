@@ -1,17 +1,17 @@
-# SlotCity Foundations and Tokens
+# Основи й токени SlotCity
 
 **Design System version:** `0.9`
 
-## Source and scope
+## Джерело та scope
 
-The archive contains 3,078 variable nodes from local and attached libraries. This snapshot publishes
+Архів містить 3 078 variable nodes із локальних і attached libraries. Цей snapshot публікує
 only the 110 local semantic color variables in collection `general` (`Default` mode), because those are
 the variables authored for this reference file. Imported primitives remain traceable in the Figma source
 but must be resolved against their upstream libraries before reuse.
 
-Machine values: [`machine/color-tokens.json`](machine/color-tokens.json).
+Машинні значення: [`machine/color-tokens.json`](machine/color-tokens.json).
 
-## Color roles
+## Колірні ролі
 
 | Role family | Intent | Key examples |
 |---|---|---|
@@ -20,7 +20,7 @@ Machine values: [`machine/color-tokens.json`](machine/color-tokens.json).
 | `general/icon/*` | functional icon hierarchy and semantic icons | white, gray ladder, yellow ladder, green/blue/violet/pink/orange/red |
 | `general/border/*` | surfaces, semantic borders and translucent/Smartico strokes | black/gray ladder, semantic solids, `stroke-transp-*`, `smartico-*` |
 
-### Base palette
+### Базова палітра
 
 | Name | Value | Typical role |
 |---|---:|---|
@@ -35,7 +35,7 @@ Machine values: [`machine/color-tokens.json`](machine/color-tokens.json).
 | Light | `#FAFBFC` | light surface |
 | White | `#FFFFFF` | primary text/icon |
 
-### Semantic accents
+### Семантичні акценти
 
 | Family | 500 | Dark/support | Translucent use |
 |---|---:|---:|---:|
@@ -47,12 +47,12 @@ Machine values: [`machine/color-tokens.json`](machine/color-tokens.json).
 | Orange | `#FF6600` | `#B54800` | 20/30% |
 | Red | `#FF3333` | `#B52424` | 10/20/30% |
 
-Tokens with `gradient-*` names in the local `general` collection are color endpoints or translucent
+Токени з назвами `gradient-*` у локальній колекції `general` є кінцевими кольорами або напівпрозорими
 strokes, not complete gradient recipes. Recreate a gradient only from an approved component/art recipe.
 
-## Semantic typography
+## Семантична типографіка
 
-Selection order: context → semantic role → Desktop/Tablet/Mobile → approved master style. Do not invent
+Порядок вибору: context → semantic role → Desktop/Tablet/Mobile → approved master style. Не вигадуйте
 intermediate sizes. Button, Badge, Tabs, Timer, Accordion, Alert and other components retain their own
 text styles.
 
@@ -67,12 +67,12 @@ text styles.
 | `landing/meta` | Body Text 12/18 Light or SemiBold | note/legal/helper → short label/badge |
 | `landing/action` | Button 18/24, 14/20, 12/16, 10/12 | component-owned large/medium/small/micro |
 
-Observed fonts in the whole archive are mixed because of imported libraries and historic templates.
-The dominant rendered families are Geologica and Gilroy, but font licensing and canonical product
+Шрифти в усьому архіві змішані через імпортовані бібліотеки й історичні шаблони.
+Домінантні rendered-сімейства — Geologica і Gilroy, але ліцензування шрифтів і канонічні продуктові
 ownership are not proven by the archive alone; do not package font binaries until owner confirmation.
 
-## Responsive rule
+## Правило адаптивності
 
-The hero campaign title moves from 40/40 or 32/32 on desktop to 18/18 on mobile. Body roles preserve
+Hero-заголовок кампанії переходить із 40/40 або 32/32 на desktop до 18/18 на mobile. Body roles зберігають
 hierarchy by changing the approved mode, container width and line count—not by interpolating arbitrary
 font sizes.

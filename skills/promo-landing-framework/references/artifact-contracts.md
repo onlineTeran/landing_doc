@@ -1,41 +1,41 @@
-# Artifact contracts
+# Контракти артефактів
 
-## Project Brief
+## Бриф проєкту
 
-Track, host, destination, one conversion, exact CTA route, sources, deliverables, integration boundary,
+Track, host, destination, одна конверсія, точний маршрут CTA, джерела, deliverables, межа інтеграції,
 constraints, exclusions, owners and dates.
 
-## Mechanics Model
+## Модель механіки
 
-For each offer: trigger, user choice, sequence/tier, reward, conditions, time, source and owner.
+Для кожної пропозиції: trigger, вибір користувача, sequence/tier, reward, умови, час, source і owner.
 
-## Claims Matrix
+## Матриця тверджень
 
-Exact copy/claim, status, editability, source/version, placement/GEO, owner and design usage.
+Точний copy/claim, status, editability, source/version, placement/GEO, owner і використання в дизайні.
 
-## Brand Bridge
+## Брендовий міст
 
-Surface ownership, host/destination anchors, one bridge device, one exclusion, invariants and sources.
+Відповідальність за surface, якорі host/destination, один bridge device, одне виключення, інваріанти й джерела.
 
-## Storyboard
+## Сценарна карта
 
-Section order/job, P0/P1/P2 content, copy ID, visual, CTA, desktop/mobile, motion, asset IDs and legal note.
+Порядок/задача секцій, контент P0/P1/P2, copy ID, visual, CTA, desktop/mobile, motion, asset IDs і legal note.
 
-## Asset Register
+## Реєстр ассетів
 
-ID, slot size, reference roles, invariants, alpha/background, master/delivery, weight, mobile variant,
+ID, розмір слота, ролі референсів, інваріанти, alpha/background, master/delivery, вага, mobile-варіант,
 prompt log and status.
 
-## Design delivery
+## Передача дизайну
 
-Context frame with host chrome; content-only 1440; content-only 440, 430 and 375; motion notes; legal volume;
+Context frame із chrome хоста; content-only 1440; content-only 440, 430 і 375; motion notes; обсяг legal;
 CTA states; asset map.
 
-## Analytics Plan
+## План аналітики
 
-Primary metric, attribution, campaign dimensions, event triggers/parameters, CTA routes and QA evidence.
+Основна метрика, атрибуція, dimensions кампанії, triggers/parameters подій, маршрути CTA й QA evidence.
 
-## QA report
+## Звіт QA
 
-Same-viewport target/implementation comparisons, surface findings, runtime assertions, build/tests,
+Порівняння target/implementation в однаковому viewport, surface findings, runtime assertions, build/tests,
 legal/content verification, analytics verification and final verdict.

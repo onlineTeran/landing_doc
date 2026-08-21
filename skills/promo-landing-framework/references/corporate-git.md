@@ -1,6 +1,6 @@
-# Corporate Git contract
+# Контракт корпоративного Git
 
-Use for delivery to `https://git.sharkscode.com/cb/ai_landings.git`.
+Використовуйте для доставки до `https://git.sharkscode.com/cb/ai_landings.git`.
 
 - Each landing is a self-contained root directory; do not commit generated `dist/`.
 - Root `landings.json` is the publication source of truth with exactly `enabled`, `path`, `dist`,
@@ -21,5 +21,5 @@ Use for delivery to `https://git.sharkscode.com/cb/ai_landings.git`.
 - Removal: set `enabled:false`, run manual `remove-<landing>` separately in required environments,
   verify URL/cache removal, then delete source/config in a later MR. Never delete the entry first.
 
-Use `<methodology-root>/CORPORATE-GIT-RUNBOOK.md`, `GIT-DELIVERY.md`, `RELEASE-TASK.md`, `QA-TASK.md`
+Використовуйте `<methodology-root>/CORPORATE-GIT-RUNBOOK.md`, `GIT-DELIVERY.md`, `RELEASE-TASK.md`, `QA-TASK.md`
 and `node <methodology-root>/scripts/validate-landings-config.mjs . [--require-dist]`.

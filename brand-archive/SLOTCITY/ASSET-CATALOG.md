@@ -1,8 +1,8 @@
-# SlotCity Asset Catalog
+# Каталог ассетів SlotCity
 
 **Design System version:** `0.9`
 
-This catalog records reusable families and modification contracts; it does not copy the 1.58 GB source
+Цей каталог фіксує повторно використовувані сімейства й контракти модифікації; він не копіює джерело обсягом 1,58 GB
 archive into the methodology repository.
 
 | Family | Status | Selection / modifications | Delivery QA |
@@ -18,16 +18,16 @@ archive into the methodology repository.
 | Game/provider art | `REFERENCE_ONLY` | third-party source/rights required; do not restyle as brand asset | exact provider asset and legal use |
 | Motion | `PENDING` | no canonical timing/easing contract | poster/fallback/reduced motion pending |
 
-## 3D library evidence
+## Доказова база 3D-бібліотеки
 
-The authored guide reports a 172-variant `3D Icon` family; decoded attached-library copies expose 198
+Авторський гайд повідомляє про 172 варіанти сімейства `3D Icon`; декодовані копії attached library містять 198
 unique labels, so the current upstream set must resolve the drift. Observed names include rewards and finance (Gift Red,
 Trophy, Wallet, Coins, Chips, Dice, Medal), support/status (24/7, Chat, Settings, Verification), gaming
 and responsibility (Roulette, Gamepad, Responsible_gaming, Deposit_limit, Daily/Weekly game limit), and
 campaign/frozen variants. Variant names are discovery aids—not permission to export or modify without
 the current source component and rights check.
 
-## Asset record schema
+## Схема запису ассета
 
 ```yaml
 asset_id:
@@ -58,7 +58,7 @@ last_verified:
 campaigns_used: []
 ```
 
-Unknown rights mean `IMMUTABLE`. Any newly generated family begins with one approved style-lock asset.
+Невідомі права означають `IMMUTABLE`. Кожне нове згенероване сімейство починається з одного погодженого style-lock асета.
 
-Local evidence files and checksums: [`assets/README.md`](assets/README.md) and
+Локальні файли доказів і checksums: [`assets/README.md`](assets/README.md) та
 [`assets/manifest.json`](assets/manifest.json). These snapshots do not promote themselves to canonical.

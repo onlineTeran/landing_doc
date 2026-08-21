@@ -32,11 +32,11 @@ a blocker. Do not fix it with safer-sounding prose.
 
 ## Build the truth layer
 
-For every offer record action, user choice, reward, eligibility, conditions, wager, time and source.
-Create or update Claims Matrix rows with exact copy, editability, status, source/version, owner and
+Для кожної пропозиції фіксуйте дію, вибір користувача, винагороду, eligibility, умови, wager, час і джерело.
+Створіть або оновіть рядки Claims Matrix з точним copy, editability, status, source/version, owner і
 placement. Separate `APPROVED VERBATIM` from `APPROVED EDITABLE`.
 
-Never infer a current number or condition from a previous campaign visual. Never apply Tone of Voice to
+Ніколи не виводьте актуальне число чи умову з візуалу попередньої кампанії. Не застосовуйте Tone of Voice до
 verbatim legal text.
 
 ## Audit every message surface
@@ -65,7 +65,7 @@ Return:
 | MINOR | clarity/readability/versioning issue that does not change the mechanic |
 | NOTE | optional improvement or owner question |
 
-For each finding include exact surface/copy, reason, supporting official rule, correction strategy and
+Для кожного finding додайте точний surface/copy, причину, офіційне правило-підтвердження, стратегію виправлення й
 owner. Proposed replacement text must be labelled `CANDIDATE — LEGAL REVIEW REQUIRED` unless it already
 has an approved claim ID.
 
@@ -77,4 +77,4 @@ End with:
 - open blockers;
 - exact next approval needed.
 
-Do not use `LEGAL APPROVED` yourself.
+Не встановлюйте `LEGAL APPROVED` самостійно.

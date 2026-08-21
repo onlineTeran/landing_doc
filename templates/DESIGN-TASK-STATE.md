@@ -1,6 +1,6 @@
-# Design Task State
+# Стан дизайн-задачі
 
-## Route
+## Маршрут
 
 - Product: `<slotcity|catbet>`
 - Operating agent: `<codex|claude>`
@@ -12,7 +12,7 @@
 - Next action:
 - Blockers:
 
-## Phase control
+## Контроль фаз
 
 | Phase | Required artifact/evidence | Status | Owner | Date | Exact path/version/approval quote |
 |---|---|---|---|---|---|
@@ -26,16 +26,16 @@
 | A7 Art/Design QA | real-slot evidence and human approval | `PENDING` | | | |
 | A8 Register & Learn | Asset Register / design-system change request | `PENDING` | | | |
 
-Allowed statuses: `PENDING | IN_PROGRESS | BLOCKED | APPROVED | N/A`. `APPROVED` requires owner, date,
-exact scope/version, artifact path and verbatim approval quote. Agent/tool output is never human approval.
+Дозволені статуси: `PENDING | IN_PROGRESS | BLOCKED | APPROVED | N/A`. Для `APPROVED` потрібні owner,
+date, точний scope/version, artifact path і дослівний approval quote. Результат агента не є human approval.
 
-## Decisions and changes
+## Рішення та зміни
 
 | ID | Decision/change | Source/owner | Impacted phase | Resolution |
 |---|---|---|---|---|
 | | | | | |
 
-## Design-system gaps
+## Прогалини дизайн-системи
 
 | Gap | Required source/owner | Impact | Status |
 |---|---|---|---|

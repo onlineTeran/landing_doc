@@ -1,4 +1,4 @@
-# Gates
+# Гейти
 
 | Gate | Required evidence | Stop condition |
 |---|---|---|
@@ -16,7 +16,7 @@
 | G11 Released | explicit approval, terminal deployment, public verification | owner-only/unverified URL |
 | G12 Learning Captured | retrospective and KB/skill updates | lessons exist only in chat |
 
-Approval must name artifact version and scope. A feedback phrase is not an approval.
+Approval має називати версію артефакта й scope. Фраза з feedback не є погодженням.
 
-Any change to mechanics or claims reopens G2. Any identity/brand ownership change reopens G3. Layout or
+Будь-яка зміна механіки чи claims повторно відкриває G2. Зміна identity/brand ownership відкриває G3. Layout або
 responsive change after G7 reopens the affected design and asset/build QA.

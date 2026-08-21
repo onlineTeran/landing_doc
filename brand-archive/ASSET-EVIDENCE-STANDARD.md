@@ -1,7 +1,7 @@
 # Asset Evidence Pack Standard
 
-This standard defines which visual files belong inside the methodology and how an agent may use them.
-The goal is reproducible generation from exact evidence, not a folder of anonymous inspiration.
+Цей стандарт визначає, які візуальні файли належать методології та як агент може їх використовувати.
+Мета — відтворювана генерація з точних доказів, а не папка анонімного натхнення.
 
 ## Required layers
 
@@ -21,7 +21,7 @@ allow it, so Codex/Claude does not depend on a chat attachment or mutable URL.
 
 ## Reference admission consent gate
 
-An image being attached, linked, opened, generated or used in the current task does **not** grant
+Прикріплення, посилання, відкриття, генерація або використання зображення в поточній задачі **не надає**
 permission to store it in the framework. Before every new image enters `brand-archive/**/assets`, the
 agent must ask one explicit, file-specific question that states:
 
@@ -35,7 +35,7 @@ Silence, task feedback, permission to inspect/generate an image or approval of a
 consent. Without consent the agent may use the image transiently for the current task, but must not copy,
 download, crop, checksum, register or commit it as methodology evidence.
 
-Record approved storage in the manifest entry:
+Зафіксуйте погоджене зберігання в manifest entry:
 
 ```json
 "storageConsent": {

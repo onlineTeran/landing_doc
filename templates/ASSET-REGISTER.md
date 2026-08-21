@@ -1,12 +1,12 @@
-# Asset Register — <campaign>
+# Реєстр ассетів — <campaign>
 
-| ID | Slot | Rendered size 1440/440/430/375 | Identity/style/composition refs | Source status/rights | Invariants | Alpha/bg | Master | Delivery | Weight cap | Mobile variant | Prompt log | Status |
+| ID | Slot | Розмір 1440/440/430/375 | Референси identity/style/composition | Статус/права | Інваріанти | Alpha/bg | Master | Delivery | Ліміт ваги | Mobile variant | Журнал prompt | Статус |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | A-001 | | | | | | | | | | | | TODO |
 
-Statuses: `CONCEPT | GENERATING | REVIEW | APPROVED | INTEGRATED | SUPERSEDED`.
+Статуси: `CONCEPT | GENERATING | REVIEW | APPROVED | INTEGRATED | SUPERSEDED`.
 
-## Style lock
+## Фіксація стилю
 
 - Reference asset ID:
 - Camera:
@@ -17,7 +17,7 @@ Statuses: `CONCEPT | GENERATING | REVIEW | APPROVED | INTEGRATED | SUPERSEDED`.
 - Safe area:
 - Optical weight target:
 
-## Prompt record
+## Журнал prompt
 
 ### <asset id> v1
 
@@ -31,7 +31,7 @@ Statuses: `CONCEPT | GENERATING | REVIEW | APPROVED | INTEGRATED | SUPERSEDED`.
 - Real-slot screenshots:
 - Approval:
 
-## Family QA
+## QA сімейства
 
 - [ ] Contact sheet equal canvas
 - [ ] Contact sheet real rendered size

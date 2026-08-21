@@ -1,19 +1,19 @@
-# CATBET Art Direction
+# Артнапрям CATBET
 
 **Design System version:** `0.9` · **Status:** `PROVISIONAL / EVIDENCE-BASED`
 
-This direction formalizes evidence already present in the CATBET Product KB, reference register and
-BETON × CATBET case. It is a safe creative frame, not a claim that missing brand decisions are final.
+Цей напрям формалізує докази, уже наявні у Product KB CATBET, реєстрі референсів і кейсі BETON × CATBET.
+Це безпечна творча рамка, а не твердження, що відсутні бренд-рішення вже остаточні.
 
-## 1. Creative thesis
+## 1. Творча теза
 
-CATBET should feel tactile, charismatic and playfully intelligent: a recognizable cyan cat world
+CATBET має відчуватися тактильним, харизматичним і грайливо розумним: упізнаваний cyan-світ кота
 where reward objects, furry lettering and motion tell one clear product story. Premium craft and
 mechanic clarity outrank decorative density.
 
-## 2. Independent brand signals
+## 2. Незалежні сигнали бренду
 
-Every key composition needs at least three canonical signals, selected for the concept:
+Кожна ключова композиція потребує щонайменше трьох канонічних сигналів, вибраних під концепт:
 
 - exact mascot identity;
 - cyan/orange semantic palette;
@@ -22,17 +22,17 @@ Every key composition needs at least three canonical signals, selected for the c
 - CATBET typography/treatment;
 - cat-native narrative motif such as paw, fish, yarn or duck.
 
-Logo is one signal only. If replacing it makes the page look like a generic casino, the direction
+Логотип — лише один сигнал. Якщо його заміна робить сторінку схожою на типове казино, напрям
 fails Brand QA.
 
-## 3. Mascot direction
+## 3. Напрям маскота
 
-The cat is an identity asset, not a generic prompt. Preserve canonical cyan fur, face, species cues,
+Кіт — identity-асет, а не типовий prompt. Зберігайте канонічну cyan-шерсть, обличчя, видові ознаки,
 body shape and proportions; muscular/bodybuilder drift is forbidden. Pose, emotion, camera, clothing
 or props may change only within an approved modification matrix. A new production render requires
 the exact identity reference and rights status.
 
-## 4. Material and object grammar
+## 4. Граматика матеріалів та об'єктів
 
 - Fur: consistent fiber length, direction, density, base color, rim light and shadow footprint across
   a family.
@@ -42,7 +42,7 @@ the exact identity reference and rights status.
 - Generic neon casino, unrelated glass cards and random coins are not default CATBET language.
 - Concrete belongs only to an approved host bridge such as BETON; it must not become CATBET canon.
 
-## 5. Composition grammar
+## 5. Граматика композиції
 
 1. One signature visual metaphor per surface.
 2. One dominant reward or action; supporting mechanics stay subordinate.
@@ -51,7 +51,7 @@ the exact identity reference and rights status.
 5. Design desktop and mobile crops intentionally; preserve gaze/action continuity.
 6. Repeat the hero's material/story in lower sections so the page feels authored, not assembled.
 
-## 6. Art roles
+## 6. Ролі арту
 
 | Role | Best use | Required evidence |
 |---|---|---|
@@ -62,13 +62,13 @@ the exact identity reference and rights status.
 | Atmospheric motif | depth/continuity | approved palette/material, low information load |
 | Cross-brand bridge | transition from host to CATBET | written Brand Bridge ownership |
 
-## 7. Motion direction
+## 7. Напрям анімації
 
-Prefer meaningful pounce, paw/fur reaction, tactile bounce or story continuity. Use one dominant motion
+Віддавайте перевагу змістовному стрибку, реакції лапи/шерсті, тактильному bounce або розвитку історії. Використовуйте один домінантний motion
 per viewport; do not add global reveal-on-scroll by default. Essential meaning must survive static and
 reduced-motion modes. Every video needs an approved poster, crop contract and performance budget.
 
-## 8. Review questions
+## 8. Питання для перевірки
 
 - Is the cat unmistakably canonical without relying on the logo?
 - Can a user distinguish deposit number, package tier and reward in five seconds?

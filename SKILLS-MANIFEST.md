@@ -40,13 +40,13 @@
 
 ### Codex
 
-The current working environment was verified to expose `grilling`, `creative-director`, `imagegen`,
-Product Design ideation/image-to-code workflows, in-app browser control and Sites hosting. Availability is
+У поточному робочому середовищі підтверджено `grilling`, `creative-director`, `imagegen`,
+workflow Product Design ideation/image-to-code, керування in-app browser і Sites hosting. Доступність
 session/plugin-dependent: record what the **new project** actually exposes in `SKILL-AUDIT.md`.
 
 ### Claude Code
 
-Use [CLAUDE-CODE-SKILLS.md](CLAUDE-CODE-SKILLS.md) as the existing discovery/audit library. Names and
+Використовуйте [CLAUDE-CODE-SKILLS.md](CLAUDE-CODE-SKILLS.md) як наявну бібліотеку discovery/audit. Назви й
 versions may differ from Codex. Install only from an approved source, pin version/SHA and preserve the
 same output contract from this manifest.
 

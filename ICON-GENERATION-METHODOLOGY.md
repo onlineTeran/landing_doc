@@ -253,7 +253,7 @@ Reference icon повинна мати зрозумілу семантику, о
 У наступних запитах писати:
 
 ~~~text
-Reference image role: immutable style reference.
+Роль референсного зображення: незмінний стильовий референс.
 Preserve exactly: camera, perspective, shape language, materials,
 lighting direction, shadow softness, detail density, visual weight,
 safe-area ratio and palette roles.
@@ -517,11 +517,11 @@ Disabled не втрачає meaning; error не залежить лише ві�
 ## 17. Master prompt template
 
 ~~~text
-Use case: icon generation
-Asset type: [ICON_TYPE]
+Сценарій: генерація іконки
+Тип асета: [ICON_TYPE]
 
 Primary request:
-Create [ICON_NAME], communicating [SEMANTIC_MEANING].
+Створи [ICON_NAME], що передає [SEMANTIC_MEANING].
 
 Style:
 [STYLE]
@@ -539,16 +539,16 @@ Lighting:
 Shadow: [SHADOW]
 Glow: [GLOW]
 
-Production target:
-Target rendered size: [TARGET_SIZE]
+Production-ціль:
+Цільовий rendered-розмір: [TARGET_SIZE]
 Optical size: [OPTICAL_SIZE]
-Theme: [THEME]
+Тема: [THEME]
 Background/output: [BACKGROUND]
 Safe area: [SAFE_AREA]
 
-Reference:
+Референс:
 [REFERENCE_IMAGE]
-Reference role: [style / material / shape / lighting / composition].
+Роль референсу: [style / material / shape / lighting / composition].
 
 Requirements:
 - true transparent background with a real alpha channel;
@@ -573,9 +573,9 @@ Requirements:
 ## 18. Reference-based prompt
 
 ~~~text
-Create the next icon in the same approved set.
+Створи наступну іконку в тому самому погодженому наборі.
 
-Reference image role: immutable reference icon.
+Роль референсного зображення: незмінна референсна іконка.
 
 Preserve exactly:
 - shape language;
@@ -595,10 +595,10 @@ New semantic object:
 [ICON_NAME] — [SEMANTIC_MEANING].
 
 Change only the semantic object.
-Do not redesign the style, change the camera, alter materials,
+Не змінюй стиль, камеру чи матеріали,
 increase decorative detail, change safe margins or add background objects.
 
-Output:
+Результат:
 isolated production-ready asset, true alpha, no text, no watermark,
 no crop and no clipped effects.
 ~~~
@@ -625,7 +625,7 @@ semantic object, overall silhouette unless explicitly listed, camera,
 perspective, proportions, palette roles, lighting direction, material system,
 visual weight, approved detail level, canvas ratio and all other elements.
 
-Do not add new objects, text, border, frame, background or watermark.
+Не додавай нові об’єкти, текст, border, frame, background або watermark.
 Return an isolated production-ready asset with true alpha.
 ~~~
 

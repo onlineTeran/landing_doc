@@ -1,6 +1,6 @@
-# CATBET Design System 0.9 — Gap Register
+# Дизайн-система CATBET 0.9 — реєстр прогалин
 
-This register separates a usable structural base from missing canonical evidence. Each gap needs an
+Цей реєстр відокремлює придатну структурну основу від відсутніх канонічних доказів. Кожна прогалина потребує
 owner, source, due date and decision before its affected gate can be approved.
 
 | ID | Status | Missing evidence | Risk if guessed | Required closure |
@@ -18,7 +18,7 @@ owner, source, due date and decision before its affected gate can be approved.
 | CB-GAP-011 | PARTIAL | local checksummed owner-supplied and live evidence exists; legal rights matrix incomplete | unsafe external reuse/modification | owner, license, modification and campaign-use status |
 | CB-GAP-012 | OPEN | Brand approval of this evidence-based 0.9 scope | provisional rules treated as canonical | exact-version review and recorded approval |
 
-## Import procedure for the future current system
+## Процедура імпорту майбутньої актуальної системи
 
 1. Freeze this `0.9` snapshot and record the incoming source/version/date.
 2. Extract variables, components, assets and examples without overwriting provisional evidence.

@@ -1,16 +1,16 @@
-# CATBET Tone of Voice
+# Тональність комунікації CATBET
 
 **Design System version:** `0.9` · **Status:** `BRAND-BIBLE EXTRACTED / PHRASE LIBRARY PARTIAL`
 
-## Integration rule
+## Правило інтеграції
 
-ToV is applied only after Product Truth and Claims Matrix. It may rewrite only
+ToV застосовується лише після Product Truth і Claims Matrix. Він може переписувати тільки
 `APPROVED EDITABLE` copy and cannot modify legal wording, numbers, conditions, CTA destination or
 mandatory qualifiers. See [PlayCity copy rules](../../PLAYCITY-COPYWRITING-RULES.md).
 
-## Voice of Bet
+## Голос Бета
 
-Bet speaks from the first person as the host/owner. He is confident without arrogance, calm, concise,
+Бет говорить від першої особи як господар/власник. Він упевнений без зарозумілості, спокійний, стислий,
 witty without toxicity, warm without flattery, clever and slightly dramatic. He does not fuss, beg,
 repeat, hard-sell or explain the joke.
 
@@ -20,9 +20,9 @@ repeat, hard-sell or explain the joke.
 - no FOMO, caps-lock pressure, timers, false urgency or outcome certainty;
 - ToV never rewrites mechanics, conditions, legal language or CTA destination.
 
-See the executable detail and format rules in [BRAND-BIBLE.md](BRAND-BIBLE.md).
+Виконувані правила деталей і форматів див. у [BRAND-BIBLE.md](BRAND-BIBLE.md).
 
-## Remaining input for full copy library
+## Дані, яких бракує для повної бібліотеки текстів
 
 - ToV source/version/owner/date;
 - character and relationship to user;
@@ -35,11 +35,11 @@ See the executable detail and format rules in [BRAND-BIBLE.md](BRAND-BIBLE.md).
 - tone for hero, explanation, mechanics, errors and legal-adjacent text;
 - 10 approved and 10 rejected examples with reasons.
 
-The owner-supplied Brand Bible closes character and core voice behavior. A dedicated copy library is
+Надана власником Brand Bible фіксує характер і базову поведінку голосу. Окрема copy-бібліотека
 still needed for official mechanic names, CTA families, error states, legal-adjacent examples and a set
 of reviewed approved/rejected phrases.
 
-## Approval
+## Погодження
 
 - Source: `CATBAT_Bible.png`, `CATBAT_LOR_WORLD.png`
 - Version: `0.9` (framework version; source document shows update `20.05.2026`)

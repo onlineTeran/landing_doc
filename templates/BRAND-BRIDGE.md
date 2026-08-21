@@ -1,8 +1,8 @@
-# Brand Bridge — <host> × <destination>
+# Брендовий міст — <host> × <destination>
 
-## Brand roles
+## Ролі брендів
 
-| Surface | Host owns | Destination owns | Final rule | Evidence |
+| Поверхня | Належить host | Належить destination | Фінальне правило | Доказ |
 |---|---|---|---|---|
 | Header/footer/navigation | | | | |
 | Page background/container | | | | |
@@ -13,7 +13,7 @@
 | Motion | | | | |
 | Legal | | | | |
 
-## Anchors
+## Якорі
 
 - Host anchor 1:
 - Host anchor 2:
@@ -22,21 +22,21 @@
 - Destination anchor 2:
 - Destination anchor 3:
 
-## Bridge device
+## Прийом, що з'єднує бренди
 
 `<one visual/story device that physically connects brands>`
 
-## Exclusion
+## Що свідомо не змішується
 
 `<what intentionally will not be mixed>`
 
-## Invariants
+## Інваріанти
 
-| Element | Immutable | Adaptable | Forbidden | Canonical source |
+| Елемент | Незмінне | Адаптивне | Заборонене | Канонічне джерело |
 |---|---|---|---|---|
 | | | | | |
 
-## Palette/type/CTA evidence
+## Докази палітри, типографіки й CTA
 
 - Exact token source:
 - Font files/rights:
@@ -44,7 +44,7 @@
 - Background seam value:
 - Logo rule:
 
-## Approval
+## Погодження
 
 - Host brand owner:
 - Destination brand owner:

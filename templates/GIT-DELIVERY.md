@@ -1,6 +1,6 @@
-# Git Delivery & Release Record — <campaign>
+# Запис Git delivery і релізу — <campaign>
 
-## Repository contract
+## Контракт репозиторію
 
 - Corporate repository: `https://git.sharkscode.com/cb/ai_landings.git`
 - Landing ID / directory:
@@ -12,7 +12,7 @@
 - Hosting target and environment:
 - Rollback owner/method:
 
-## Local completion / Stage MR readiness
+## Локальна готовність / готовність Stage MR
 
 - [ ] G9 Feature Complete is approved.
 - [ ] No secrets, raw masters, debug panels or unused assets are included.
@@ -23,7 +23,7 @@
 - [ ] Exact configured build passes from the landing directory and configured dist contains `index.html`.
 - [ ] Generated `dist/` is not committed; package and lock file are synchronized.
 
-## Change set
+## Набір змін
 
 - Commit SHA:
 - Build artifact/checksum:
@@ -33,7 +33,7 @@
 - Known risks and waivers:
 - Rollback signal:
 
-## Stage evidence
+## Докази Stage
 
 - MR/review and reviewed SHA:
 - Validation / repository security scan / build jobs:
@@ -41,7 +41,7 @@
 - Stage URL and served build marker:
 - Stage QA approval / residual risks:
 
-## Explicit release approval
+## Явне погодження релізу
 
 - [ ] G10 QA Green is approved for the Stage build below.
 - Exact commit/tag:
@@ -51,7 +51,7 @@
 - Timestamp/timezone:
 - Promotion mechanism from Stage-approved source to `prod`:
 
-## Post-deploy verification
+## Перевірка після deploy
 
 - Deployment terminal result:
 - Public URL:

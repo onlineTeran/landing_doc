@@ -68,12 +68,12 @@ Static landing uses `"build": "static"`; its `dist` may point directly to the la
 | `dist` | relative to repository root; after build contains deployable `index.html` |
 | `build` | command executed from landing directory, or exact value `static` |
 
-For npm builds, keep `package.json` and `package-lock.json` synchronized because CI uses `npm ci`.
+Для npm build тримайте `package.json` і `package-lock.json` синхронізованими, оскільки CI використовує `npm ci`.
 Only the configured `dist` contents are published.
 
 ## 3. Local delivery gate
 
-Before an MR:
+Перед MR:
 
 1. Rebase/update from the current target branch according to team policy; resolve conflicts without
    overwriting other landings.
@@ -118,12 +118,12 @@ Any Critical/Blocker keeps Production release blocked.
 
 ## 5. Production release
 
-Create a release task tied to the exact reviewed commit/build and Stage QA evidence. Do not infer the
+Створіть release task, прив’язаний до точного перевіреного commit/build і доказів Stage QA. Не виводьте
 promotion topology: confirm whether current policy uses an MR to `prod`, a controlled promotion or
 another protected-branch mechanism. In all cases, the production source must be traceable to the Stage
 build that QA approved.
 
-Production deploy is a manual job after validation, security scan and build. It can be run only by a
+Production deploy — ручна job після validation, security scan і build. Її може запустити лише
 Frontend Developer/Lead/DevOps user with the existing production rights. AI may prepare instructions
 and evidence, but may not self-approve or bypass CI/manual jobs.
 
@@ -150,7 +150,7 @@ Removal is deliberately two changes:
 3. Verify the URL is unavailable and CDN cache is cleared; repeat for the other environment if needed.
 4. Only after removal from every required environment, delete source and configuration in a separate MR.
 
-Never delete the entry first: CI needs its `path` to remove the published landing.
+Ніколи не видаляйте entry спочатку: CI потрібен його `path`, щоб прибрати опублікований лендінг.
 
 ## 8. Access and responsibility matrix
 

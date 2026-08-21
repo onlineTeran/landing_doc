@@ -53,7 +53,7 @@ Clean identity reference:
 - люди можуть бути контекстом, але не головним героєм CATBET-візуалу;
 - не використовувати казино-кліше: дощ грошей, випадкові фішки, натовп переможців, хаотичний неон.
 
-Current production pose evidence includes Bet lying calmly among yarn balls, forepaws forward and head
+Актуальний production-доказ пози показує Бета, який спокійно лежить серед клубків пряжі, витягнувши передні лапи й голову
 raised. This is a strong default for controlled/static hero scenes because it communicates attention
 without jumping, anthropomorphic stance or costume.
 

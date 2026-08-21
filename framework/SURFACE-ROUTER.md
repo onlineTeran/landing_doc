@@ -22,7 +22,7 @@ primary surface; додаткові surface оформлюються окрем�
 6. Якщо evidence неповне, поверни `DESIGN_SYSTEM_GAP` із відсутнім owner/source; не компенсуй
    прогалину generic casino style.
 
-For a new isolated design repository run
+Для нового ізольованого дизайн-репозиторію виконайте
 `./methodology/scripts/bootstrap-design-task.sh . <slotcity|catbet> <codex|claude>`; for a landing use
 the landing bootstrap from `AGENT-BOOTSTRAP.md`.
 

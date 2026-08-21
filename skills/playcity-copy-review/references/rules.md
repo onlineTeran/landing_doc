@@ -30,7 +30,7 @@
 
 `Участь в азартних іграх може викликати ігрову залежність. Дотримуйтеся правил (принципів) відповідальної гри`
 
-The law requires a text warning to occupy at least 15% of the full advertisement area, with black text on
+Закон вимагає, щоб текстове попередження займало щонайменше 15% повної площі реклами, чорним текстом на
 a white background. Legal must define the advertising unit and approve the layout.
 
 ## Output discipline

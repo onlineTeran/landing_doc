@@ -1,6 +1,6 @@
-# QA Task — <campaign> / <version>
+# Задача для QA — <campaign> / <version>
 
-## Build under test
+## Build для тестування
 
 - Commit/build:
 - Environment and URL:
@@ -9,7 +9,7 @@
 - Product/brand/asset version:
 - Test accounts/data (secure location, never credentials here):
 
-## Scope and risk
+## Scope і ризики
 
 - Primary user journey:
 - Changed functional IDs:
@@ -17,21 +17,21 @@
 - Highest-risk areas:
 - Explicit out of scope:
 
-## Acceptance scenarios
+## Сценарії приймання
 
 | ID | Priority | Preconditions | Steps | Expected result | Viewports/browsers | Evidence | Status/bug |
 |---|---|---|---|---|---|---|---|
 | QA-001 | P0 | | | | | | TODO |
 
-Required coverage: content/legal, visual fidelity, CTA/navigation, auth/guest, loading/empty/error/success,
-analytics deduplication, accessibility, performance, reduced motion, iframe origin/height and top-10 devices.
+Обов'язкове покриття: content/legal, visual fidelity, CTA/navigation, auth/guest, loading/empty/error/success,
+analytics deduplication, accessibility, performance, reduced motion, iframe origin/height і top-10 devices.
 
-## Integration-specific checks
+## Перевірки інтеграцій
 
-For Smartico include: authorized/guest, late token, invalid token, missing whitelist, API timeout, empty
+Для Smartico додайте: authorized/guest, прострочений token, invalid token, відсутній whitelist, API timeout, empty
 missions, `onUpdate`, opt-in/already-opted-in, claim, logout/user switch and no token/PII in logs.
 
-## Exit criteria
+## Критерії виходу
 
 - [ ] P0/P1 scenarios pass or have signed waivers.
 - [ ] Zero console/hydration errors, missing assets and horizontal overflow.
@@ -40,7 +40,7 @@ missions, `onUpdate`, opt-in/already-opted-in, claim, logout/user switch and no 
 - [ ] Legal/Product/Brand/Design/Technical approvals are linked.
 - [ ] QA owner records `APPROVED`, build SHA, date and residual risks.
 
-## Corporate Stage / Production split
+## Розділення корпоративних Stage / Production
 
 ### Stage readiness
 

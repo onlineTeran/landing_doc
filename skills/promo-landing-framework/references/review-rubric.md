@@ -1,8 +1,8 @@
-# Review rubric
+# Рубрика перевірки
 
-## Visual direction score
+## Оцінка візуального напряму
 
-Score 1–5 and weight:
+Оцініть за шкалою 1–5 і застосуйте вагу:
 
 - brand truth and recognizability — 25%;
 - offer clarity in five seconds — 20%;
@@ -12,20 +12,20 @@ Score 1–5 and weight:
 - asset/animation feasibility — 10%;
 - distinctiveness without gimmick — 5%.
 
-Reject when brand truth or offer clarity is below 3.
+Відхиліть, якщо brand truth або зрозумілість пропозиції нижче 3.
 
-## Asset review
+## Перевірка ассетів
 
-Confirm canonical identity, style-lock material/camera/light, semantic clarity, optical weight, true alpha,
+Підтвердьте канонічну identity, material/camera/light style lock, семантичну ясність, оптичну вагу, справжній alpha,
 clean edges, safe crop, real rendered size, weight budget, prompt/source record and owner approval.
 
-## Design fidelity surfaces
+## Поверхні перевірки точності дизайну
 
-Compare hero framing, typography, CTA, section spacing, background seam, asset identity/material/weight,
+Порівняйте hero framing, typography, CTA, відступи секцій, background seam, identity/material/weight асетів,
 progress/number markers, legal density and mobile layouts. Use target and implementation captures in one
 combined comparison at the same viewport/state; fix, compare again and record the verdict.
 
-## Finding acceptance
+## Приймання зауважень
 
-Accept a proposed change only if it passes correctness, framework/version validity, design safety,
+Приймайте запропоновану зміну лише якщо вона проходить correctness, framework/version validity, design safety,
 content/legal safety and net-win checks. Do not auto-apply technically valid but visually unsafe changes.

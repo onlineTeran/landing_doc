@@ -4,7 +4,7 @@
 **Document date visible in source:** `20.05.2026` · **Framework import:** `21.08.2026`
 **Status:** `OWNER-SUPPLIED BRAND EVIDENCE`; exact Figma variables and editable masters remain separate.
 
-This file is the textual decision layer for Codex and Claude. It does not replace the original
+Цей файл — текстовий шар рішень для Codex і Claude. Він не замінює оригінальну
 screenshots; every identity-critical generation must cite their asset IDs from `assets/manifest.json`.
 
 ## 1. Brand core
@@ -26,7 +26,7 @@ screenshots; every identity-critical generation must cite their asset IDs from `
 | feeling that this is the right moment/place | promise that chance can be controlled |
 | calm anticipation and a precise cue to act | aggressive excitement at any cost |
 
-The brand may dramatize a moment, but cannot imply that Bet guarantees a win or knows a random result.
+Бренд може драматизувати момент, але не може натякати, що Бет гарантує виграш або знає випадковий результат.
 
 ## 3. Brand personality
 
@@ -44,7 +44,7 @@ See [MASCOT.md](MASCOT.md) for the executable identity and pose contract.
 ## 4. Communication behavior
 
 Bet's appearance is itself a message: luck is near; pay attention. He does not over-explain or hard-sell.
-Default communication uses Bet's first-person voice or a direct feline cue. Copy is short enough to land
+Стандартна комунікація використовує голос Бета від першої особи або прямий котячий cue. Copy достатньо короткий, щоб спрацювати
 with one glance and the visual carries one action.
 
 ### Preferred behavior
@@ -151,4 +151,4 @@ are exact layout elements. The frame should hook, intrigue and provoke action wi
 - Are exact logo/text layers separate from generated raster?
 - Does mobile keep face, eyes, collar, CTA and legal safe zones?
 
-If any answer fails, the asset returns to the current ART phase; it does not advance by adding a larger logo.
+Якщо будь-яка відповідь негативна, асет повертається до поточної ART-фази; більший логотип не переводить його далі.

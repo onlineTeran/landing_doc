@@ -1,29 +1,29 @@
-# SlotCity Product & Brand Knowledge Base
+# Продуктова й брендова база знань SlotCity
 
-**Status:** onboarding skeleton. It is intentionally not filled with guessed colors, typography or mascot
-rules. Complete G3 Brand Evidence with the SlotCity brand team before the first Framework 2.0 design.
+**Статус:** onboarding-каркас. Його навмисно не заповнено вигаданими кольорами, типографікою чи правилами
+маскота. До першого дизайну у Framework 2.0 завершіть G3 Brand Evidence разом із бренд-командою SlotCity.
 
-The structured onboarding source is the [SlotCity Brand Archive](../brand-archive/SLOTCITY/INDEX.md).
+Структуроване джерело onboarding — [SlotCity Brand Archive](../brand-archive/SLOTCITY/INDEX.md).
 
-## 1. Source precedence
+## 1. Пріоритет джерел
 
-1. Current legal/compliance approval for exact placement/GEO.
-2. Current SlotCity promo rules and canonical product source.
-3. SlotCity design system / brand Figma / canonical assets.
-4. Current production SlotCity interface.
-5. Approved previous SlotCity campaign pages.
-6. External references and AI generations.
+1. Актуальне погодження legal/compliance для точного placement/GEO.
+2. Актуальні промоправила SlotCity і канонічне продуктове джерело.
+3. Дизайн-система SlotCity / брендова Figma / канонічні асети.
+4. Актуальний production-інтерфейс SlotCity.
+5. Погоджені попередні сторінки кампаній SlotCity.
+6. Зовнішні референси й AI-генерації.
 
-## 2. Starting sources
+## 2. Початкові джерела
 
 - [SlotCity production site](https://slotcity.ua/)
 - [SlotCity → CATBET traffic-bridge example](https://slotcity.ua/promotions/catbet)
 
-The cross-brand example is evidence of a placement pattern, not a complete SlotCity brand guide.
+Кросбрендовий приклад підтверджує патерн placement, але не є повним брендгайдом SlotCity.
 
-## 3. Required brand onboarding pack
+## 3. Обов'язковий пакет підключення бренду
 
-Request exact Figma nodes/exports for:
+Запросіть точні Figma nodes/exports для:
 
 - primary/secondary logo lockups and clear space;
 - color tokens and allowed combinations;
@@ -38,7 +38,7 @@ Request exact Figma nodes/exports for:
 - motion examples;
 - canonical analytics/device matrix.
 
-## 4. Fill-once Brand Sheet
+## 4. Одноразова бренд-картка
 
 | Category | Canonical value | Source node/file | Owner | Last verified |
 |---|---|---|---|---|
@@ -55,11 +55,11 @@ Request exact Figma nodes/exports for:
 | Mascot/character invariants | TBD | | | |
 | Motion vocabulary | TBD | | | |
 
-No visual concept passes G3 while P0 fields remain `TBD`.
+Жоден візуальний концепт не проходить G3, доки поля P0 мають статус `TBD`.
 
-## 5. Product truth template
+## 5. Шаблон продуктової правди
 
-For each SlotCity campaign record:
+Для кожної кампанії SlotCity зафіксуйте:
 
 - campaign name/id;
 - audience/eligibility;
@@ -73,26 +73,26 @@ For each SlotCity campaign record:
 - legal block/version;
 - analytics and attribution owner.
 
-Do not reuse CATBET metaphors, furry material, paws, CatBoxes or color roles unless CATBET is the
-destination brand and Brand Bridge explicitly assigns them.
+Не використовуйте метафори CATBET, пухнасті матеріали, лапи, CatBoxes або колірні ролі, якщо CATBET не є
+брендом призначення й Brand Bridge прямо не закріплює їх.
 
-## 6. Host vs destination cases
+## 6. Сценарії host і destination
 
-### SlotCity as host
+### SlotCity як host
 
-- SlotCity owns header/footer/navigation, page seam, background/container and usually CTA component.
-- Destination brand can own offer imagery, mascot, title accent and specific reward objects.
-- Verify whether production code excludes SlotCity chrome while design includes a context frame.
+- SlotCity відповідає за header/footer/navigation, page seam, background/container і зазвичай CTA-компонент.
+- Бренд призначення може відповідати за offer imagery, маскота, акцент заголовка й конкретні reward-об’єкти.
+- Перевірте, чи production-код не містить chrome SlotCity, тоді як дизайн має context frame.
 
-### SlotCity as destination
+### SlotCity як destination
 
-- Source host may own CTA shape and page chrome.
-- SlotCity visual anchors must come from this KB, not from generic casino tropes.
-- Use one bridge device; do not split every component 50/50 by color.
+- Source host може визначати форму CTA і chrome сторінки.
+- Візуальні якорі SlotCity мають походити з цієї KB, а не з типових casino-тропів.
+- Використовуйте один bridge device; не діліть кожен компонент кольором 50/50.
 
-## 7. Anti-generic checklist
+## 7. Чекліст проти generic-дизайну
 
-Before approving a SlotCity direction, ask:
+Перед погодженням напряму SlotCity перевірте:
 
 - Could this page belong to any casino after swapping logo? If yes, fail.
 - Are fonts/CTA/background taken from canonical SlotCity sources? If no, fail.
@@ -101,9 +101,9 @@ Before approving a SlotCity direction, ask:
 - Is the host seam visible?
 - Does mobile preserve the same brand recognition without relying on a large logo?
 
-## 8. Asset onboarding
+## 8. Підключення ассетів
 
-For every supplied asset store:
+Для кожного наданого асета збережіть:
 
 - canonical source and licensing/ownership;
 - whether it may be recolored, cropped, animated, dressed or regenerated;
@@ -112,21 +112,21 @@ For every supplied asset store:
 - master/delivery formats;
 - contact person for approval.
 
-Unknown modification rights mean `immutable` until the brand owner answers.
+Невідомі права на модифікацію означають `immutable`, доки власник бренду не надасть відповідь.
 
-## 9. Definition of Brand Ready
+## 9. Критерії Brand Ready
 
-- P0 Brand Sheet fields completed with source links.
-- CTA and typography verified in production/Figma.
-- At least one approved icon/illustration style lock exists.
-- Host chrome and content boundary captured at 1440/440/430/375.
-- Current product mechanic and Claims Matrix approved.
-- Cross-brand role assignment completed if another product participates.
+- Поля P0 Brand Sheet заповнені з посиланнями на джерела.
+- CTA й типографіку перевірено в production/Figma.
+- Є щонайменше один погоджений style lock іконки/ілюстрації.
+- Chrome хоста й межі контенту зафіксовано на 1440/440/430/375.
+- Актуальну продуктову механіку й Claims Matrix погоджено.
+- Якщо бере участь інший продукт, кросбрендовий розподіл ролей завершено.
 - [SlotCity Tone of Voice](../brand-archive/SLOTCITY/TONE-OF-VOICE.md) is approved or explicitly
   `TOV PENDING`; no invented substitute is used.
 - Copy/placement passed [PlayCity rules](../PLAYCITY-COPYWRITING-RULES.md) review.
 
-## 10. First improvement task
+## 10. Перша задача вдосконалення
 
-Run a dedicated SlotCity onboarding project: capture the design system, fill this file, add asset examples
-and write one SlotCity-native case study. Do not use the CATBET case as a visual substitute.
+Проведіть окремий onboarding-проєкт SlotCity: зафіксуйте дизайн-систему, заповніть цей файл, додайте
+приклади асетів і створіть один SlotCity-native case study. Не використовуйте кейс CATBET як візуальну заміну.

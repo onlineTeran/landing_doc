@@ -1,22 +1,22 @@
-# CATBET Component Contract
+# Контракт компонентів CATBET
 
 **Design System version:** `0.9` · **Status:** `PARTIAL / INVENTORY PENDING`
 
-This is the decision contract for selecting, adapting and implementing CATBET components. Exact
+Це контракт рішень для вибору, адаптації та реалізації компонентів CATBET. Точні
 component names, variants and properties remain pending until the current design-system file is
 supplied.
 
-## 1. Component source precedence
+## 1. Пріоритет джерел компонентів
 
 1. Current CATBET Figma component instance and its main component.
 2. Current CATBET production behavior.
 3. Approved campaign-local component with owner and scope.
 4. New component approved at G7/G8.
 
-Do not redraw a component from a screenshot or substitute a SlotCity component. Record exact
+Не перемальовуйте компонент зі скриншота й не підставляйте компонент SlotCity. Фіксуйте точні
 `file_key`, `node_id`, component property values and source version in the Design Spec.
 
-## 2. Expected families
+## 2. Очікувані сімейства
 
 | Family | Known evidence | 0.9 rule |
 |---|---|---|
@@ -30,13 +30,13 @@ Do not redraw a component from a screenshot or substitute a SlotCity component. 
 | Form/control | Smartico or product boundary | contract owner and validation/error states required |
 | Legal/footer block | Legal/product owned | immutable content IDs, link target and minimum presentation |
 
-## 3. Required state matrix
+## 3. Обов'язкова матриця станів
 
-Every interactive family records: `default`, `hover`, `focus-visible`, `pressed`, `disabled`,
+Для кожного інтерактивного сімейства фіксуйте: `default`, `hover`, `focus-visible`, `pressed`, `disabled`,
 `loading`, `success`, `error`, empty/unavailable state, keyboard behavior and mobile behavior. If a
 state is owned by Smartico or another embedded product, document the boundary instead of simulating it.
 
-## 4. CTA ownership
+## 4. Власник CTA
 
 - CATBET-native landing: current CATBET CTA component and route contract are required.
 - Cross-brand landing: the host normally owns shape, typography and interaction states; CATBET owns
@@ -44,15 +44,15 @@ state is owned by Smartico or another embedded product, document the boundary in
 - CTA copy, analytics event, authentication behavior, deep link and fallback URL are independent
   fields. A visual button alone is not a complete component specification.
 
-## 5. Smartico and product integration
+## 5. Smartico та продуктова інтеграція
 
-For every Smartico widget, mission, tournament, registration or personalized block, record the real
+Для кожного віджета Smartico, місії, турніру, реєстрації або персоналізованого блока фіксуйте реальну
 SDK/API/component version from the implementation repository, init/auth lifecycle, eligibility,
 loading/empty/error states, consent, analytics, fallback and owner. Brand documentation cannot invent
 product behavior. Integration gaps block G4/G8 according to their impact.
 
-## 6. Component acceptance
+## 6. Приймання компонента
 
-A component is implementation-ready only when design source, content source, responsive geometry,
+Компонент готовий до реалізації лише тоді, коли design source, content source, responsive geometry,
 all relevant states, accessibility behavior, integration boundary and QA acceptance criteria are
 linked. Otherwise return `COMPONENT_GAP: <family>/<state>` with owner and next action.

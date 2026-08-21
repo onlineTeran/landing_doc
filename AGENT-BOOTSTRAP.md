@@ -79,15 +79,15 @@ Bootstrap автоматично створює або дописує managed se
 ```markdown
 ## Promo Landing Framework
 
-Use `brand-design-base` for any SlotCity/CATBET art, UI, component or visual-audit request. Use the
+Використовуйте `brand-design-base` для будь-якого запиту SlotCity/CATBET щодо арту, UI, компонента чи visual audit. Використовуйте
 project-local `promo-landing-framework` skill for all campaign landing work and
 `playcity-copy-review` before Product/Legal Ready and before release.
-The selected product, current phase and artifacts live in docs/promo-landing/PROJECT-STATE.md.
-Do not start design without G3, do not generate production assets before G7, do not code before G8,
+Вибраний продукт, поточна фаза й артефакти зберігаються в docs/promo-landing/PROJECT-STATE.md.
+Не починайте дизайн без G3, не генеруйте production-асети до G7, не пишіть код до G8,
 allow Stage delivery only after G9 with explicit Stage approval, and do not publish to Production
 without G10 plus explicit release approval for the exact commit/build and target. Record G11 only after
 successful Production smoke.
-Use package.json as stack/version source of truth.
+Використовуйте package.json як джерело правди щодо stack/version.
 ```
 
 Структурна перевірка стану:
