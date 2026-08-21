@@ -1,54 +1,53 @@
-# README Hero — SlotCity × CATBET Worlds
+# Hero для README — світи SlotCity × CATBET
 
-**Track:** `ART` · **Framework:** `3.0.0-draft` · **Brand systems:** `SlotCity 0.9`, `CATBET 0.9`
-**Status:** `V8 READY / BRAND REVIEW PENDING` · **Target:** repository README · **Size:** `1600×900`
+**Маршрут:** `ART` · **Framework:** `3.0.0-draft` · **Дизайн-системи:** `SlotCity 0.9`, `CATBET 0.9`
+**Статус:** `V8 READY / BRAND REVIEW PENDING` · **Місце:** README репозиторію · **Розмір:** `1600×900`
 
-## Objective
+## Мета
 
-Show, at one glance, that the framework can preserve two independent brand worlds while managing them
-inside one delivery system. The image must create executive-level impact without explaining technical
-architecture.
+Одним кадром показати, що framework зберігає дві незалежні бренд-реальності й водночас керує ними
+в єдиній delivery-системі. Зображення має створювати ефект для керівників без пояснення технічної
+архітектури.
 
-## Evidence roles
+## Ролі доказових джерел
 
-| Role | Asset ID/path | What is locked |
+| Роль | ID/шлях | Що зафіксовано |
 |---|---|---|
-| SlotCity identity | `SC-DERIVED-MASCOT-002` | faceless white draped mascot, glasses, yellow cap/shoes, gold chain |
-| SlotCity pose | `SC-DERIVED-POSE-004` | relaxed lean, supported elbow, crossed ankles, no step toward camera |
-| SlotCity environment | `SC-LIVE-MASCOT-001` | light daytime city, warm white/cream, many yellow/gold elements |
-| CATBET identity | `CB-DERIVED-MASCOT-003` | Bet, cyan fur, orange/red eyes, orange collar, no clothes |
-| CATBET pose | `CB-LIVE-POSE-005` | calm lying/sphinx pose among yarn; no jump |
-| Cross-brand ensemble | `SC-CB-OWNER-ENSEMBLE-001` | secondary SlotCity red-haired luck and blue genie characters |
-| SlotCity exact logo | owner-supplied logo reference, 2026-08-21 | spelling, script silhouette and underline locked for direct 3D generation |
-| CATBET exact logo | owner-supplied logo reference, 2026-08-21 | spelling, cyan block silhouette and cat mark locked for direct 3D generation |
+| Ідентичність SlotCity | `SC-DERIVED-MASCOT-002` | безликий білий драпований маскот, окуляри, жовта кепка й взуття, золотий ланцюг |
+| Поза SlotCity | `SC-DERIVED-POSE-004` | спокійна опора на лікоть, схрещені щиколотки, без кроку в камеру |
+| Середовище SlotCity | `SC-LIVE-MASCOT-001` | світле денне місто, теплі білі/кремові поверхні, жовті акценти |
+| Ідентичність CATBET | `CB-DERIVED-MASCOT-003` | Бет: блакитно-бірюзове хутро, помаранчеві очі й нашийник, без одягу |
+| Поза CATBET | `CB-LIVE-POSE-005` | спокійна лежача поза серед клубків, без стрибка |
+| Кросбрендовий ансамбль | `SC-CB-OWNER-ENSEMBLE-001` | другорядні персонажі SlotCity: руда героїня удачі та синя джинія |
+| Логотип SlotCity | наданий власником референс, 2026-08-21 | написання, рукописний силует і підкреслення для прямої 3D-генерації |
+| Логотип CATBET | наданий власником референс, 2026-08-21 | написання, блакитний блоковий силует і котячий знак для прямої 3D-генерації |
 
-## Composition contract
+## Контракт композиції
 
-- SlotCity on the left: daylight, optimistic monumental city, high yellow density;
-- CATBET on the right: dark teal/black controlled world with cyan fur and orange accents;
-- CATBET environment is feline lore, not a city: tactile fur, antique book, yarn and paw artifacts;
-- mascots face the shared center without violence;
-- central `VS` is an oversized dimensional split-color lightning wordmark;
-- both logos are generated directly into the scene as extruded 3D signage from the supplied identity references, without plates or post-composited overlays;
-- no offer, sum, CTA or product claim.
+- ліворуч SlotCity: денне оптимістичне монументальне місто, де золото є акцентом;
+- праворуч CATBET: контрольований темно-бірюзовий котячий lore-світ;
+- середовище CATBET — хутро, старовинна книга, клубки й артефакти лап, а не місто;
+- маскоти дивляться до спільного центру без насильства;
+- у центрі — великий об'ємний двоколірний `VS` із блискавкою;
+- логотипи генеруються одразу в сцені як виразні 3D-об'єкти без плашок і post-composite overlay;
+- жодних оферів, сум, CTA або продуктових claims.
 
-## Correction log
+## Журнал корекцій
 
-| Version | Result | Decision |
+| Версія | Результат | Рішення |
 |---|---|---|
-| v1 | abstract two-world background, no mascots | insufficient identity; retained as exploration |
-| v2 | dark SlotCity city and clothed/tuxedo cat | rejected by user: SlotCity needs more yellow/light; Bet must be unclothed and follow supplied brand style |
-| v3 | light yellow SlotCity city + faceless mascot; natural unclothed Bet with orange collar | current README candidate; Brand review still required |
-| v4 | full SlotCity ensemble, cinematic shared city, 3D exact logos without plates and stylized lightning `VS` | current README candidate; replaces v3 |
-| v5 | larger outlined logo integration | rejected before release: silhouettes read better, but pose/world hierarchy still wrong |
-| v6 | feline lore world introduced | rejected by user: SlotCity stepping pose and Bet's jumping pose were wrong |
-| v7 | relaxed leaning SlotCity mascot; Bet lying on lore book; no CATBET city; much larger `VS`; contour-based post-composited logos | superseded: user requested one directly generated 3D composition |
-| v8 | single-pass final scene with baked 3D logos and oversized `VS`; reduced gold; approved poses/world split retained | current README candidate |
+| v1 | абстрактне тло двох світів без маскотів | недостатня ідентичність; збережено як exploration |
+| v2 | темний SlotCity і кіт у костюмі | відхилено: SlotCity має бути світлішим, Бет — без одягу |
+| v3 | світле місто, безликий маскот і природний Бет | проміжний кандидат; потрібен Brand review |
+| v4 | повний ансамбль, спільне місто, 3D-логотипи без плашок | замінено наступними корекціями |
+| v5 | збільшені контурні логотипи | відхилено: неправильна ієрархія поз і світів |
+| v6 | додано котячий lore-світ | відхилено: SlotCity крокував у камеру, Бет стрибав |
+| v7 | спокійні пози, книга, без міста CATBET, більший `VS` | замінено на вимогу єдиної прямої 3D-генерації |
+| v8 | single-pass сцена з 3D-логотипами, великим `VS` і меншою кількістю золота | поточний кандидат README |
 
-## Deliverables
+## Результати
 
-- README delivery: `framework-worlds-vs-v8.webp`;
-- lossless generated master: `source/framework-worlds-vs-generated-final-v8.png`;
-- generation contract: `PROMPT-V8.md`;
-- exact logo references supplied by the owner remain in the source/evidence trail;
-- rejected/reference iterations remain under `source/` to preserve the correction trail.
+- README: `framework-worlds-vs-v8.webp`;
+- lossless master: `source/framework-worlds-vs-generated-final-v8.png`;
+- контракт генерації: `PROMPT-V8.md`;
+- відхилені ітерації лишаються в `source/` як контроль помилок.

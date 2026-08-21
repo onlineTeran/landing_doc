@@ -1,16 +1,15 @@
-# SlotCity Asset Evidence Pack 0.9
+# Доказовий пакет ассетів SlotCity 0.9
 
-These are dated production snapshots used by agents for exact evidence. They are not automatically
-canonical masters. See [`../MASCOT.md`](../MASCOT.md) and [`manifest.json`](manifest.json).
+Це датовані production snapshots для точного evidence. Вони не стають canonical masters автоматично.
+Дивись [`../MASCOT.md`](../MASCOT.md) і [`manifest.json`](manifest.json).
 
-| Asset | Role | Evidence class | Default use |
+| Ассет | Роль | Evidence class | Дозволене використання |
 |---|---|---|---|
-| `reference/logo-live-2026-08-21.svg` | exact logo layer | `LIVE_SNAPSHOT` | composite unchanged; logo contract still pending |
-| `reference/mascot-city-levels-live-2026-08-21.webp` | mascot identity | `LIVE_SNAPSHOT` | identity reference; no inferred modifications |
-| `reference/mascot-levels-identity-clean-v0.9.png` | focused mascot identity crop | `DERIVED_IDENTITY_CROP` | preferred identity reference for generation |
-| `reference/mascot-relaxed-pose-owner-supplied-v0.9-2026-08-21.png` | relaxed leaning pose | `OWNER_SUPPLIED_BRAND_SOURCE` | pose only; ignore third-party social icons |
-| `reference/mascot-relaxed-pose-crop-v0.9.png` | focused relaxed-pose crop | `DERIVED_POSE_CROP` | pose reference only, never identity/source for social marks |
-| `reference/city-levels-og-live-2026-08-21.webp` | city environment | `LIVE_SNAPSHOT` | environment/composition reference only |
+| `reference/logo-live-2026-08-21.svg` | exact logo layer | `LIVE_SNAPSHOT` | композит без змін; logo contract очікується |
+| `reference/mascot-city-levels-live-2026-08-21.webp` | identity маскота | `LIVE_SNAPSHOT` | reference без inferred modifications |
+| `reference/mascot-levels-identity-clean-v0.9.png` | focused identity crop | `DERIVED_IDENTITY_CROP` | пріоритетний identity reference для generation |
+| `reference/mascot-relaxed-pose-owner-supplied-v0.9-2026-08-21.png` | relaxed leaning pose | `OWNER_SUPPLIED_BRAND_SOURCE` | лише pose; ігнорувати third-party social icons |
+| `reference/mascot-relaxed-pose-crop-v0.9.png` | focused pose crop | `DERIVED_POSE_CROP` | лише pose, не джерело identity/social marks |
 
-For generation, prefer the focused crop as `identity` and the full banner or OG only as `environment`.
-Store output outside this folder.
+Для generation використовуй focused crop як `identity`, а full banner лише як `environment`.
+Output зберігай поза цією папкою. Новий reference додається тільки після file-specific storage consent.

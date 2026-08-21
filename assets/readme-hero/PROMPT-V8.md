@@ -1,24 +1,24 @@
-# Generation contract — README Hero v8
+# Контракт генерації — README Hero v8
 
-## Inputs and roles
+## Вхідні матеріали та ролі
 
-1. `source/worlds-vs-generated-v7.png` — locked character identities, poses and two-world composition;
-2. owner-supplied SlotCity logo image — exact spelling, script silhouette and underline reference;
-3. owner-supplied CATBET logo image — exact spelling, cyan block silhouette and cat-mark reference.
+1. `source/worlds-vs-generated-v7.png` — зафіксовані ідентичності, пози та композиція двох світів;
+2. логотип SlotCity від власника — точне написання, рукописний силует і підкреслення;
+3. логотип CATBET від власника — точне написання, блоковий блакитний силует і котячий знак.
 
-## Single-pass transformation
+## Single-pass перетворення
 
-- preserve the relaxed SlotCity lean, crossed ankles and secondary red-haired luck / blue genie hierarchy;
-- preserve Bet lying calmly with orange collar, natural feline anatomy and no clothes;
-- keep SlotCity as a light cream/white amusement city, with yellow/gold limited to deliberate accents;
-- keep CATBET as a dark tactile feline lore realm with fur, antique book, yarn and paw artifacts — no city;
-- create both brand logos directly inside the generated image as highly legible extruded 3D wordmarks;
-- use no rectangular, pill, plaque or UI-style logo backing;
-- make the center `VS` substantially larger than previous iterations, split gold/cyan, with a lightning slash and real depth;
-- preserve negative space around all three marks and do not add any other text, claim, CTA, offer or value.
+- зберегти спокійну позу SlotCity з опорою, схрещеними щиколотками й другорядними персонажами;
+- зберегти Бета, який лежить із помаранчевим нашийником, природною анатомією та без одягу;
+- залишити SlotCity світлим кремово-білим містом, де золото/жовтий є контрольованими акцентами;
+- залишити CATBET темним тактильним котячим lore-світом із хутром, книгою, клубками й лапами;
+- створити обидва логотипи прямо в зображенні як читабельні екструдовані 3D-написи;
+- не використовувати прямокутні, овальні, plaque- або UI-підкладки;
+- зробити `VS` значно більшим: золото/блакить, блискавка, справжня глибина;
+- зберегти negative space й не додавати іншого тексту, claim, CTA, оферу або суми.
 
-## Delivery
+## Результат
 
 - generated master: `source/framework-worlds-vs-generated-final-v8.png`;
-- README derivative: `framework-worlds-vs-v8.webp`, `1600×900`;
-- status: self-QA pass, human Brand review pending.
+- README WebP: `framework-worlds-vs-v8.webp`, `1600×900`;
+- статус: self-QA пройдено, людський Brand review очікується.

@@ -1,71 +1,76 @@
-# Art Design Process
+# Процес проєктування арту
 
-Isolated art uses a compact gated flow. It may be run independently or as the Asset phase of an
-approved landing. Production generation still requires a human-selected concept and exact slot.
+Окремий арт проходить компактний керований маршрут. Він може працювати самостійно або як Asset-фаза
+погодженого лендінгу. Production-генерація все одно потребує вибраного людиною концепту й точного slot.
 
-## A0 — Route
+## A0 — Маршрутизація
 
-Create `ART-BRIEF.md`. Lock product, asset role, target placement, dimensions/ratios, desktop/mobile
-relationship, deadline, owner and intended delivery. Output: `ROUTED` or blockers.
+Створи `ART-BRIEF.md`. Зафіксуй продукт, роль арту, місце використання, розміри/пропорції,
+desktop/mobile relationship, дедлайн, owner і delivery. Результат: `ROUTED` або перелік блокерів.
 
-## A1 — Evidence lock
+## A1 — Фіксація доказів
 
-Load Brand Archive. Assign each reference exactly one role: identity, style, composition, material,
-camera/light, color, motion or negative evidence. Record checksum/node/path and rights. If the requested
-role or character is absent, return `DESIGN_SYSTEM_GAP`.
+Завантаж Brand Archive. Кожному референсу признач одну роль: identity, style, composition, material,
+camera/light, color, motion або negative evidence. Запиши checksum/node/path і права. Якщо потрібної
+ролі чи персонажа немає, поверни `DESIGN_SYSTEM_GAP`.
 
-## A2 — Creative contract
+Attachment, URL, live-page image або generated output можна тимчасово переглядати, але вони не стають
+репозиторним референсом автоматично. До copy/download, створення crop/derivative, checksum/manifest entry
+або commit у `brand-archive` отримай окремий file-specific storage consent із продуктом, роллю та точним
+target path. Дослівно запиши approval у manifest. Відсутність відповіді чи design approval не є згодою.
 
-Select one approved style group and define:
+## A2 — Творчий контракт
 
-- subject/object count and hierarchy;
-- composition, content safe zone and crop tolerance;
-- palette via tokens/controlled accents;
-- material, camera, light, depth and background;
-- immutable identity features;
-- forbidden elements and negative prompt;
-- dedicated mobile recomposition when required.
+Обери одну погоджену style group і зафіксуй:
 
-Do not blend historical style groups by default.
+- кількість і hierarchy об'єктів;
+- composition, content safe zone і crop tolerance;
+- palette через tokens і контрольовані accents;
+- material, camera, light, depth і background;
+- незмінні ознаки identity;
+- заборонені елементи й negative prompt;
+- окрему mobile recomposition, якщо вона потрібна.
 
-## A3 — Concept set
+Не змішуй історичні style groups без окремого рішення.
 
-Produce exactly three meaningfully different, source-grounded concepts unless the user explicitly asks
-for one constrained execution. Keep the same locked message and identity; vary composition or treatment,
-not product truth. Label each concept with evidence and risks.
+## A3 — Набір концептів
 
-## A4 — Human selection
+Підготуй рівно три змістовно різні концепти на основі джерел, якщо користувач не попросив одну
+обмежену реалізацію. Не змінюй product truth та identity; варіюй композицію або treatment. Для кожного
+концепту назви докази й ризики.
 
-Record `APPROVED` with owner, date, concept/version and exact scope. Feedback is not approval. No
-production family generation before selection.
+## A4 — Вибір людиною
 
-## A5 — Master production
+Запиши `APPROVED` із owner, датою, concept/version і точним scope. Feedback не є approval.
+До вибору не створюй production family.
 
-Create one style-lock master first. Save prompt, model/tool, references, seed/settings when available,
-edits and source output. Put copy/logo/UI in editable layout layers unless canonical source requires baked
-content. Reuse canonical component/assets before generating substitutes.
+## A5 — Виробництво master
 
-## A6 — Variants and delivery
+Спочатку створи один style-lock master. Збережи prompt, model/tool, references, seed/settings, manual edits
+і source output. Copy/logo/UI тримай в editable layers, якщо canonical source не вимагає baked content.
+Перед генерацією substitute повторно перевір canonical assets/components.
 
-Create only listed variants. Desktop >2:1 requires a dedicated mobile composition unless the selected
-brand contract explicitly permits a shared safe core. Preserve masters; optimize delivery separately.
+## A6 — Варіанти й delivery
 
-## A7 — Art QA
+Створюй лише перелічені варіанти. Для desktop ширше 2:1 потрібна окрема mobile composition, якщо brand
+contract прямо не дозволяє спільне safe core. Master зберігай окремо від оптимізованих delivery-файлів.
 
-Complete `ART-QA.md` at real slot size:
+## A7 — Перевірка арту
 
-1. identity and product correctness;
-2. style group, materials, camera/light and palette;
-3. subject count, hierarchy, safe zone, crops and mobile recomposition;
+Заповни `ART-QA.md` у реальному slot size:
+
+1. identity і product correctness;
+2. style group, materials, camera/light і palette;
+3. hierarchy, safe zone, crops і mobile recomposition;
 4. anatomy/geometry/text/logo/watermark defects;
-5. alpha, edge contamination, dimensions, color profile, format and byte budget;
-6. same-family consistency and accessible contrast behind external content;
-7. owner approval for exact master and delivery set.
+5. alpha, edges, dimensions, profile, format і byte budget;
+6. same-family consistency та contrast під зовнішнім контентом;
+7. owner approval для точного master і delivery set.
 
-An attractive preview is not sufficient evidence.
+Привабливий preview сам по собі не є доказом якості.
 
-## A8 — Register and learn
+## A8 — Реєстрація й навчання
 
-Write the asset into `ASSET-REGISTER.md` with source/master/delivery paths, rights, prompt provenance,
-campaigns used, QA evidence and last verified date. Reusable new rules go through design-system owner
-review before entering Brand Archive.
+Запиши погоджений asset в `ASSET-REGISTER.md`: source/master/delivery paths, rights, prompt provenance,
+campaigns, QA evidence і last verified. Нові повторно використовувані правила входять у Brand Archive
+лише після design-system owner review.

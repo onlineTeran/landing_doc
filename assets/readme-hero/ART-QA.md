@@ -1,24 +1,24 @@
-# README Hero — Art QA
+# Hero для README — перевірка арту
 
-**Asset:** `framework-worlds-vs-v8.webp` · **Status:** `SELF-QA PASS / BRAND REVIEW PENDING`
+**Ассет:** `framework-worlds-vs-v8.webp` · **Статус:** `SELF-QA PASS / BRAND REVIEW PENDING`
 
-| Check | Result | Evidence |
+| Перевірка | Результат | Доказ |
 |---|---|---|
-| Required slot and aspect | PASS | `1600×900`, 16:9 WebP |
-| SlotCity light/yellow direction | PASS | daylight city dominated by cream/white architecture; yellow/gold is now an accent rather than a full-scene wash |
-| SlotCity mascot identity | PASS | faceless draped figure, black glasses, yellow cap/shoes, gold chain |
-| SlotCity pose | PASS | relaxed lean with supported elbow and crossed ankles; no oversized stepping shoe |
-| SlotCity ensemble evidence | PASS | red-haired luck and blue genie characters retained as secondary hierarchy |
-| CATBET no-clothes default | PASS | natural feline body; no tuxedo, hoodie or human anatomy |
-| CATBET identity | PASS | cyan fur, orange/red eyes, dark nose, orange collar |
-| CATBET pose | PASS | calm lying/sphinx pose, head raised; no jump or pounce |
-| CATBET world ownership | PASS | no city/skyline/roads; fur terrain, lore book, yarn and paw artifacts |
-| Logo fidelity/readability | PASS | directly generated 3D marks preserve the supplied SlotCity and CATBET spelling/silhouettes; high contrast, no plate |
-| `VS` integration | PASS | oversized split gold/cyan lightning lettering is the central 3D object; no UI badge |
-| Text/product truth | PASS | only neutral `VS`; no offer, mechanic, CTA or claim |
-| Readability at README scale | PASS | separated silhouettes, high-contrast logos and central marker |
-| Source/provenance | PASS | brand references are checksummed; final master, prompt contract and delivery hash are recorded in the hero manifest |
-| Human Brand approval | PENDING | owner/date/scope not yet recorded |
+| Розмір і пропорції | `PASS` | `1600×900`, 16:9 WebP |
+| Світлий SlotCity | `PASS` | домінують денне світло й кремово-білі поверхні; золото/жовтий — акценти |
+| Ідентичність SlotCity | `PASS` | безликий драпований персонаж, чорні окуляри, жовта кепка/взуття, ланцюг |
+| Поза SlotCity | `PASS` | спокійна опора й схрещені щиколотки; немає великого кроку в камеру |
+| Ансамбль SlotCity | `PASS` | руда героїня та синя джинія лишаються другорядними |
+| Бет без одягу | `PASS` | природна котяча анатомія без костюма, худі чи людського тіла |
+| Ідентичність CATBET | `PASS` | блакитне хутро, помаранчеві очі й нашийник, темний ніс |
+| Поза CATBET | `PASS` | Бет спокійно лежить із піднятою головою; не стрибає |
+| Власний світ CATBET | `PASS` | немає міста; є хутро, lore-книга, клубки й артефакти лап |
+| Логотипи | `PASS` | прямі читабельні 3D-написи SlotCity/CATBET без плашок |
+| `VS` | `PASS` | великий двоколірний центральний 3D-об'єкт із блискавкою |
+| Product truth | `PASS` | лише нейтральний `VS`; немає механіки, CTA, оферу або claim |
+| Читабельність у README | `PASS` | розділені силуети, контрастні логотипи й чіткий центр |
+| Provenance | `PASS` | master, prompt-контракт і delivery hash записані в manifest |
+| Людське Brand approval | `PENDING` | owner/date/scope ще не зафіксовано |
 
-The image may ship as a framework demonstration marked by this review status. It must not be presented
-as campaign-approved CATBET or SlotCity advertising until Brand records approval for the exact file hash.
+Зображення можна використовувати як демонстрацію framework із зазначеним статусом. Воно не є
+погодженою рекламою SlotCity або CATBET, доки Brand не затвердить точний hash файлу.

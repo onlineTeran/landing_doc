@@ -14,6 +14,13 @@ Brand Design Base — versioned evidence layer для будь-якого віз
 
 Нижчий рівень не переписує вищий. Назва компонента без library key/set key не ідентифікує компонент.
 
+## Reference admission
+
+Надане, відкрите або згенероване зображення доступне лише для поточної задачі. Воно не стає частиною
+Brand Design Base автоматично. Перед кожним додаванням original/crop/derivative агент окремо називає
+точний файл, бренд, evidence role і target path та отримує явне storage consent користувача. Дозвіл
+фіксується дослівно в manifest; без нього заборонені copy/download/crop/register/commit у Brand Archive.
+
 ## Шари бази
 
 | Layer | Що зберігає | Обов'язковий anti-invention rule |

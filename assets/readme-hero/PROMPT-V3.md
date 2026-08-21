@@ -1,21 +1,22 @@
-# Generation prompt — README Hero v3
+# Контракт генерації — README Hero v3
 
-The generated background used three references with non-overlapping roles:
+Для тла використано три джерела з неперетинними ролями:
 
-1. SlotCity mascot identity crop;
-2. SlotCity light/day city environment;
-3. CATBET no-clothes Bet identity crop.
+1. crop ідентичності маскота SlotCity;
+2. світле денне середовище SlotCity;
+3. crop ідентичності Бета без одягу.
 
-Core constraints: wide 16:9 face-off, bright warm SlotCity city with high yellow density, dark controlled
-CATBET world, natural cyan cat with orange collar and no clothes, faceless SlotCity mascot, clear center
-for `VS`, quiet upper logo safe zones, no generated text/logos/claims, no casino clichés, no violence.
+Базові обмеження: широкий 16:9 face-off; тепле світле місто SlotCity із жовтими акцентами; темний
+контрольований світ CATBET; природний блакитний кіт із помаранчевим нашийником; безликий маскот
+SlotCity; чистий центр під `VS`; спокійні верхні safe zones; без згенерованих текстів, логотипів,
+claims, казино-кліше або насильства.
 
-Exact logos and `VS` were composited after generation. This separation is mandatory for future variants.
+Точні логотипи й `VS` у цій версії додавалися після генерації. Для майбутніх варіантів розділення
+залишалося обов'язковим до зміни контракту у v8.
 
-## v4 correction
+## Корекція v4
 
-The v4 background added the owner-supplied cross-brand ensemble as SlotCity supporting-character
-evidence while preserving separate identity references for the main faceless mascot and Bet. It keeps
-the SlotCity side bright/gold and the CATBET side dark/cyan, with a narrow energy seam instead of a blank
-orb. Exact logos were then extruded from their SVG silhouettes without plates; `VS` became a separate
-split gold/cyan lightning wordmark.
+До тла додано наданий власником кросбрендовий ансамбль як доказ другорядних персонажів SlotCity,
+при цьому ідентичність головного маскота й Бета лишилася розділеною. Між світами використано вузький
+енергетичний шов. Логотипи екструдовано з SVG-силуетів без плашок, а `VS` оформлено як окрему
+золото-блакитну блискавку.

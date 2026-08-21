@@ -1,21 +1,23 @@
 <!-- promo-landing-framework:begin -->
-## Corporate Promo Landing Framework
+## Корпоративний framework промо-лендінгів
 
-For any SlotCity/CATBET art, UI, component or visual-audit task, use the project-local
-`brand-design-base` skill and route the surface before acting. For every promo landing task, also use
-the project-local `promo-landing-framework` skill and read
-`docs/promo-landing/PROJECT-STATE.md` before acting. For gambling copy, also use
-`playcity-copy-review` before G2 and before release.
+Для SlotCity/CATBET art, UI, component або visual audit використовуй project-local skill
+`brand-design-base` і спочатку визнач surface. Для promo landing також використовуй
+`promo-landing-framework` і прочитай `docs/promo-landing/PROJECT-STATE.md`. Для gambling copy застосуй
+`playcity-copy-review` перед G2 і перед релізом.
 
-Work only on the current sequential gate. Record each human approval with owner, exact scope/version,
-date and artifact path; never self-approve Product, Legal, Brand, Design, QA, Release or access rights.
-Do not design before G3, generate production assets/code before G7, or implement before G8.
+Працюй лише над поточним послідовним gate. Кожен human approval записуй з owner, scope/version, date й
+artifact path; не затверджуй за Product, Legal, Brand, Design, QA, Release або rights owner. Не проєктуй
+до G3, не генеруй production assets/code до G7 і не починай implementation до G8.
 
-After G9, Stage push/MR/manual deploy requires explicit Stage approval and exists only to produce G10
-QA evidence. Production merge/promotion/deploy requires G10 plus a separate explicit approval for the
-exact commit/build and target. For `cb/ai_landings`, follow
-`methodology/CORPORATE-GIT-RUNBOOK.md`; never substitute the legacy Vercel flow.
+Не додавай attached/linked/live/generated image до `brand-archive` автоматично. До
+copy/download/crop/derivative/manifest отримай file-specific storage consent із brand, role та exact
+target path; запиши owner, date, quote і scope.
 
-Resolve technical versions from the landing's `package.json` and facts from versioned project files,
-not chat memory.
+Після G9 Stage push/MR/manual deploy потребує explicit Stage approval і створює лише G10 QA evidence.
+Production merge/promotion/deploy потребує G10 та окремого approval для exact commit/build і target.
+Для `cb/ai_landings` виконуй `methodology/CORPORATE-GIT-RUNBOOK.md`.
+
+Technical versions бери з `package.json`, а факти — з versioned project files, не з chat memory.
+Усі human-readable документи веди українською за `LANGUAGE-POLICY.md`.
 <!-- promo-landing-framework:end -->

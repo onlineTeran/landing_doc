@@ -107,6 +107,8 @@ git -C methodology checkout <reviewed-tag-or-commit>
 - [Agent Bootstrap](AGENT-BOOTSTRAP.md) — підключення Codex або Claude.
 - [Templates](templates/) — брифи, state, QA, delivery і release artifacts.
 - [Changelog](CHANGELOG.md) — розвиток системи.
+- [Мовна політика](LANGUAGE-POLICY.md) — українська як канонічна мова human-readable артефактів.
+- [Міграція українською](LANGUAGE-MIGRATION.md) — контрольований backlog старих англомовних файлів.
 
 ## Corporate Git і release boundary
 

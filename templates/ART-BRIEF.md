@@ -1,59 +1,59 @@
-# Art Brief
+# Бриф арту
 
-## Control
+## Контроль
 
-- Product:
-- Surface / exact slot:
-- Asset role: `hero-banner | promo-banner | card-horizontal | card-vertical | card-square | section-background | decorative-cutout | 3d-icon | character | other`
-- Request owner:
+- Продукт:
+- Surface / точний slot:
+- Роль: `hero-banner | promo-banner | card-horizontal | card-vertical | card-square | section-background | decorative-cutout | 3d-icon | character | other`
+- Власник запиту:
 - Brand/art approver:
-- Status: `DRAFT | EVIDENCE_LOCKED | CONCEPT_SELECTED | PRODUCTION | QA | APPROVED`
-- Deadline/version:
+- Статус: `DRAFT | EVIDENCE_LOCKED | CONCEPT_SELECTED | PRODUCTION | QA | APPROVED`
+- Дедлайн/версія:
 
-## Goal and content
+## Мета й контент
 
 - User/business goal:
-- One-sentence message:
-- Primary subject/object:
-- Supporting subjects (max/count rationale):
-- External copy/CTA occupying the slot:
+- Повідомлення одним реченням:
+- Головний subject/object:
+- Supporting subjects і ліміт:
+- External copy/CTA у slot:
 - Legal/product constraints:
 
-## Output contract
+## Контракт результату
 
-| Variant | Dimensions/ratio | Safe content zone | Crop tolerance | Format/alpha | Weight cap |
+| Варіант | Розмір/ratio | Safe content zone | Crop tolerance | Format/alpha | Weight cap |
 |---|---|---|---|---|---|
 | Desktop | | | | | |
 | Mobile | | | | | |
-| Other | | | | | |
+| Інший | | | | | |
 
 - Mobile strategy: `DEDICATED_RECOMPOSITION | SHARED_SAFE_CORE | N/A`
 - Master format:
 - Delivery location:
 
-## Evidence lock
+## Фіксація доказів
 
-| Reference | Exact path/node/version | Role | Status | Rights/allowed changes |
-|---|---|---|---|---|
-| | | identity/style/composition/material/light/color/negative | | |
+| Референс | Exact path/node/version | Роль | Статус | Rights/allowed changes | Storage consent |
+|---|---|---|---|---|---|
+| | | identity/style/composition/material/light/color/negative | | | `NOT_REQUESTED | APPROVED` + owner/date/quote/scope |
 
-## Creative contract
+## Творчий контракт
 
 - Selected style group:
 - Identity invariants:
-- Composition and hierarchy:
-- Palette/tokens + one controlled accent:
+- Composition і hierarchy:
+- Palette/tokens та controlled accent:
 - Materials:
 - Camera/perspective:
 - Lighting/shadow/glow:
 - Depth/background:
 - Required:
 - Forbidden/negative prompt:
-- `DESIGN_SYSTEM_GAP` items:
+- `DESIGN_SYSTEM_GAP`:
 
-## Concept decision
+## Рішення щодо концепту
 
-| Concept | Evidence | Strength | Risk | Decision |
+| Концепт | Evidence | Сила | Ризик | Рішення |
 |---|---|---|---|---|
 | A | | | | |
 | B | | | | |
@@ -62,7 +62,7 @@
 - Approval quote:
 - Owner/date/version/scope:
 
-## Production log
+## Журнал production
 
 - Tool/model/version:
 - Exact prompt/settings/seed:

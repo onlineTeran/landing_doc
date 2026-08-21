@@ -64,18 +64,6 @@
       "allowedUse": "pose-reference-only",
       "rightsStatus": "inherits-source",
       "lastVerified": "2026-08-21"
-    },
-    {
-      "id": "SC-LIVE-CITY-001",
-      "path": "reference/city-levels-og-live-2026-08-21.webp",
-      "sha256": "5799e257dab6a48c17d75ee369567deecf0f36ea98a17392685ad19f2bf01767",
-      "sourceUrl": "https://slotcity.ua/img/levels/seo/og/1200_630_levels.webp",
-      "sourcePage": "https://slotcity.ua/levels",
-      "evidenceClass": "LIVE_SNAPSHOT",
-      "allowedRoles": ["environment", "composition"],
-      "allowedUse": "reference-only",
-      "rightsStatus": "owner-confirmation-pending",
-      "lastVerified": "2026-08-21"
     }
   ]
 }

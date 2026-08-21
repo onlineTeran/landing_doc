@@ -26,6 +26,7 @@
   cross-brand hero separating SlotCity city ownership from CATBET feline lore-world ownership.
 - README hero V8 with reduced gold, directly generated dimensional SlotCity/CATBET marks and an
   oversized split-color `VS`; prompt provenance, checksums, self-QA and pending Brand review are recorded.
+- Канонічну українську мовну політику та автоматичну перевірку всіх Markdown-файлів.
 
 ### Changed
 
@@ -37,6 +38,13 @@
 - SlotCity and CATBET design-system packages are versioned `0.9`; SlotCity ToV is explicitly pending
   user-supplied source. Product (`slotcity|catbet`) and agent (`codex|claude`) are independent bootstrap
   arguments, and every product/agent combination is supported.
+- Reference admission now requires separate, file-specific user consent before any image is copied,
+  downloaded, cropped, registered or committed into a Brand Archive.
+
+### Removed
+
+- На запит власника видалено небажаний SlotCity city-environment reference та всі його записи в
+  manifest/register.
 
 ## [2.1.0-draft] — 2026-08-21
 

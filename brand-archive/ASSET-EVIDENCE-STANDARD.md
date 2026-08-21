@@ -19,6 +19,37 @@ Large editable masters may remain in the corporate DAM/Figma, but their exact so
 checksum must be recorded. A small identity-critical snapshot should live in the repository when rights
 allow it, so Codex/Claude does not depend on a chat attachment or mutable URL.
 
+## Reference admission consent gate
+
+An image being attached, linked, opened, generated or used in the current task does **not** grant
+permission to store it in the framework. Before every new image enters `brand-archive/**/assets`, the
+agent must ask one explicit, file-specific question that states:
+
+- exact source/file and product/brand;
+- proposed reference role;
+- proposed repository target path;
+- whether an original, crop and/or derivative will be stored.
+
+Only an explicit owner answer such as `так, додати <exact file/scope>` opens storage for that scope.
+Silence, task feedback, permission to inspect/generate an image or approval of a design is not storage
+consent. Without consent the agent may use the image transiently for the current task, but must not copy,
+download, crop, checksum, register or commit it as methodology evidence.
+
+Record approved storage in the manifest entry:
+
+```json
+"storageConsent": {
+  "status": "APPROVED",
+  "owner": "<name/role>",
+  "date": "YYYY-MM-DD",
+  "quote": "<verbatim approval>",
+  "scope": "original|crop|derivative and exact target path"
+}
+```
+
+Consent is per image and scope. It does not transfer to adjacent files, a whole webpage, future variants
+or a different brand archive. Removing an asset also requires updating every manifest/register/link.
+
 ## Evidence classes
 
 | Class | Meaning | Agent permission |
@@ -49,6 +80,13 @@ allow it, so Codex/Claude does not depend on a chat attachment or mutable URL.
   "allowedUse": "reference-only",
   "identityRegion": "optional exact subject/region",
   "owner": null,
+  "storageConsent": {
+    "status": "APPROVED",
+    "owner": "<name/role>",
+    "date": "YYYY-MM-DD",
+    "quote": "<verbatim approval>",
+    "scope": "original|crop|derivative and exact target path"
+  },
   "lastVerified": "YYYY-MM-DD"
 }
 ```
@@ -62,7 +100,8 @@ allow it, so Codex/Claude does not depend on a chat attachment or mutable URL.
 4. Keep logos as exact vector/layout layers. Never ask an image model to spell or recreate them.
 5. Unknown modification rights mean immutable/reference-only.
 6. Record every used asset ID and prompt role in the project Art Brief and Asset Register.
-7. When a newer source arrives, add a new dated file and diff; do not silently overwrite evidence.
+7. Pass the file-specific Reference Admission Consent Gate before any repository write or manifest entry.
+8. When a newer source arrives, ask again, then add a new dated file and diff; do not silently overwrite evidence.
 
 ## Repository limits
 

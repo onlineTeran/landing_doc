@@ -1,29 +1,32 @@
-# Reference & Mascot Base — <campaign>
+# База референсів і маскотів — <campaign>
 
-## Reference register
+## Реєстр референсів
 
-| ID | Exact URL/file/node | Role | Rights | Captured/version | What to reuse | What not to copy | Owner |
-|---|---|---|---|---|---|---|---|
-| R-001 | | identity/style/composition/type/material/motion | canonical/reference-only/TBD | | | | |
+| ID | Exact URL/file/node | Роль | Права | Captured/version | Що використовувати | Що не копіювати | Owner | Storage consent |
+|---|---|---|---|---|---|---|---|---|
+| R-001 | | identity/style/composition/type/material/motion | canonical/reference-only/TBD | | | | | owner/date/verbatim quote/exact path+scope |
 
-## Mascot identity card
+До створення рядка чи repository file окремо запитай, чи можна додати точне зображення як reference.
+Дозвіл inspect/generate/use у поточній задачі не є дозволом на storage.
+
+## Паспорт ідентичності маскота
 
 - Mascot/product:
-- Canonical source and version:
+- Canonical source і version:
 - Rights/owner:
-- Identity-defining silhouette and proportions:
+- Identity-defining silhouette і proportions:
 - Face/species cues:
 - Canonical colors/materials:
-- Allowed expressions, poses, clothing and props:
+- Allowed expressions, poses, clothing і props:
 - Forbidden transformations:
 - Required logo/product relationship:
-- Mobile crop and safe area:
+- Mobile crop і safe area:
 - Animation constraints:
 - Accessibility/alt-text intent:
 
-## Approval evidence
+## Доказ approval
 
 - Identity lock contact sheet:
 - Real-slot 375/430/440/1440 comparison:
 - Brand owner / date / version:
-- Status: `DRAFT | APPROVED | SUPERSEDED`
+- Статус: `DRAFT | APPROVED | SUPERSEDED`
